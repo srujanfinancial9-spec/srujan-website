@@ -1,0 +1,108 @@
+@import "node_modules/bootstrap/scss/mixins";
+@import "src/variables.scss";
+
+// .btn-green {
+//   background: #004a43;
+//   color: #fff;
+//   font-family: $body-font;
+//   font-size: 16px;
+//   font-weight: 500;
+//   line-height: 24px;
+//   letter-spacing: 0.10000000149011612px;
+//   text-align: center;
+//   height: 44px;
+//   &:hover {
+//     background: #004a43;
+//     color: #fff;
+//   }
+// }
+
+.menu {
+  background: $initial-background;
+  border: 0.75px solid #d7e0d4;
+}
+.navbar {
+  a {
+    text-decoration: none;
+  }
+  &-items {
+    align-self: flex-end;
+  }
+  @include media-breakpoint-up(lg) {
+    padding: 18px 40px 0px 18px;
+  }
+  &-links {
+    text-decoration: none;
+    list-style: none;
+    gap: 25px;
+    align-self: flex-end;
+    padding-left: 0;
+    transition: all 0.5s ease;
+    @include media-breakpoint-down(lg) {
+      position: absolute;
+      z-index: 99999;
+      top: 10%;
+      left: 40%;
+    }
+    @include media-breakpoint-down(md) {
+      top: 15%;
+      left: 34%;
+    }
+    .navbar-link-item {
+      //styleName: H5 – 16pt;
+      font-family: $body-font;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+      letter-spacing: 0.10000000149011612px;
+      text-align: left;
+      cursor: pointer;
+      height: 40px;
+      padding: 0px 5px;
+      @include media-breakpoint-down(lg) {
+        text-align: center;
+        font-size: 40px;
+        line-height: 48px;
+        letter-spacing: -0.4000000059604645px;
+        color: #fff !important;
+      }
+      &:hover{
+        border-bottom: 2px solid #004a43;
+      }
+    }
+  }
+}
+.navbar-brand {
+  margin-right: 0;
+  @include media-breakpoint-up(lg) {
+    width: 180px;
+  }
+}
+.mobile-menu-layout {
+  position: absolute;
+  background: #004a43;
+  padding: 0;
+  z-index: 9999;
+  width: 100%;
+  left: -1000px;
+  transition: all 0.5s ease;
+  @include media-breakpoint-down(lg) {
+    height: 500vh;
+  }
+  .cross-button {
+    left: 80%;
+    top: 30px;
+    border: none;
+    background: #004a43;
+  }
+}
+.show-layout {
+  left: 0 !important;
+}
+.show {
+  opacity: 1 !important;
+}
+.hide {
+  opacity: 0 !important;
+  z-index: 000 !important;
+}

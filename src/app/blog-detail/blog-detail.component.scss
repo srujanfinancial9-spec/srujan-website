@@ -1,0 +1,42 @@
+@import "node_modules/bootstrap/scss/mixins";
+@import "src/layout.scss";
+
+.main-blog-container {
+  .header-part {
+    .sub-title {
+      margin-top: 18px;
+    }
+    .thumbnail {
+      margin-top: 32px;
+      margin-bottom: 20px;
+    }
+  }
+  .body-part {
+    margin-top: 48px;
+    .list {
+      margin-top: 18px;
+      padding: 20px 0 38px 40px;
+    }
+  }
+  .blog-end {
+    margin-bottom: 9px;
+    @include media-breakpoint-up(md){
+      margin-bottom: 79px;
+    }
+    @include media-breakpoint-up(lg){
+      margin-bottom: 218px;
+    }
+    .blog-footer-img {
+      margin-top: 62px;
+    }
+  }
+}
+.blog-title{
+  margin-bottom: 56px;
+  @include media-breakpoint-up(md){
+    margin-bottom: 80px;
+  }
+  @include media-breakpoint-up(lg){
+    margin-bottom: 104px;
+  }
+}

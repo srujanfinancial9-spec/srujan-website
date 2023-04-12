@@ -1,0 +1,40 @@
+<div class="mobile-menu-layout container-fluid" [ngClass]="{'show-layout': show, hide: !show}">
+  <button type="button" (click)="hideMobileLayout()" class="cross-button position-relative">
+    <img src="" alt="cross">
+  </button>
+</div>
+<div class="navbar-items d-flex d-lg-none">
+  <div class="navbar-links d-flex flex-column justify-content-center text-center mb-0" [ngClass]="{show: show, hide: !show}">
+    <div class="navbar-link-item text-info" [routerLink]="['/']" (click)="hideMobileLayout()"><a>Home</a></div>
+    <div class="navbar-link-item text-info" [routerLink]="['/about']" (click)="hideMobileLayout()"><a>About</a></div>
+    <div class="navbar-link-item text-info" [routerLink]="['/service']" (click)="hideMobileLayout()"><a>Services</a></div>
+    <div class="navbar-link-item text-info" [routerLink]="['/blog']" (click)="hideMobileLayout()"><a>Blog</a></div>
+    <div class="navbar-link-item text-info" [routerLink]="['/contact']" (click)="hideMobileLayout()"><a>Contact</a></div>
+    <div class="navbar-link-item text-info" [routerLink]="['/sixth']" (click)="hideMobileLayout()"><a>Sixth</a></div>
+  </div>
+</div>
+<div class="container-fluid menu">
+  <div class="navbar navbar-container d-flex justify-content-between">
+    <div class="navbar-brand">
+      <a href="#" class="companyLogo">
+        <img src="assets/Img/Svg/company-logo.svg" alt="Logo">
+      </a>
+    </div>
+    <button type="button" (click)="showMobileLayout()" class="hamburger-button d-lg-none">
+      <img src="" alt="hamburger">
+    </button>
+    <div class="navbar-items d-none d-lg-flex">
+      <div class="navbar-links d-flex mb-0">
+        <div class="navbar-link-item text-info" [routerLink]="['/']"><a>Home</a></div>
+        <div class="navbar-link-item text-info" [routerLink]="['/about']"><a>About</a></div>
+        <div class="navbar-link-item text-info" [routerLink]="['/service']"><a>Services</a></div>
+        <div class="navbar-link-item text-info" [routerLink]="['/blog']"><a>Blog</a></div>
+        <div class="navbar-link-item text-info" [routerLink]="['/contact']"><a>Contact</a></div>
+        <div class="navbar-link-item text-info" [routerLink]="['/sixth']"><a>Sixth</a></div>
+      </div>
+    </div>
+    <div class="navbar-action d-none d-lg-flex pb-2">
+      <button class="btn-outline-green">Get In touch</button>
+    </div>
+  </div>
+</div>

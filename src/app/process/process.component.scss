@@ -1,0 +1,79 @@
+@import "node_modules/bootstrap/scss/mixins";
+@import "src/layout.scss";
+
+.hero-section {
+  background: #004a43;
+  padding: 50px 0px;
+  @include media-breakpoint-up(md) {
+    padding: 60px 47px 60px 47px;
+  }
+  @include media-breakpoint-up(lg) {
+    padding: 78.07px 290px 81px 290px;
+  }
+  .content {
+    .subtitle {
+      color: #31c3ae;
+    }
+    .body {
+      margin: auto;
+      max-width: 407px;
+      margin-bottom: 30px;
+      @include media-breakpoint-up(md) {
+        margin-bottom: 50px;
+      }
+      @include media-breakpoint-up(lg) {
+        margin-bottom: 84.67px;
+      }
+    }
+    .process-line {
+      @include media-breakpoint-down(md){
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+      &-item {
+        width: 130px;
+      }
+    }
+  }
+}
+
+.layout {
+  @include media-breakpoint-up(lg) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    gap: 110px;
+  }
+  .text-content {
+    max-width: 445px;
+    @include media-breakpoint-up(md){
+      max-width: 350px;
+    }
+    @include media-breakpoint-up(lg){
+      max-width: 445px;
+    }
+    .title {
+      margin-bottom: 24px;
+    }
+  }
+  .profile-content {
+    align-self: center;
+    max-width: 555px;
+    height: 250px;
+    background: #ecf3f2;
+    @include media-breakpoint-up(md){
+      width: 300px;
+      height: 300px;
+    }
+    @include media-breakpoint-up(lg) {
+      width: 555px;
+      height: 382px;
+    }
+    .progress-indicator {
+      height: 33px;
+      width: 94px;
+      border-radius: 0px;
+      background: #A9FF9B;
+      top: 34px;
+    }
+  }
+}

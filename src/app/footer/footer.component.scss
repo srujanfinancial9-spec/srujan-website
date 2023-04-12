@@ -1,0 +1,100 @@
+@import "node_modules/bootstrap/scss/mixins";
+@import "src/layout.scss";
+
+ul {
+  padding-left: 0;
+  li {
+    list-style: none;
+    opacity: 0.8;
+    &:hover{
+      opacity: 1;
+    }
+  }
+}
+a {
+  text-decoration: none;
+  opacity: 0.8;
+    &:hover{
+      opacity: 1;
+    }
+}
+.divider {
+  margin: auto;
+  max-width: 1295px;
+  border-color: $primary;
+  margin-top: 28px;
+  margin-bottom: 28px;
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 20px;
+    margin-top: 120px;
+  }
+}
+
+.footer {
+  background: $initial-background;
+  padding: 40px 15px;
+  @include media-breakpoint-up(lg) {
+    padding: 40px 65px;
+  }
+  &-top {
+    &-container {
+      gap: 36px;
+      .about-website {
+        max-width: 300px;
+        .website-logo {
+          margin-bottom: 25px;
+          img {
+            height: 48px;
+          }
+        }
+        .body {
+          margin-bottom: 24px;
+        }
+      }
+      .footer-top-social-media-links {
+        display: flex;
+        gap: 18px;
+        @include media-breakpoint-up(lg) {
+          margin-top: 24px;
+          gap: 12px;
+        }
+        .social-icon {
+          height: 16px;
+          width: 16px;
+        }
+      }
+      .pages-link {
+        row-gap: 42px;
+        column-gap: 25px;
+        @include media-breakpoint-up(lg) {
+          gap: 114px;
+        }
+        .page-links {
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+          @include media-breakpoint-up(lg) {
+            gap: 8px;
+          }
+        }
+      }
+    }
+  }
+  &-bottom {
+    gap: 20px;
+    &-copyright {
+      gap: 17px;
+    }
+    &-social-media-links {
+      display: flex;
+      gap: 18px;
+      @include media-breakpoint-up(lg) {
+        gap: 12px;
+      }
+      .social-icon {
+        height: 16px;
+        width: 16px;
+      }
+    }
+  }
+}
