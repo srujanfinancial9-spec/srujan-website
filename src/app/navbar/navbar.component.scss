@@ -1,21 +1,5 @@
 @import "node_modules/bootstrap/scss/mixins";
-@import "src/variables.scss";
-
-// .btn-green {
-//   background: #004a43;
-//   color: #fff;
-//   font-family: $body-font;
-//   font-size: 16px;
-//   font-weight: 500;
-//   line-height: 24px;
-//   letter-spacing: 0.10000000149011612px;
-//   text-align: center;
-//   height: 44px;
-//   &:hover {
-//     background: #004a43;
-//     color: #fff;
-//   }
-// }
+@import "src/layout.scss";
 
 .menu {
   background: $initial-background;
@@ -66,7 +50,7 @@
         letter-spacing: -0.4000000059604645px;
         color: #fff !important;
       }
-      &:hover{
+      &:hover {
         border-bottom: 2px solid #004a43;
       }
     }
@@ -105,4 +89,8 @@
 .hide {
   opacity: 0 !important;
   z-index: 000 !important;
+}
+.hamburger-button {
+  border: none;
+  background: #fff;
 }

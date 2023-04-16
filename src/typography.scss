@@ -2,26 +2,24 @@
 @import "src/variables.scss";
 
 h1 {
-  //styleName: Display – 56pt;
   font-family: $title-font;
   font-weight: 600 !important;
   font-size: 40px !important;
   line-height: 48px !important;
-  letter-spacing: -0.4000000059604645px !important;
+  letter-spacing: -0.8px !important;
   @include media-breakpoint-up(md) {
-    font-size: 46px !important;
-    line-height: 52px !important;
-    letter-spacing: -0.5px !important;
+    font-size: 54px !important;
+    line-height: 56px !important;
+    letter-spacing: -0.8px !important;
   }
   @include media-breakpoint-up(lg) {
     font-size: 62px !important;
     line-height: 60px !important;
-    letter-spacing: -1px !important;
+    letter-spacing: -0.8px !important;
   }
 }
 
 h2 {
-  //styleName: H1 – 40pt;
   font-family: $title-font;
   font-weight: 600 !important;
   font-size: 32px !important;
@@ -33,13 +31,12 @@ h2 {
     letter-spacing: -0.4000000059604645px !important;
   }
   @include media-breakpoint-up(lg) {
-    font-size: 46px !important;
-    line-height: 52px !important;
-    letter-spacing: -0.5px !important;
+    font-size: 54px !important;
+    line-height: 56px !important;
+    letter-spacing: 0px !important;
   }
 }
 h3 {
-  //styleName: H3 – 24pt;
   font-family: $title-font;
   font-weight: 600 !important;
   font-size: 32px !important;
@@ -48,12 +45,11 @@ h3 {
   text-align: left;
   @include media-breakpoint-up(md) {
     font-size: 40px !important;
-    line-height: 48px !important;
+    line-height: 46px !important;
     letter-spacing: -0.10000000149011612px !important;
   }
 }
 h4 {
-  //styleName: H4 – 18pt;
   font-family: $title-font;
   font-weight: 600 !important;
   font-size: 32px !important;
@@ -154,9 +150,29 @@ h6 {
 }
 .sub-title {
   font-family: $body-font;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 500;
   line-height: 24px;
   letter-spacing: 0.10000000149011612px;
   text-align: left;
+  @include media-breakpoint-up(md) {
+    font-size: 18px;
+  }
+}
+.testimonial-title {
+  font-family: $title-font;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 0px;
+  text-align: center;
+  color:#575757;
+  @include media-breakpoint-up(md) {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  @include media-breakpoint-up(lg) {
+    font-size: 28px;
+    line-height: 40px;
+  }
 }
