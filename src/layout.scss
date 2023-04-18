@@ -10,6 +10,7 @@
     padding: 64px 0px;
   }
 }
+
 .section-gap {
   margin-top: 32px;
   margin-bottom: 32px;
@@ -178,6 +179,25 @@
   &:hover {
     background: #a9ff9b;
     color: #004a43;
+  }
+}
+.footer-btn{
+  // height: 48px;
+  // width: 178px;
+  border-radius: 0px;
+
+  background: #0B2416;
+  color: #fff;
+  border: 1px solid #A9FF9B;;
+  font-family: $body-font;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.10000000149011612px;
+  text-align: center;
+  &:hover {
+    background: #A9FF9B;
+    color: #0B2416;
   }
 }
 .btn-lg-green {

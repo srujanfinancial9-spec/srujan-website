@@ -14,10 +14,10 @@ export class PrivacyPolicyComponent implements OnInit {
   }
 
   imageChange() {
-    // if (this.actionImgPath == "assets/Images/Svg/up-arrow.svg") {
-    //   this.actionImgPath ='assets/Images/Svg/down-arrow.svg'
-    // } else {
-    //   this.actionImgPath ='assets/Images/Svg/up-arrow.svg'
-    // }
+    if (this.actionImgPath == "assets/Img/Svg/up-arrow.svg") {
+      this.actionImgPath ='assets/Img/Svg/down-arrow.svg'
+    } else {
+      this.actionImgPath ='assets/Img/Svg/up-arrow.svg'
+    }
   }
 }

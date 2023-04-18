@@ -6,7 +6,7 @@ ul {
   li {
     list-style: none;
     opacity: 0.8;
-    &:hover{
+    &:hover {
       opacity: 1;
     }
   }
@@ -14,9 +14,9 @@ ul {
 a {
   text-decoration: none;
   opacity: 0.8;
-    &:hover{
-      opacity: 1;
-    }
+  &:hover {
+    opacity: 1;
+  }
 }
 .divider {
   margin: auto;
@@ -31,7 +31,7 @@ a {
 }
 
 .footer {
-  background: $initial-background;
+  background: #0b2416;
   padding: 40px 15px;
   @include media-breakpoint-up(lg) {
     padding: 40px 65px;
@@ -96,5 +96,11 @@ a {
         width: 16px;
       }
     }
+  }
+}
+.footer-element {
+  @include media-breakpoint-up(lg){
+    right: -9%;
+    top: -10%;
   }
 }

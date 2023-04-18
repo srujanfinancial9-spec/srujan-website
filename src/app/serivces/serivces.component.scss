@@ -4,7 +4,12 @@
 @import "src/app/home/home.component.scss";
 
 .right-section-content {
-  max-width: 500px;
+  @include media-breakpoint-up(md){
+    max-width: 350px;
+  }
+  @include media-breakpoint-up(lg){
+    max-width: 500px;
+  }
 }
 .progress-indicator {
   height: 33px;
@@ -12,4 +17,26 @@
   border-radius: 0px;
   background: #A9FF9B;
   top: 29px;
+}
+.profile-content{
+  background: #fff !important;
+  border: 1px solid #087A68;
+  @include media-breakpoint-up(lg){
+    width: 400px !important;
+  }
+}
+.element{
+  width: 350px;
+}
+.element-2{
+  top: -90px;
+  left: 38px;
+  z-index: 999;
+}
+.green-box{
+  bottom: -12px;
+  right: -12px;
+}
+.bg-brown{
+  background: #E9EFE7 !important;
 }

@@ -74,18 +74,12 @@
 .text {
   background: #fff;
   &-main {
-    @include media-breakpoint-up(md) {
-      display: flex;
-    }
     &-left {
       &-collapse-action {
         display: flex;
         justify-content: space-between;
         margin: 12px 15px;
         border-bottom: 1px solid #0065f24e;
-        @include media-breakpoint-up(md) {
-          display: none;
-        }
       }
       &-collapse-menu {
         padding: 20px 80px 30px 15px;
@@ -121,40 +115,16 @@
     &-right {
       padding: 40px 15px;
       @include media-breakpoint-up(md) {
-        min-width: 215px;
         padding: 40px 55px;
-        overflow: hidden;
-        overflow-y: scroll;
-        height: 1068px;
       }
       @include media-breakpoint-up(lg) {
-        height: 800px;
         padding: 40px 60px;
-      }
-      max-width: 915px;
-      &-title {
-        // h1 {
-        //   font-family: DM Sans;
-        //   font-weight: 700;
-        //   line-height: 32px;
-        //   font-size: 24px;
-        //   letter-spacing: -0.10000000149011612px;
-        //   text-align: left;
-        //   @include media-breakpoint-up(lg) {
-        //     font-size: 40px;
-        //     line-height: 48px;
-        //     letter-spacing: -0.5px;
-        //   }
-        // }
       }
       &-body {
         margin-top: 28px;
         @include media-breakpoint-up(lg) {
           margin-top: 40px;
         }
-      }
-      &::-webkit-scrollbar {
-        display: none; /* for Chrome, Safari, and Opera */
       }
     }
   }
