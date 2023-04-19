@@ -1,12 +1,5 @@
-<div class="mobile-menu-layout container-fluid" [ngClass]="{'show-layout': show, hide: !show}">
-  <button type="button" (click)="hideMobileLayout()" class="cross-button position-relative">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" class="bi bi-x-lg" viewBox="0 0 16 16">
-      <path
-        d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
-    </svg>
-  </button>
-</div>
-<div class="navbar-items d-flex d-lg-none">
+<div class="mobile-menu-layout container-fluid" [ngClass]="{'show-layout': show, hide: !show}"></div>
+<div class="navbar-items container d-flex d-lg-none">
   <div class="navbar-links d-flex flex-column justify-content-center text-center mb-0"
     [ngClass]="{show: show, hide: !show}">
     <div class="navbar-link-item text-info" [routerLink]="['/']" (click)="hideMobileLayout()"><a>Home</a></div>
@@ -16,19 +9,25 @@
     <div class="navbar-link-item text-info" [routerLink]="['/process']" (click)="hideMobileLayout()"><a>Our Process</a>
     </div>
     <div class="navbar-link-item text-info" [routerLink]="['/blog']" (click)="hideMobileLayout()"><a>Blog</a></div>
-    <div class="navbar-link-item text-info" [routerLink]="['/contact']" (click)="hideMobileLayout()"><a>Contact</a>
+    <div class="navbar-link-item text-info d-grid" [routerLink]="['/contact']" (click)="hideMobileLayout()">
+      <button class="btn nav-btn">Contact</button>
+    </div>
+    <div class="mt-5 navbar-link-item gap-3 d-flex nav-social-icon justify-content-center">
+      <img class="social-icon" src="assets/Img/Svg/fb-dark.svg" alt="facebook">
+      <img class="social-icon" src="assets/Img/Svg/lin-dark.svg" alt="linkidin">
+      <img class="social-icon" src="assets/Img/Svg/tw-dark.svg" alt="twitter">
     </div>
   </div>
 </div>
 <div class="container-fluid menu">
   <div class="navbar navbar-container d-flex justify-content-between">
-    <div class="navbar-brand mb-4">
+    <div class="navbar-brand mb-lg-4" [ngClass]="{'show-layout': !show, hide: show}">
       <a href="#" class="companyLogo d-flex gap-2">
         <img src="assets/Img/Svg/company-logo.svg" alt="Logo" class="img-fluid">
       </a>
     </div>
-    <button type="button" (click)="showMobileLayout()" class="hamburger-button d-lg-none">
-      <img src="assets/Img/Svg/hamburger.svg" alt="hamburger">
+    <button type="button" (click)="toggle()" class="hamburger-button d-lg-none">
+      <img src={{icon}} alt="icon">
     </button>
     <div class="navbar-items d-none d-lg-flex">
       <div class="navbar-links d-flex mb-0">
