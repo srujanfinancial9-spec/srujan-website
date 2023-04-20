@@ -28,15 +28,6 @@
         max-width: 480px;
       }
       &-subtitle {
-        // span {
-        //   //styleName: H4 – 18pt;
-        //   font-family: $body-font;
-        //   font-size: 18px;
-        //   font-weight: 500;
-        //   line-height: 28px;
-        //   letter-spacing: 0px;
-        //   text-align: left;
-        // }
         margin-bottom: 1rem;
       }
       &-body {
@@ -148,13 +139,15 @@
     max-width: 547px;
     background: #f6fbff;
     border: 1px solid #d7e0d4;
-    padding: 23px 11px 29px 18px;
+    padding: 24px 16px;
     @include media-breakpoint-up(md){
       max-width: 337px;
+      // padding: 23px 11px 29px 18px;
     }
     @include media-breakpoint-up(lg){
       max-width: 547px;
-      padding: 40px 31px 30px 64px;
+      padding: 48px 32px;
+      // padding: 40px 31px 30px 64px;
     }
   }
 }

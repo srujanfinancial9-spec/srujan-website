@@ -2,7 +2,13 @@
 @import "src/layout.scss";
 
 .mgt-20 {
-  margin-top: 20px;
+  margin-top: 4px;
+  @include media-breakpoint-up(md){
+    margin-top: 8px;
+  }
+  @include media-breakpoint-up(lg){
+    margin-top: 16px;
+  }
 }
 .left {
   background: #fff;

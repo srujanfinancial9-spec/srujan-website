@@ -89,7 +89,7 @@
     max-width: 1440px;
     margin: auto;
     padding: 40px 15px;
-    gap: 28px;
+    gap: 16px;
     @include media-breakpoint-up(md) {
       padding: 40px 60px;
     }
@@ -101,7 +101,10 @@
     &-container {
       max-width: 448px;
       &-title {
-        margin-bottom: 25px;
+        margin-bottom: 8px;
+        @include media-breakpoint-up(md){
+          margin-bottom: 16px;
+        }
       }
     }
   }
@@ -337,17 +340,18 @@
   position: relative;
   .dividers {
     margin: auto;
-    width: 320px;
+    // width: 320px;
+    max-width: 859px;
     margin-top: 16px;
     margin-bottom: 16px;
     border-bottom: 2px solid #d7e0d4;
     @include media-breakpoint-up(md) {
-      width: 550px;
+      // width: 550px;
     }
     @include media-breakpoint-up(lg) {
       margin-top: 32px;
       margin-bottom: 32px;
-      width: 859px;
+      // width: 859px;
     }
   }
   .rectangle-box {
@@ -381,8 +385,11 @@
       height: 197px;
     }
     .body {
-      padding: 24px 28px 24px 29px;
+      padding: 24px 26px;
       border: 1px solid #d7e0d4;
+      @include media-breakpoint-up(lg){
+        padding: 24px 28px 24px 29px;
+      }
     }
     &:hover {
       border: 1px solid #016c62;

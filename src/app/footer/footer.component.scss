@@ -18,6 +18,13 @@ a {
     opacity: 1;
   }
 }
+.calling-feature {
+  color: #fff;
+  &:hover {
+    color: $primary;
+  }
+}
+
 .divider {
   margin: auto;
   max-width: 1295px;
@@ -72,7 +79,7 @@ a {
         .page-links {
           display: flex;
           flex-direction: column;
-          gap: 12px;
+          gap: 4px;
           @include media-breakpoint-up(lg) {
             gap: 8px;
           }
@@ -99,8 +106,28 @@ a {
   }
 }
 .footer-element {
-  @include media-breakpoint-up(lg){
+  @include media-breakpoint-up(lg) {
     right: -9%;
     top: -10%;
+  }
+}
+
+.underline {
+  position: relative;
+  &:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  &:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
   }
 }

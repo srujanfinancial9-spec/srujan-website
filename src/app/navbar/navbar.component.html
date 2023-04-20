@@ -1,33 +1,34 @@
-<div class="mobile-menu-layout container-fluid" [ngClass]="{'show-layout': show, hide: !show}"></div>
-<div class="navbar-items container d-flex d-lg-none">
-  <div class="navbar-links d-flex flex-column justify-content-center text-center mb-0"
-    [ngClass]="{show: show, hide: !show}">
-    <div class="navbar-link-item text-info" [routerLink]="['/']" (click)="hideMobileLayout()"><a>Home</a></div>
-    <div class="navbar-link-item text-info" [routerLink]="['/about']" (click)="hideMobileLayout()"><a>About</a></div>
-    <div class="navbar-link-item text-info" [routerLink]="['/services']" (click)="hideMobileLayout()"><a>Our Services</a>
+<div class="mobile-menu-layout container-fluid" [ngClass]="{'show-layout': show, 'hide-layout': !show}">
+  <div class="navbar-links d-flex flex-column justify-content-center text-center mb-0">
+    <div class="navbar-link-item text-info" [ngClass]="{'show-menu': show, 'delay-1s':show}" [routerLink]="['/']" (click)="hideMobileLayout()"><a>Home</a></div>
+    <div class="navbar-link-item text-info" [ngClass]="{'show-menu': show, 'delay-2s':show}" [routerLink]="['/about']" (click)="hideMobileLayout()"><a>About</a></div>
+    <div class="navbar-link-item text-info" [ngClass]="{'show-menu': show, 'delay-3s':show}" [routerLink]="['/services']" (click)="hideMobileLayout()"><a>Our Services</a>
     </div>
-    <div class="navbar-link-item text-info" [routerLink]="['/process']" (click)="hideMobileLayout()"><a>Our Process</a>
+    <div class="navbar-link-item text-info" [ngClass]="{'show-menu': show, 'delay-4s':show}" [routerLink]="['/process']" (click)="hideMobileLayout()"><a>Our Process</a>
     </div>
-    <div class="navbar-link-item text-info" [routerLink]="['/blog']" (click)="hideMobileLayout()"><a>Blog</a></div>
-    <div class="navbar-link-item text-info d-grid" [routerLink]="['/contact']" (click)="hideMobileLayout()">
+    <div class="navbar-link-item text-info" [ngClass]="{'show-menu': show, 'delay-5s':show}" [routerLink]="['/blog']" (click)="hideMobileLayout()"><a>Blog</a></div>
+    <div class="navbar-link-item text-info d-grid" [ngClass]="{'show-menu': show, 'delay-6s':show}" [routerLink]="['/contact']" (click)="hideMobileLayout()">
       <button class="btn nav-btn">Contact</button>
     </div>
-    <div class="mt-5 navbar-link-item gap-3 d-flex nav-social-icon justify-content-center">
-      <img class="social-icon" src="assets/Img/Svg/fb-dark.svg" alt="facebook">
-      <img class="social-icon" src="assets/Img/Svg/lin-dark.svg" alt="linkidin">
-      <img class="social-icon" src="assets/Img/Svg/tw-dark.svg" alt="twitter">
+    <div class="mt-5 navbar-link-item gap-3 d-flex nav-social-icon" [ngClass]="{'show-menu': show, 'delay-7s':show}">
+      <img class="social-icon" src="assets/Img/Svg/fb-light.svg" alt="facebook">
+      <img class="social-icon" src="assets/Img/Svg/LinkedIn-light.svg" alt="linkidin">
+      <img class="social-icon" src="assets/Img/Svg/Twitter-light.svg" alt="twitter">
     </div>
   </div>
 </div>
+<div class="navbar-items container d-flex d-lg-none">
+</div>
 <div class="container-fluid menu">
   <div class="navbar navbar-container d-flex justify-content-between">
-    <div class="navbar-brand mb-lg-4" [ngClass]="{'show-layout': !show, hide: show}">
+    <div class="navbar-brand mb-lg-4 ">
       <a href="#" class="companyLogo d-flex gap-2">
         <img src="assets/Img/Svg/company-logo.svg" alt="Logo" class="img-fluid">
       </a>
     </div>
-    <button type="button" (click)="toggle()" class="hamburger-button d-lg-none">
-      <img src={{icon}} alt="icon">
+    <button type="button" (click)="toggle()" class="hamburger-button d-flex flex-column gap-1 d-lg-none position-relative" style="z-index: 99999999;">
+      <div class="blue-line" [ngClass]="{'blue-line-a':show}"></div>
+      <div class="blue-line" [ngClass]="{'blue-line-b':show}"></div>
     </button>
     <div class="navbar-items d-none d-lg-flex">
       <div class="navbar-links d-flex mb-0">
