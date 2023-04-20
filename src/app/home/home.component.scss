@@ -142,12 +142,10 @@
     padding: 24px 16px;
     @include media-breakpoint-up(md){
       max-width: 337px;
-      // padding: 23px 11px 29px 18px;
     }
     @include media-breakpoint-up(lg){
       max-width: 547px;
       padding: 48px 32px;
-      // padding: 40px 31px 30px 64px;
     }
   }
 }
