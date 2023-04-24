@@ -13,9 +13,10 @@ ul {
 }
 a {
   text-decoration: none;
-  opacity: 0.8;
+  // opacity: 0.8;
   &:hover {
-    opacity: 1;
+    // opacity: 1;
+    color: #A0E4B0 !important;
   }
 }
 .calling-feature {
@@ -38,7 +39,7 @@ a {
 }
 
 .footer {
-  background: #0b2416;
+  background: $primary;
   padding: 40px 15px;
   @include media-breakpoint-up(lg) {
     padding: 40px 65px;

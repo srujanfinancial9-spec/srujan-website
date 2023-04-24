@@ -9,7 +9,7 @@
           achieve their financial goals and build long-term wealth</p>
       </div>
       <div class="left-section-content-button">
-        <button class="btn secondary-btn">Let’s Get Started</button>
+        <button class="btn secondary-btn" [routerLink]="['/contact']">Let’s Get Started</button>
       </div>
     </div>
     <div class="left-section-profile align-self-center">
@@ -42,7 +42,7 @@
           your financial situation is taken into consideration.</p>
       </div>
       <div class="right-section-content-button">
-        <button class="btn secondary-btn">Learn About Our Process</button>
+        <button class="btn secondary-btn" [routerLink]="['/process']">Learn About Our Process</button>
       </div>
     </div>
     <div class="right-section-profile position-relative align-self-center">
@@ -67,7 +67,7 @@
           achieve your financial goals amidst the busy schedules and demanding lifestyles.</p>
       </div>
       <div class="right-section-content-button">
-        <button class="btn secondary-btn">Learn About Our Process</button>
+        <button class="btn secondary-btn" [routerLink]="['/about']">More About Me</button>
       </div>
     </div>
     <div class="left-section-profile align-self-center">
@@ -112,10 +112,10 @@
             </div>
             <div class="button-section d-flex gap-2">
               <button class="slide-btn btn-left" type="button" data-bs-target="#mySlider" data-bs-slide="prev">
-                <i class="bi bi-arrow-left"></i>
+                <img src="assets/Img/Svg/Arrow.svg" alt="arrow" style="transform: scaleX(-1);">
               </button>
               <button class="slide-btn active-btn btn-right" type="button" data-bs-target="#mySlider" data-bs-slide="next">
-                <i class="bi bi-arrow-right"></i>
+                <img src="assets/Img/Svg/Arrow.svg" alt="arrow">
               </button>
             </div>
           </div>
@@ -152,10 +152,10 @@
             </div>
             <div class="button-section d-flex gap-2">
               <button class="slide-btn btn-left" type="button" data-bs-target="#mySlider" data-bs-slide="prev">
-                <i class="bi bi-arrow-left"></i>
+                <img src="assets/Img/Svg/Arrow.svg" alt="arrow" style="transform: scaleX(-1);">
               </button>
               <button class="slide-btn active-btn btn-right" type="button" data-bs-target="#mySlider" data-bs-slide="next">
-                <i class="bi bi-arrow-right"></i>
+                <img src="assets/Img/Svg/Arrow.svg" alt="arrow">
               </button>
             </div>
           </div>
@@ -192,10 +192,10 @@
             </div>
             <div class="button-section d-flex gap-2">
               <button class="slide-btn btn-left" type="button" data-bs-target="#mySlider" data-bs-slide="prev">
-                <i class="bi bi-arrow-left"></i>
+                <img src="assets/Img/Svg/Arrow.svg" alt="arrow" style="transform: scaleX(-1);">
               </button>
               <button class="slide-btn active-btn btn-right" type="button" data-bs-target="#mySlider" data-bs-slide="next">
-                <i class="bi bi-arrow-right"></i>
+                <img src="assets/Img/Svg/Arrow.svg" alt="arrow">
               </button>
             </div>
           </div>
@@ -208,7 +208,7 @@
 
 <div class="content-layout d-none d-md-block position-relative">
   <div class="graphic horizontal-graphic position-absolute">
-    <img src="assets/Img/Png/horizontal-graphic.png" alt="">
+    <img src="assets/Img/Svg/home-graphic-element.svg" alt="" class="img-fluid">
   </div>
 </div>
 
@@ -221,7 +221,7 @@
       <div class="grid-item card">
         <div class="card-body">
           <div class="grid-item-title">
-            <h4 class="text-primary">Freedom from debt </h4>
+            <h3 class="text-primary">Freedom from debt </h3>
           </div>
           <div class="grid-item-body">
             <p class="text-info sm-text">We’ll review your tax returns to identity opportunities to reduce your tax
@@ -236,7 +236,7 @@
       <div class="grid-item card">
         <div class="card-body">
           <div class="grid-item-title">
-            <h4 class="text-primary">Building Long-term Wealth</h4>
+            <h3 class="text-primary">Building Long-term Wealth</h3>
           </div>
           <div class="grid-item-body">
             <p class="text-info sm-text">We can help you understand your risk tolerance and provide you with a
@@ -248,7 +248,7 @@
       <div class="grid-item card">
         <div class="card-body">
           <div class="grid-item-title">
-            <h4 class="text-primary">Retirement Planning</h4>
+            <h3 class="text-primary">Retirement Planning</h3>
           </div>
           <div class="grid-item-body">
             <p class="text-info sm-text">
@@ -261,7 +261,7 @@
       <div class="grid-item card">
         <div class="card-body">
           <div class="grid-item-title">
-            <h4 class="text-primary">Holistic life planning</h4>
+            <h3 class="text-primary">Holistic life planning</h3>
           </div>
           <div class="grid-item-body">
             <p class="text-info sm-text">
@@ -334,10 +334,10 @@
 
 <div class="content-layout">
   <div class="cover-main container  position-relative">
-    <div class="cover d-flex flex-column flex-md-row justify-content-md-between">
+    <div class="cover d-flex flex-column flex-md-row justify-content-between">
       <div class="cover-container">
         <div class="cover-container-title">
-          <h3 class="text-primary text-center text-md-start">Want to work with us? </h3>
+          <h2 class="text-primary text-center text-md-start">Want to work with us? </h2>
         </div>
         <div class="cover-container-body">
           <p class="body-text text-center text-md-start">Get in touch to know if we’re the right fit to help you plan for your financial planning
@@ -345,7 +345,8 @@
         </div>
       </div>
       <div class="cover-button align-self-center">
-        <button class="btn btn-outline-green">Let’s talk it over</button>
+        <!-- <button class="btn btn-outline-green">Let’s talk it over</button> -->
+        <button class="btn secondary-btn">Let’s Get Started</button>
       </div>
     </div>
     <div class="green-box position-absolute"></div>

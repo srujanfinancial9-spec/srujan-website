@@ -39,13 +39,18 @@ h2 {
 h3 {
   font-family: $title-font;
   font-weight: 600 !important;
-  font-size: 32px !important;
-  line-height: 38px !important;
+  font-size: 24px !important;
+  line-height: 32px !important;
   letter-spacing: -0.10000000149011612px !important;
   text-align: left;
-  @include media-breakpoint-up(md) {
+  @include media-breakpoint-up(lg){
     font-size: 40px !important;
     line-height: 46px !important;
+    letter-spacing: -0.10000000149011612px !important;
+  }
+  @include media-breakpoint-up(md) {
+    font-size: 32px !important;
+    line-height: 38px !important;
     letter-spacing: -0.10000000149011612px !important;
   }
 }
@@ -134,7 +139,7 @@ h6 {
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
-  letter-spacing: 0px;
+  letter-spacing: 0.5px;
   text-align: left;
   @include media-breakpoint-down(lg){
     font-size: 12px;

@@ -95,11 +95,11 @@
     }
     @include media-breakpoint-up(lg) {
       gap: 110px;
-      padding: 60px 165px;
+      padding: 60px 152px;
       margin-bottom: 164px;
     }
     &-container {
-      max-width: 448px;
+      max-width: 503px;
       &-title {
         margin-bottom: 8px;
         @include media-breakpoint-up(md){
@@ -171,17 +171,17 @@
 }
 .secondary-btn {
   padding: 16px;
-  background: #a9ff9b;
-  color: #004a43;
+  background: #068466;
+  color: #fff;
   font-family: $body-font;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 24px;
-  letter-spacing: 0.10000000149011612px;
+  letter-spacing: 0.5px;
   text-align: center;
   &:hover {
-    background: #a9ff9b;
-    color: #004a43;
+    background: $primary;
+    color: #fff;
   }
 }
 .footer-btn {
@@ -189,7 +189,7 @@
   // width: 178px;
   border-radius: 0px;
 
-  background: #0b2416;
+  background: $primary;
   color: #fff;
   border: 1px solid #a9ff9b;
   font-family: $body-font;
@@ -314,14 +314,16 @@
 }
 
 .slide-btn {
-  height: 24px;
-  width: 32px;
+  // height: 24px;
+  // width: 32px;
   border-radius: 0px;
   border: 1px solid #004a43;
   background: #fff;
+  padding: 0px 16px 4px 16px;
   @include media-breakpoint-up(lg) {
-    height: 30px;
-    width: 46px;
+    // padding: 16px;
+    // height: 30px;
+    // width: 46px;
   }
   &:hover {
     background: #a9ff9b;
