@@ -19,8 +19,8 @@
 
 <div class="text container">
   <div class="text-main">
-    <div class="text-main-left">
-      <div class="text-main-left-collapse-action">
+    <div class="text-main-left d-md-none">
+      <div class="text-main-left-collapse-action" [ngClass]="{'show-divider':showDivider}">
         <p class="text-primary body-text">Action</p>
         <a data-bs-toggle="collapse" href="#collapse" role="button" aria-expanded="true" aria-controls="collapse"
           (click)="imageChange()"><img src={{actionImgPath}} alt="dropdown"></a>

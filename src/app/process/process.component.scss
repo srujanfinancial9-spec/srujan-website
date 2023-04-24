@@ -26,12 +26,21 @@
       }
     }
     .process-line {
-      @include media-breakpoint-down(md){
+      @include media-breakpoint-down(md) {
         flex-wrap: wrap;
         gap: 20px;
       }
       &-item {
         width: 130px;
+        .header-icon {
+          margin: auto;
+          width: 64px;
+          height: 64px;
+          background: #31c3ae;
+          border: 1px solid #31c3ae;
+          border-radius: 12px;
+          padding-top: 14%;
+        }
       }
     }
   }
@@ -45,10 +54,10 @@
   }
   .text-content {
     max-width: 445px;
-    @include media-breakpoint-up(md){
+    @include media-breakpoint-up(md) {
       max-width: 350px;
     }
-    @include media-breakpoint-up(lg){
+    @include media-breakpoint-up(lg) {
       max-width: 500px;
     }
     .title {
@@ -60,7 +69,8 @@
     max-width: 555px;
     height: 250px;
     background: #ecf3f2;
-    @include media-breakpoint-up(md){
+    overflow: hidden;
+    @include media-breakpoint-up(md) {
       width: 300px;
       height: 300px;
     }
@@ -72,8 +82,38 @@
       height: 33px;
       width: 94px;
       border-radius: 0px;
-      background: #A9FF9B;
+      background: #a9ff9b;
       top: 34px;
+    }
+    .right-dashed-element {
+      top: 26%;
+      left: 21%;
+      @include media-breakpoint-down(lg) {
+        left: 0;
+      }
+    }
+    .left-dashed-element {
+      right: 32%;
+      top: 30%;
+      @include media-breakpoint-down(lg) {
+        right: 0;
+      }
+    }
+    .right-icon {
+      top: 46%;
+      left: 50%;
+      @include media-breakpoint-down(lg) {
+        top: 51%;
+        left: 54%;
+      }
+    }
+    .left-icon {
+      top: 48%;
+      left: 32%;
+      @include media-breakpoint-down(lg) {
+        top: 54%;
+        left: 35%;
+      }
     }
   }
 }

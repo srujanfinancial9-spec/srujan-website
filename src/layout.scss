@@ -102,7 +102,7 @@
       max-width: 503px;
       &-title {
         margin-bottom: 8px;
-        @include media-breakpoint-up(md){
+        @include media-breakpoint-up(md) {
           margin-bottom: 16px;
         }
       }
@@ -317,7 +317,7 @@
   // height: 24px;
   // width: 32px;
   border-radius: 0px;
-  border: 1px solid #004a43;
+  border: 1px solid $primary;
   background: #fff;
   padding: 0px 16px 4px 16px;
   @include media-breakpoint-up(lg) {
@@ -326,16 +326,22 @@
     // width: 46px;
   }
   &:hover {
-    background: #a9ff9b;
-    border: 1px solid #a9ff9b !important;
+    background: $primary;
+    border: 1px solid $primary !important;
+    path{
+      fill: #fff !important;
+    }
   }
 }
 .bi {
   color: #004a43;
 }
 .active-btn {
-  background: #a9ff9b !important;
-  border: 1px solid #a9ff9b !important;
+  background: $primary !important;
+  border: 1px solid $primary !important;
+  path{
+    fill: #fff !important;
+  }
 }
 
 .sepration {
@@ -389,7 +395,7 @@
     .body {
       padding: 24px 26px;
       border: 1px solid #d7e0d4;
-      @include media-breakpoint-up(lg){
+      @include media-breakpoint-up(lg) {
         padding: 24px 28px 24px 29px;
       }
     }

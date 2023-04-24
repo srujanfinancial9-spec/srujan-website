@@ -92,6 +92,12 @@ textarea {
     @include media-breakpoint-up(lg) {
       max-width: 445px;
     }
+    &-body {
+      margin-top: 16px;
+      @include media-breakpoint-up(lg) {
+        margin-top: 24px;
+      }
+    }
   }
   &-form {
     display: flex;
