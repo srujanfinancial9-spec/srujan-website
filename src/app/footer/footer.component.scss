@@ -98,12 +98,14 @@ a {
   &-bottom {
     border-top: 0.1px solid #fff;
     background: $primary;
+    padding: 32px 16px;
+    gap: 8px;
     @include media-breakpoint-up(lg) {
-      padding: 30px 65px;
+      padding: 32px 64px;
+      gap: 24px;
     }
-    gap: 20px;
     &-copyright {
-      gap: 17px;
+      gap: 16px;
     }
     &-social-media-links {
       display: flex;

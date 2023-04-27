@@ -7,7 +7,7 @@
     padding: 60px 0px;
   }
   @include media-breakpoint-up(lg) {
-    padding: 64px 0px;
+    padding: 72px 0px;
   }
 }
 
@@ -68,21 +68,76 @@
   padding-top: 32px;
   padding-bottom: 32px;
   .logo-section {
-    gap: 23px;
-    padding-left: 15px;
-    padding-right: 15px;
+    column-gap: 24px;
+    row-gap: 16px;
+    // padding-left: 15px;
+    // padding-right: 15px;
     @include media-breakpoint-up(md) {
-      gap: 32px;
-      padding: 40px 47px 0px 47px;
+      padding: 0px 0px 0px 0px;
+      column-gap: 12px;
+      row-gap: 4px;
     }
     @include media-breakpoint-up(lg) {
-      padding: 40px 167px 0px 167px;
-      gap: 88px;
+      padding: 40px 0px 0px 0px;
+      row-gap: 4px;
+    }
+    .featured-item {
+      .logo {
+        &-1 {
+          width: 240px;
+          height: 30px;
+          @include media-breakpoint-up(md){
+            width: 160px;
+            height: 20px;
+          }
+          @include media-breakpoint-up(lg) {
+            width: 320px;
+            height: 40px;
+          }
+        }
+        &-2{
+          width: 186px;
+          height: 30px;
+          @include media-breakpoint-up(md){
+            width: 124px;
+            height: 20px;
+          }
+          @include media-breakpoint-up(lg) {
+            width: 248px;
+            height: 40px;
+          }
+        }
+        &-3{
+          width: 237px;
+          height: 36px;
+          @include media-breakpoint-up(md){
+            width: 158px;
+            height: 24px;
+          }
+          @include media-breakpoint-up(lg) {
+            width: 316px;
+            height: 48px;
+          }
+        }
+        &-4{
+          width: 180px;
+          height: 42px;
+          @include media-breakpoint-up(md){
+            width: 120px;
+            height: 28px;
+          }
+          @include media-breakpoint-up(lg) {
+            width: 240px;
+            height: 56px;
+          }
+        }
+      }
     }
   }
 }
 
 .cover-main {
+  // max-width: 1250px !important;
   .cover {
     background: #fafbfa;
     border: 1px solid #016c62;
@@ -99,7 +154,10 @@
       margin-bottom: 164px;
     }
     &-container {
-      max-width: 503px;
+      max-width: 515px;
+      @include media-breakpoint-down(lg) {
+        max-width: 364px;
+      }
       &-title {
         margin-bottom: 8px;
         @include media-breakpoint-up(md) {
@@ -124,7 +182,7 @@
 }
 
 .btn-green {
-  background: #004a43;
+  background: #068466;
   color: #fff;
   font-family: $body-font;
   font-size: 16px;
@@ -134,7 +192,7 @@
   text-align: center;
   height: 44px;
   &:hover {
-    background: #004a43;
+    background: $primary;
     color: #fff;
   }
 }
@@ -179,6 +237,11 @@
   line-height: 24px;
   letter-spacing: 0.5px;
   text-align: center;
+  @include media-breakpoint-down(lg) {
+    padding: 12px;
+    font-size: 14px;
+    line-height: 20px;
+  }
   &:hover {
     background: $primary;
     color: #fff;
@@ -208,7 +271,7 @@
   width: 541px;
   border-radius: 0px;
 
-  background: #004a43;
+  background: #068466;
   color: #fff;
   font-family: $body-font;
   font-size: 16px;
@@ -217,7 +280,7 @@
   letter-spacing: 0.10000000149011612px;
   text-align: center;
   &:hover {
-    background: #004a43;
+    background: $primary;
     color: #fff;
   }
 }
@@ -328,7 +391,7 @@
   &:hover {
     background: $primary;
     border: 1px solid $primary !important;
-    path{
+    path {
       fill: #fff !important;
     }
   }
@@ -339,44 +402,31 @@
 .active-btn {
   background: $primary !important;
   border: 1px solid $primary !important;
-  path{
+  path {
     fill: #fff !important;
   }
 }
 
 .sepration {
   position: relative;
+  max-width: 900px;
+  margin: 16px 0px;
+  @include media-breakpoint-up(md) {
+    margin: 16px 32px;
+  }
+  @include media-breakpoint-up(lg) {
+    margin: 32px 197px;
+  }
   .dividers {
-    margin: auto;
-    // width: 320px;
-    max-width: 859px;
-    margin-top: 16px;
-    margin-bottom: 16px;
-    border-bottom: 2px solid #d7e0d4;
-    @include media-breakpoint-up(md) {
-      // width: 550px;
-    }
-    @include media-breakpoint-up(lg) {
-      margin-top: 32px;
-      margin-bottom: 32px;
-      // width: 859px;
-    }
+    border-bottom: 1px solid #000;
   }
   .rectangle-box {
     position: absolute;
     width: 10px;
     height: 10px;
-    right: 2%;
+    right: 0;
     top: 17px;
     background: #31c3ae;
-    @include media-breakpoint-up(md) {
-      right: 8%;
-      top: 18px;
-    }
-    @include media-breakpoint-up(lg) {
-      right: 17.5%;
-      top: 34px;
-    }
   }
 }
 
@@ -384,9 +434,9 @@
   gap: 30px;
   &-item {
     margin: auto;
-    max-width: 366px;
+    // max-width: 366px;
+    max-width: 420px;
     @include media-breakpoint-up(md) {
-      max-width: 420px;
     }
     .header {
       background: #f3f1ec;

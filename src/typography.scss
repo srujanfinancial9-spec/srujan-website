@@ -170,13 +170,13 @@ h6 {
 }
 .sub-title {
   font-family: $body-font;
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 18px;
+  font-weight: 600;
   line-height: 24px;
-  letter-spacing: 0.10000000149011612px;
+  letter-spacing: 0.1px;
   text-align: left;
   @include media-breakpoint-up(md) {
-    font-size: 18px;
+    font-size: 20px;
   }
 }
 .testimonial-title {

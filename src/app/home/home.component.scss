@@ -10,6 +10,10 @@
   }
 }
 .left {
+  margin-top: 64px;
+  @include media-breakpoint-down(lg) {
+    margin-top: 32px;
+  }
   &-section {
     gap: 28px;
     @include media-breakpoint-up(md) {
@@ -45,26 +49,38 @@
     }
     &-profile {
       order: 1;
+      border: 1px solid#4CA495;
       @include media-breakpoint-up(md) {
         order: 2;
       }
-      .feature {
-        z-index: 99;
-        left: 22%;
-        top: 8%;
-        @include media-breakpoint-down(md) {
-          width: 290px;
+      // .feature {
+      //   z-index: 99;
+      //   left: 22%;
+      //   top: 8%;
+      //   @include media-breakpoint-down(md) {
+      //     width: 290px;
+      //   }
+      //   @include media-breakpoint-up(lg) {
+      //     left: 45%;
+      //     top: -6%;
+      //   }
+      // }
+      .name-placeholder{
+        bottom:-12%;
+        @include media-breakpoint-up(lg){
+          bottom:-10%;
         }
-        @include media-breakpoint-up(lg) {
-          left: 45%;
-          top: -6%;
-        }
+        color: black;
       }
     }
   }
 }
 
 .right {
+  margin-top: 64px;
+  @include media-breakpoint-down(lg) {
+    margin-top: 32px;
+  }
   &-section {
     gap: 28px;
     @include media-breakpoint-up(lg) {
@@ -72,7 +88,10 @@
     }
     &-content {
       order: 2;
-      max-width: 350px;
+      max-width: 393px;
+      @include media-breakpoint-up(md){
+        max-width: 350px;
+      }
       @include media-breakpoint-up(lg) {
         max-width: 480px;
       }
@@ -171,10 +190,19 @@
             margin-top: 32px;
           }
         }
+        .body {
+          margin: auto;
+          max-width: 432px;
+          margin-top: 16px;
+          @include media-breakpoint-up(lg) {
+            max-width: 684px;
+            margin-top: 32px;
+          }
+        }
       }
       .info {
-        margin: auto;
         @include media-breakpoint-up(lg) {
+          margin: auto;
           width: 820px;
         }
         .button-section {
@@ -202,10 +230,13 @@
 
 .horizontal-graphic {
   top: 12px;
+  @include media-breakpoint-down(lg){
+    top: -62px;
+  }
 }
 .vertical-graphic {
   right: 0px;
-  bottom: -50%;
+  bottom: 72%;
   overflow: hidden;
   width: 120px;
 }

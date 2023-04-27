@@ -55,7 +55,7 @@
     }
     .nav-social-icon {
       @include media-breakpoint-down(lg) {
-        margin-top: 20% !important;
+        margin-top: 2% !important;
       }
       img{
         width: 20px;
@@ -83,6 +83,11 @@
   transform: translateY(-130%) translateZ(0px);
   @include media-breakpoint-down(lg) {
     height: 70vh;
+    top: -24px;
+  }
+  @include media-breakpoint-down(md){
+    height: 80vh;
+    top: -16px;
   }
   .cross-button {
     left: 80%;

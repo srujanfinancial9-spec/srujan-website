@@ -1,0 +1,12 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: srujan-financial-service
+spec:
+  selector:
+    app: srujan-financial
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: LoadBalancer
