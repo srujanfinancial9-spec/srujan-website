@@ -74,55 +74,6 @@
 .text {
   background: #fff;
   &-main {
-    &-left {
-      border: 1px solid $primary;
-      max-width: 500px;
-      margin: 40px 15px;
-      @include media-breakpoint-up(md) {
-        margin: 40px 55px;
-      }
-      @include media-breakpoint-up(lg) {
-        margin: 40px 60px;
-      }
-      &-collapse-action {
-        display: flex;
-        justify-content: space-between;
-        margin: 12px 15px;
-      }
-      .show-divider{
-        border-bottom: 1px solid #0065f24e;
-      }
-      &-collapse-menu {
-        padding: 24px 16px;
-        // @include media-breakpoint-up(md) {
-        //   padding: 40px 47px;
-        // }
-        // @include media-breakpoint-up(lg) {
-        //   padding: 60px 10px 60px 100px;
-        // }
-        &-item {
-          cursor: pointer;
-          margin-bottom: 1rem;
-        }
-      }
-    }
-    &-divider {
-      display: none;
-      @include media-breakpoint-up(md) {
-        display: block;
-        height: 1068px;
-        width: 1px;
-        border-radius: 0px;
-        background: #0065f2;
-        opacity: 0.15;
-        margin-top: 20px;
-        margin-right: 55px;
-      }
-      @include media-breakpoint-up(lg) {
-        height: 700px;
-        margin-right: 55px;
-      }
-    }
     &-right {
       padding: 40px 15px;
       @include media-breakpoint-up(md) {

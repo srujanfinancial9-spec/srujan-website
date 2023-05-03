@@ -102,9 +102,10 @@
   // }
   &-title {
     margin: auto;
-    max-width: 757px;
+    max-width: 674px;
     margin-bottom: 80px;
     @include media-breakpoint-up(lg) {
+      max-width: 1020px;
       margin-bottom: 118px;
     }
   }
@@ -183,6 +184,11 @@
         }
       }
     }
+  }
+}
+.about-logo{
+  @include media-breakpoint-up(lg){
+    gap: 240px !important;
   }
 }
 

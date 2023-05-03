@@ -12,31 +12,18 @@
   }
 }
 .progress-indicator {
-  height: 33px;
+  height: 38px;
   width: 94px;
   border-radius: 0px;
   background: #A9FF9B;
   top: 29px;
 }
-.profile-content{
-  background: #fff !important;
-  border: 1px solid #087A68;
-  @include media-breakpoint-up(lg){
-    width: 400px !important;
+.service-profile-content{
+  @include media-breakpoint-up(md) {
+    max-width: 300px;
+  }
+  @include media-breakpoint-up(lg) {
+    max-width: 555px;
   }
 }
-.element{
-  width: 350px;
-}
-.element-2{
-  top: -90px;
-  left: 38px;
-  z-index: 999;
-}
-.green-box{
-  bottom: -12px;
-  right: -12px;
-}
-.bg-brown{
-  background: #E9EFE7 !important;
-}
+

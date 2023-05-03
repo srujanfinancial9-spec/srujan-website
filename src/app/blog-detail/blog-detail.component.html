@@ -2,19 +2,7 @@
   <div class="hero-layout main-blog-container">
     <div class="header-part">
       <div class="button-section">
-        <button class="btn btn-secondary">
-          <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="me-1">
-            <g clip-path="url(#clip0_730_4393)">
-              <path
-                d="M4.72159 0.378052V1.24205C4.72159 3.72605 3.02959 5.11205 0.725586 5.13005V6.75005C3.02959 6.75005 4.72159 8.15405 4.72159 10.6201V11.4841H6.23359V10.6201C6.23359 8.67605 5.42359 7.36205 3.67759 6.89405V6.64205H14.2256V5.23805H3.67759V4.96805C5.42359 4.50005 6.23359 3.20405 6.23359 1.24205V0.378052H4.72159Z"
-                fill="#004A43" />
-            </g>
-            <defs>
-              <clipPath id="clip0_730_4393">
-                <rect width="15" height="12" fill="white" />
-              </clipPath>
-            </defs>
-          </svg>
+        <button class="btn secondary-btn">
           All
           posts</button>
       </div>
@@ -100,17 +88,37 @@
           <h2 class="text-primary">Recent Blog Posts</h2>
         </div>
         <div class="blog-header-button d-none d-md-block">
-          <button class="btn secondary-btn">View All </button>
+          <button class="btn secondary-btn" [routerLink]="['/blog']">View All </button>
         </div>
       </div>
       <div class="blog-tiles blog-component d-flex flex-column flex-md-row justify-content-between">
         <div class="blog-tiles-item">
-          <div class="header"></div>
+          <div class="header d-flex justify-content-center">
+            <img src="assets/Img/Png/image_28.png" alt="image_28">
+          </div>
           <div class="body">
-            <h5 class="text-primary">Long headline to turn your visitors</h5>
-            <p class="text-info body-text">Harmonious colour themes have built up as the collection has evolved. </p>
+            <h5 class="text-primary">Key Tips For Sticking To Your Budget</h5>
+            <p class="text-primary body-text">As someone who has been living on one income for years, I know firsthand the
+            </p>
             <div class="link">
-              <button class="btn btn-primary-link text-primary">Read Now</button>
+              <button class="btn btn-primary-link fw-bold">Read Now</button>
+              <svg width="7" height="11" viewBox="0 0 7 11" fill="none" class="mt-1" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.5 1.5L5.5 5.5L1.5 9.5" stroke="#016C62" stroke-width="1.5" />
+              </svg>
+
+            </div>
+          </div>
+        </div>
+        <div class="blog-tiles-item">
+          <div class="header d-flex justify-content-center">
+            <img src="assets/Img/Png/money.png" alt="money">
+          </div>
+          <div class="body">
+            <h5 class="text-primary">How To Stop Worrying About Money</h5>
+            <p class="text-primary body-text">Money is a big stress factor for many people. So, if you’ve found yourself
+            </p>
+            <div class="link">
+              <button class="btn btn-primary-link fw-bold">Read Now</button>
               <svg width="7" height="11" viewBox="0 0 7 11" fill="none" class="mt-1" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1.5 1.5L5.5 5.5L1.5 9.5" stroke="#016C62" stroke-width="1.5" />
               </svg>
@@ -118,25 +126,16 @@
           </div>
         </div>
         <div class="blog-tiles-item">
-          <div class="header"></div>
-          <div class="body">
-            <h5 class="text-primary">Long headline to turn your visitors</h5>
-            <p class="text-info body-text">Harmonious colour themes have built up as the collection has evolved. </p>
-            <div class="link">
-              <button class="btn btn-primary-link text-primary">Read Now</button>
-              <svg width="7" height="11" viewBox="0 0 7 11" fill="none" class="mt-1" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1.5 1.5L5.5 5.5L1.5 9.5" stroke="#016C62" stroke-width="1.5" />
-              </svg>
-            </div>
+          <div class="header d-flex justify-content-center">
+            <img src="assets/Img/Png/steps.png" alt="steps">
           </div>
-        </div>
-        <div class="blog-tiles-item">
-          <div class="header"></div>
           <div class="body">
-            <h5 class="text-primary">Long headline to turn your visitors</h5>
-            <p class="text-info body-text">Harmonious colour themes have built up as the collection has evolved. </p>
+            <h5 class="text-primary">How To Set Realistic Goals For Your Future</h5>
+            <p class="text-primary body-text">Setting realistic goals can be a powerful way to start making progress
+              towards
+            </p>
             <div class="link">
-              <button class="btn btn-primary-link text-primary">Read Now</button>
+              <button class="btn btn-primary-link fw-bold">Read Now</button>
               <svg width="7" height="11" viewBox="0 0 7 11" fill="none" class="mt-1" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1.5 1.5L5.5 5.5L1.5 9.5" stroke="#016C62" stroke-width="1.5" />
               </svg>

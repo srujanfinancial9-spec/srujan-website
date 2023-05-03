@@ -2,13 +2,13 @@
   <div class="navbar-links d-flex flex-column justify-content-center text-center mb-0">
     <div class="navbar-link-item text-info" [ngClass]="{'show-menu': show, 'delay-1s':show}" [routerLink]="['/']"
       (click)="hideMobileLayout()"><a>Home</a></div>
+      <div class="navbar-link-item text-info" [ngClass]="{'show-menu': show, 'delay-3s':show}"
+        [routerLink]="['/services']" (click)="hideMobileLayout()"><a>Services</a>
+      </div>
     <div class="navbar-link-item text-info" [ngClass]="{'show-menu': show, 'delay-2s':show}" [routerLink]="['/about']"
       (click)="hideMobileLayout()"><a>About</a></div>
-    <div class="navbar-link-item text-info" [ngClass]="{'show-menu': show, 'delay-3s':show}"
-      [routerLink]="['/services']" (click)="hideMobileLayout()"><a>Our Services</a>
-    </div>
     <div class="navbar-link-item text-info" [ngClass]="{'show-menu': show, 'delay-4s':show}" [routerLink]="['/process']"
-      (click)="hideMobileLayout()"><a>Our Process</a>
+      (click)="hideMobileLayout()"><a>Process</a>
     </div>
     <div class="navbar-link-item text-info" [ngClass]="{'show-menu': show, 'delay-5s':show}" [routerLink]="['/blog']"
       (click)="hideMobileLayout()"><a>Blog</a></div>
@@ -101,21 +101,14 @@
     <div class="navbar-items d-none d-lg-flex">
       <div class="navbar-links d-flex mb-0">
         <div class="navbar-link-item text-info" [routerLink]="['/']" (click)="hideMobileLayout()"><a>Home</a></div>
-        <div class="navbar-link-item text-info" [routerLink]="['/about']" (click)="hideMobileLayout()"><a>About</a>
-        </div>
-        <div class="navbar-link-item text-info" [routerLink]="['/services']" (click)="hideMobileLayout()"><a>Our
-            Services</a>
-        </div>
-        <div class="navbar-link-item text-info" [routerLink]="['/process']" (click)="hideMobileLayout()"><a>Our
-            Process</a>
-        </div>
+        <div class="navbar-link-item text-info" [routerLink]="['/services']" (click)="hideMobileLayout()"><a>Services</a></div>
+        <div class="navbar-link-item text-info" [routerLink]="['/about']" (click)="hideMobileLayout()"><a>About</a></div>
+        <div class="navbar-link-item text-info" [routerLink]="['/process']" (click)="hideMobileLayout()"><a>Process</a></div>
         <div class="navbar-link-item text-info" [routerLink]="['/blog']" (click)="hideMobileLayout()"><a>Blog</a></div>
-        <div class="navbar-link-item text-info" [routerLink]="['/contact']" (click)="hideMobileLayout()"><a>Contact</a>
-        </div>
       </div>
     </div>
     <div class="navbar-action d-none d-lg-flex">
-      <button class="btn btn-green">Get In touch</button>
+      <button class="btn btn-green" [routerLink]="['/contact']">Get In touch</button>
     </div>
   </div>
 </div>

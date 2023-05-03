@@ -47,6 +47,7 @@
 }
 
 .layout {
+  gap: 25px;
   @include media-breakpoint-up(lg) {
     padding-top: 60px;
     padding-bottom: 60px;
@@ -113,6 +114,45 @@
       @include media-breakpoint-down(lg) {
         top: 54%;
         left: 35%;
+      }
+    }
+  }
+}
+
+.faq {
+  gap: 80px;
+  @include media-breakpoint-up(lg) {
+    gap: 110px;
+  }
+  &-header {
+    max-width: 300px;
+    @include media-breakpoint-up(md){
+      max-width: 300px;
+    }
+    @include media-breakpoint-up(lg){
+      max-width: 427px;
+    }
+    .body {
+      margin-top: 16px;
+      @include media-breakpoint-up(lg) {
+        margin-top: 24px;
+      }
+    }
+  }
+  &-question {
+    &-item {
+      max-width: 540px;
+      border-bottom: 1px solid #004a43;
+      margin-bottom: 16px;
+      @include media-breakpoint-up(md){
+        max-width: 300px;
+      }
+      @include media-breakpoint-up(lg){
+        max-width: 540px;
+      }
+      .question {
+        overflow: hidden;
+        cursor: pointer;
       }
     }
   }
