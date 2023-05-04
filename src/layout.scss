@@ -11,6 +11,14 @@
   }
 }
 
+.content{
+  &-title{
+    @include media-breakpoint-down(md){
+      max-width: 317px;
+    }
+  }
+}
+
 .section-gap {
   margin-top: 32px;
   margin-bottom: 32px;
@@ -27,9 +35,6 @@
 
 .cards-row {
   gap: 15px !important;
-  @include media-breakpoint-up(lg) {
-    // gap: 30px !important;
-  }
   &-item {
     max-width: 348px;
     overflow: hidden;
@@ -84,7 +89,6 @@
           width: 217px;
           height: 20px;
           @include media-breakpoint-up(md) {
-            // width: 160px;
             height: 20px;
           }
           @include media-breakpoint-up(lg) {
@@ -97,7 +101,6 @@
           height: 26px;
           @include media-breakpoint-up(md) {
             width: 124px;
-            // height: 20px;
           }
           @include media-breakpoint-up(lg) {
             width: 248px;
@@ -109,7 +112,6 @@
           height: 28px;
           @include media-breakpoint-up(md) {
             width: 158px;
-            // height: 24px;
           }
           @include media-breakpoint-up(lg) {
             width: 316px;
@@ -120,10 +122,6 @@
           width: 131px;
           height: 41px;
           top: -7px;
-          @include media-breakpoint-up(md) {
-            // width: 120px;
-            // height: 28px;
-          }
           @include media-breakpoint-up(lg) {
             width: 240px;
             height: 56px;
@@ -135,7 +133,6 @@
 }
 
 .cover-main {
-  // max-width: 1250px !important;
   .cover {
     background: #fafbfa;
     border: 1px solid #016c62;
@@ -152,7 +149,6 @@
       margin-bottom: 164px;
     }
     &-container {
-      // max-width: 515px;
       max-width: 680px;
       @include media-breakpoint-down(lg) {
         max-width: 380px;
@@ -194,56 +190,10 @@
   height: 100px;
   border-radius: 10px;
 }
-
-.btn-green {
-  background: #068466;
-  color: #fff;
-  font-family: $body-font;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 24px;
-  letter-spacing: 0.10000000149011612px;
-  text-align: center;
-  height: 44px;
-  &:hover {
-    background: $primary;
-    color: #fff;
-  }
-}
-.btn-input {
-  background: #004a43;
-  color: #fff;
-  font-family: $body-font;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 24px;
-  letter-spacing: 0.10000000149011612px;
-  text-align: center;
-  height: 48px;
-  &:hover {
-    background: #004a43;
-    color: #fff;
-  }
-}
-.btn-light-green {
-  background: #087a68;
-  color: #fff;
-  font-family: $body-font;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 24px;
-  letter-spacing: 0.10000000149011612px;
-  text-align: center;
-  height: 44px;
-  border-radius: 0 !important;
-  &:hover {
-    background: #087a68;
-    color: #fff;
-  }
-}
 .secondary-btn {
   padding: 12px 30px;
   background: #068466;
+  border: 1px solid #068466;
   color: #fff;
   font-family: $body-font;
   font-size: 16px;
@@ -252,19 +202,25 @@
   letter-spacing: 0.5px;
   text-align: center;
   @include media-breakpoint-down(lg) {
-    // padding: 12px 30px;
     font-size: 14px;
     line-height: 20px;
   }
-  &:hover {
+  &:hover{
+    background: $primary;
+    border: 1px solid $primary;
+    color: #fff;
+  }
+  &:active{
+    transform: scale(0.98);
+    border: 1px solid $primary;
     background: $primary;
     color: #fff;
   }
 }
 .footer-btn {
-  height: 48px;
+  padding: 12px 30px;
   border-radius: 0px;
-
+  background: transparent;
   color: #004a43;
   border: 1px solid #a0e4b0;
   font-family: $body-font;
@@ -273,101 +229,12 @@
   line-height: 24px;
   letter-spacing: 0.10000000149011612px;
   text-align: center;
-  &:hover {
+  &:hover, &:active {
     background: #a9ff9b;
+    border: 1px solid #a0e4b0;
     .calling-feature {
       color: $primary !important;
     }
-  }
-}
-.btn-lg-green {
-  height: 48px;
-  width: 541px;
-  border-radius: 0px;
-
-  background: #068466;
-  color: #fff;
-  font-family: $body-font;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 24px;
-  letter-spacing: 0.10000000149011612px;
-  text-align: center;
-  &:hover {
-    background: $primary;
-    color: #fff;
-  }
-}
-.nav-btn {
-  background: #004a43;
-  color: #fff;
-  font-family: $body-font;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 24px;
-  letter-spacing: 0.1000000015px;
-  text-align: center;
-  height: 48px;
-  // width: 330px;
-  margin-top: 13px;
-  &:hover {
-    background: #004a43;
-    color: #fff;
-  }
-}
-.btn-outline-green {
-  height: 48px;
-  width: 178px;
-  border-radius: 0px;
-
-  background: #fff;
-  color: #068466;
-  border: 1px solid #068466;
-  font-family: $body-font;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 24px;
-  letter-spacing: 0.10000000149011612px;
-  text-align: center;
-  &:hover {
-    background: #004a43;
-    color: #fff;
-  }
-}
-.blog-btn {
-  height: 42px;
-  width: 140.03125px;
-  border-radius: 4px;
-  border: 2px solid #575757;
-  font-family: $body-font;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 22px;
-  letter-spacing: 0em;
-  text-align: left;
-  color: #004a43;
-  &:hover {
-    background: #575757;
-    color: #fff;
-  }
-}
-.btn-outline-call {
-  height: 48px;
-  width: 221px;
-  border-radius: 0px;
-
-  background: #fff;
-  color: #068466;
-  border: 1px solid #068466;
-  font-family: $body-font;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 24px;
-  letter-spacing: 0.10000000149011612px;
-  text-align: center;
-  &:hover {
-    background: #004a43;
-    color: #fff;
   }
 }
 .btn-primary-link {
@@ -384,25 +251,13 @@
   padding: 0 !important;
   padding-right: 7px !important;
 }
-.circle-btn-border {
-  padding: 10px 11.5px 9px 11.5px;
-  border: 1px solid #d7e0d4;
-  border-radius: 50%;
-}
 
 .slide-btn {
-  // height: 24px;
-  // width: 32px;
   border-radius: 0px;
   border: 1px solid $primary;
   background: #fff;
   padding: 0px 16px 4px 16px;
-  @include media-breakpoint-up(lg) {
-    // padding: 16px;
-    // height: 30px;
-    // width: 46px;
-  }
-  &:hover {
+  &:hover, &:active {
     background: #068466;
     border: 1px solid #068466 !important;
     path {
@@ -410,9 +265,6 @@
     }
   }
 }
-// .bi {
-//   color: #004a43;
-// }
 .active-btn {
   background: #068466 !important;
   border: 1px solid #068466 !important;
@@ -448,7 +300,6 @@
   gap: 30px;
   &-item {
     margin: auto;
-    // max-width: 366px;
     max-width: 420px;
     @include media-breakpoint-up(md) {
     }

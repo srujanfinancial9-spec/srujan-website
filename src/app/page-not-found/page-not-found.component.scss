@@ -22,11 +22,15 @@
       &-body{
         margin: auto;
         max-width: 308px;
+        margin-top: 16px;
+        @include media-breakpoint-up(lg) {
+          margin-top: 24px;
+        }
       }
       &-button {
-        margin-top: 28px;
+        margin-top: 24px;
         @include media-breakpoint-up(lg) {
-          margin-top: 40px;
+          margin-top: 32px;
         }
       }
     }

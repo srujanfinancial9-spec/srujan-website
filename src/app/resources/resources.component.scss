@@ -13,26 +13,21 @@
       padding: 50px 165px 50px 165px;
     }
     @include media-breakpoint-up(lg){
-      padding: 99px 165px 122px 165px;
-    }
-    .pattern {
-      @include media-breakpoint-up(md) {
-        height: 340px;
-      }
-      @include media-breakpoint-up(lg) {
-        height: 390px;
-      }
+      padding: 99px 165px 127px 165px;
     }
     .left-pattern {
-      top: 0.5px;
+      bottom: 0px;
       left: -70px;
     }
     .right-pattern {
-      top: 0.5px;
+      top: 0px;
       right: -70px;
     }
     &-container {
-      max-width: 730px;
+      max-width: 760px;
+      @include media-breakpoint-down(lg){
+        max-width: 404px;
+      }
       &-tag {
         margin-bottom: 1rem;
       }
