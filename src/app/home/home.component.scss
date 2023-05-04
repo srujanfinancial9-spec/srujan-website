@@ -9,16 +9,12 @@
     height: 440px;
   }
 }
-.content-width{
-  @include media-breakpoint-up(lg){
-    max-width: 480px !important;
-  }
-}
 .body-width{
   @include media-breakpoint-up(lg){
     max-width: 470px !important;
   }
 }
+
 .green-border{
   border: 1px solid #4CA495;
 }
@@ -97,6 +93,11 @@
       @include media-breakpoint-up(lg) {
         max-width: 515px;
       }
+      &-title{
+        @include media-breakpoint-down(md){
+          max-width: 300px;
+        }
+      }
       &-body {
         margin-top: 16px;
         @include media-breakpoint-up(lg) {
@@ -132,7 +133,7 @@
   @include media-breakpoint-down(md) {
     margin: auto;
     margin-bottom: 24px;
-    max-width: 267px;
+    max-width: 280px;
   }
 }
 .grid {

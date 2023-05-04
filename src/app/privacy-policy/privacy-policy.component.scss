@@ -36,20 +36,13 @@
     @include media-breakpoint-up(lg) {
       padding: 129px 165px 156px 165px;
     }
-    .pattern {
-      @include media-breakpoint-up(md) {
-        height: 340px;
-      }
-      @include media-breakpoint-up(lg) {
-        height: 390px;
-      }
-    }
+
     .left-pattern {
-      top: 0.5px;
+      bottom: 0px;
       left: -70px;
     }
     .right-pattern {
-      top: 0.5px;
+      top: 0px;
       right: -70px;
     }
     &-container {
