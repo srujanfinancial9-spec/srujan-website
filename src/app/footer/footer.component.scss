@@ -13,28 +13,44 @@ ul {
 }
 a {
   text-decoration: none;
-  opacity: 0.8;
   &:hover {
+    color: #a0e4b0 !important;
+  }
+}
+.websitelink {
+  &:hover {
+    color: #fff !important;
+  }
+}
+.no-highlight {
+  color: #d8d8d8 !important;
+  opacity: 0.4;
+  &:hover {
+    color: #fff !important;
     opacity: 1;
   }
 }
-.divider {
-  margin: auto;
-  max-width: 1295px;
-  border-color: $primary;
-  margin-top: 28px;
-  margin-bottom: 28px;
-  @include media-breakpoint-up(lg) {
-    margin-bottom: 20px;
-    margin-top: 120px;
-  }
+.calling-feature {
+  color: #fff;
 }
 
+// .border-top {
+//   // margin: auto;
+//   // max-width: 1295px;
+//   border-top: 1px solid #fff;
+//   // margin-top: 28px;
+//   // margin-bottom: 28px;
+//   // @include media-breakpoint-up(lg) {
+//   //   margin-bottom: 20px;
+//   //   margin-top: 120px;
+//   // }
+// }
+
 .footer {
-  background: #0b2416;
+  background: $primary;
   padding: 40px 15px;
   @include media-breakpoint-up(lg) {
-    padding: 40px 65px;
+    padding: 40px 65px 144px 65px;
   }
   &-top {
     &-container {
@@ -72,7 +88,7 @@ a {
         .page-links {
           display: flex;
           flex-direction: column;
-          gap: 12px;
+          gap: 4px;
           @include media-breakpoint-up(lg) {
             gap: 8px;
           }
@@ -81,9 +97,16 @@ a {
     }
   }
   &-bottom {
-    gap: 20px;
+    border-top: 0.1px solid #fff;
+    background: $primary;
+    padding: 32px 16px;
+    gap: 8px;
+    @include media-breakpoint-up(lg) {
+      padding: 32px 64px;
+      gap: 24px;
+    }
     &-copyright {
-      gap: 17px;
+      gap: 16px;
     }
     &-social-media-links {
       display: flex;
@@ -99,8 +122,28 @@ a {
   }
 }
 .footer-element {
-  @include media-breakpoint-up(lg){
-    right: -9%;
-    top: -10%;
+  @include media-breakpoint-up(lg) {
+    left: -10.5%;
+    top: 5%;
+  }
+}
+
+.underline {
+  position: relative;
+  &:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  &:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
   }
 }

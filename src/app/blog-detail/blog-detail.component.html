@@ -2,7 +2,8 @@
   <div class="hero-layout main-blog-container">
     <div class="header-part">
       <div class="button-section">
-        <button class="btn blog-btn"><img src="assets/Img/Svg/blog-detail-right-arrow.svg" class="me-1" alt="arrow"> All
+        <button class="btn secondary-btn">
+          All
           posts</button>
       </div>
       <div class="sub-title">
@@ -31,7 +32,8 @@
     </div>
     <div class="body-part">
       <h3 class="text-primary">The software development company</h3>
-      <p class="blog-text text-primary">First, who are these agencies? (Narrating voice ON). They go by many names, and they will introduce themselves as:</p>
+      <p class="blog-text text-primary">First, who are these agencies? (Narrating voice ON). They go by many names, and
+        they will introduce themselves as:</p>
       <div class="list">
         <p class="blog-text text-primary">software development company</p>
         <p class="blog-text text-primary">software development agency</p>
@@ -48,18 +50,28 @@
         <p class="blog-text text-primary">"Need engineers?"</p>
         <p class="blog-text text-primary">"What are your needs in FE, UX and design?"</p>
         <p class="blog-text text-primary">"Are you looking to accelerate your mobile development?" and</p>
-        <p class="blog-text text-primary">"We saw that you're looking to hire Java developers. We have 2 Java experts that we can staff quickly".</p>
+        <p class="blog-text text-primary">"We saw that you're looking to hire Java developers. We have 2 Java experts
+          that we can staff quickly".</p>
       </div>
       <p class="blog-text text-primary">They typically charge per day or per hour of a person.</p>
     </div>
     <div class="body-part">
       <h3 class="text-primary">The problem of the tech industry: capacity</h3>
-      <p class="blog-text text-primary">Right now, in early 2023, the hiring frenzy has cooled down and in fact we're in rationalization mode. But it is still true that there is a shortage of tech talent inside Startups and business operators.</p>
-      <p class="blog-text text-primary">At the same time, software development agencies are always trying to score more business.</p>
-      <p class="blog-text text-primary">How can there be a shortage of engineering capacity and oversupply at the same time?</p>
-      <p class="blog-text text-primary">I think the problem isn't (just) capacity. In my opinion the problem is more around trust and efficiency.</p>
-      <p class="blog-text text-primary">What's tech outsourcing got to do with trust? Because it's hard for a company to formulate a problem that is easy to externalize and manage with a new supplier, who will have to be culturally, technically and financially integrated into the operation. This is very inefficient, and frequently wipes away many of the potencial benefits of IT agencies.</p>
-      <p class="blog-text text-primary">Integrating with an outsider hard to do, and very hard to do well. In practice, companies in general shy away from using with some exceptions.</p>
+      <p class="blog-text text-primary">Right now, in early 2023, the hiring frenzy has cooled down and in fact we're in
+        rationalization mode. But it is still true that there is a shortage of tech talent inside Startups and business
+        operators.</p>
+      <p class="blog-text text-primary">At the same time, software development agencies are always trying to score more
+        business.</p>
+      <p class="blog-text text-primary">How can there be a shortage of engineering capacity and oversupply at the same
+        time?</p>
+      <p class="blog-text text-primary">I think the problem isn't (just) capacity. In my opinion the problem is more
+        around trust and efficiency.</p>
+      <p class="blog-text text-primary">What's tech outsourcing got to do with trust? Because it's hard for a company to
+        formulate a problem that is easy to externalize and manage with a new supplier, who will have to be culturally,
+        technically and financially integrated into the operation. This is very inefficient, and frequently wipes away
+        many of the potencial benefits of IT agencies.</p>
+      <p class="blog-text text-primary">Integrating with an outsider hard to do, and very hard to do well. In practice,
+        companies in general shy away from using with some exceptions.</p>
     </div>
     <div class="blog-end">
       <p class="blog-text fw-bold">If you work for an IT agency, DM today.</p>
@@ -76,41 +88,57 @@
           <h2 class="text-primary">Recent Blog Posts</h2>
         </div>
         <div class="blog-header-button d-none d-md-block">
-          <button class="btn secondary-btn">View All </button>
+          <button class="btn secondary-btn" [routerLink]="['/blog']">View All </button>
         </div>
       </div>
       <div class="blog-tiles blog-component d-flex flex-column flex-md-row justify-content-between">
         <div class="blog-tiles-item">
-          <div class="header"></div>
+          <div class="header d-flex justify-content-center">
+            <img src="assets/Img/Png/image_28.png" alt="image_28">
+          </div>
           <div class="body">
-            <h5 class="text-primary">Long headline to turn your visitors</h5>
-            <p class="text-info body-text">Harmonious colour themes have built up as the collection has evolved. </p>
+            <h5 class="text-primary">Key Tips For Sticking To Your Budget</h5>
+            <p class="text-primary body-text">As someone who has been living on one income for years, I know firsthand the
+            </p>
             <div class="link">
-              <button class="btn btn-primary-link text-primary">Read Now</button>
-              <img src="assets/Img/Svg/right-arrow.svg" class="mt-1" alt="right arrow">
+              <button class="btn btn-primary-link fw-bold">Read Now</button>
+              <svg width="7" height="11" viewBox="0 0 7 11" fill="none" class="mt-1" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.5 1.5L5.5 5.5L1.5 9.5" stroke="#016C62" stroke-width="1.5" />
+              </svg>
+
             </div>
           </div>
         </div>
         <div class="blog-tiles-item">
-          <div class="header"></div>
+          <div class="header d-flex justify-content-center">
+            <img src="assets/Img/Png/money.png" alt="money">
+          </div>
           <div class="body">
-            <h5 class="text-primary">Long headline to turn your visitors</h5>
-            <p class="text-info body-text">Harmonious colour themes have built up as the collection has evolved. </p>
+            <h5 class="text-primary">How To Stop Worrying About Money</h5>
+            <p class="text-primary body-text">Money is a big stress factor for many people. So, if you’ve found yourself
+            </p>
             <div class="link">
-              <button class="btn btn-primary-link text-primary">Read Now</button>
-              <img src="assets/Img/Svg/right-arrow.svg" class="mt-1" alt="right arrow">
+              <button class="btn btn-primary-link fw-bold">Read Now</button>
+              <svg width="7" height="11" viewBox="0 0 7 11" fill="none" class="mt-1" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.5 1.5L5.5 5.5L1.5 9.5" stroke="#016C62" stroke-width="1.5" />
+              </svg>
             </div>
           </div>
         </div>
         <div class="blog-tiles-item">
-          <div class="header"></div>
+          <div class="header d-flex justify-content-center">
+            <img src="assets/Img/Png/steps.png" alt="steps">
+          </div>
           <div class="body">
-            <h5 class="text-primary text-center text-md-start">Long headline to turn your visitors</h5>
-            <p class="text-info body-text text-center text-md-start">Harmonious colour themes have built up as the
-              collection has evolved. </p>
+            <h5 class="text-primary">How To Set Realistic Goals For Your Future</h5>
+            <p class="text-primary body-text">Setting realistic goals can be a powerful way to start making progress
+              towards
+            </p>
             <div class="link">
-              <button class="btn btn-primary-link text-primary">Read Now</button>
-              <img src="assets/Img/Svg/right-arrow.svg" class="mt-1" alt="right arrow">
+              <button class="btn btn-primary-link fw-bold">Read Now</button>
+              <svg width="7" height="11" viewBox="0 0 7 11" fill="none" class="mt-1" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.5 1.5L5.5 5.5L1.5 9.5" stroke="#016C62" stroke-width="1.5" />
+              </svg>
             </div>
           </div>
         </div>

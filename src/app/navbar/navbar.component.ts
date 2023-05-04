@@ -7,18 +7,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
   show = false;
+  icon = "assets/Img/Svg/hamburger.svg";
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  showMobileLayout() {
-    console.log("show")
-    this.show = true;
+  toggle() {
+    if (this.show == false) {
+      this.show = true;
+      this.icon ="assets/Img/Svg/Close.svg";
+    } else {
+      this.show = false;
+      this.icon = "assets/Img/Svg/hamburger.svg";
+    }
   }
   hideMobileLayout() {
-    console.log("hide")
     this.show = false;
+    this.icon = "assets/Img/Svg/hamburger.svg";
   }
 }

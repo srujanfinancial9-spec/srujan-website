@@ -1,50 +1,114 @@
-<div class="mobile-menu-layout container-fluid" [ngClass]="{'show-layout': show, hide: !show}">
-  <button type="button" (click)="hideMobileLayout()" class="cross-button position-relative">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" class="bi bi-x-lg" viewBox="0 0 16 16">
-      <path
-        d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
-    </svg>
-  </button>
-</div>
-<div class="navbar-items d-flex d-lg-none">
-  <div class="navbar-links d-flex flex-column justify-content-center text-center mb-0"
-    [ngClass]="{show: show, hide: !show}">
-    <div class="navbar-link-item text-info" [routerLink]="['/']" (click)="hideMobileLayout()"><a>Home</a></div>
-    <div class="navbar-link-item text-info" [routerLink]="['/about']" (click)="hideMobileLayout()"><a>About</a></div>
-    <div class="navbar-link-item text-info" [routerLink]="['/services']" (click)="hideMobileLayout()"><a>Our Services</a>
+<div class="mobile-menu-layout container-fluid" [ngClass]="{'show-layout': show, 'hide-layout': !show}">
+  <div class="navbar-links d-flex flex-column justify-content-center text-center mb-0">
+    <div class="navbar-link-item text-info" [ngClass]="{'show-menu': show, 'delay-1s':show}" [routerLink]="['/']"
+      (click)="hideMobileLayout()"><a>Home</a></div>
+      <div class="navbar-link-item text-info" [ngClass]="{'show-menu': show, 'delay-3s':show}"
+        [routerLink]="['/services']" (click)="hideMobileLayout()"><a>Services</a>
+      </div>
+    <div class="navbar-link-item text-info" [ngClass]="{'show-menu': show, 'delay-2s':show}" [routerLink]="['/about']"
+      (click)="hideMobileLayout()"><a>About</a></div>
+    <div class="navbar-link-item text-info" [ngClass]="{'show-menu': show, 'delay-4s':show}" [routerLink]="['/process']"
+      (click)="hideMobileLayout()"><a>Process</a>
     </div>
-    <div class="navbar-link-item text-info" [routerLink]="['/process']" (click)="hideMobileLayout()"><a>Our Process</a>
+    <div class="navbar-link-item text-info" [ngClass]="{'show-menu': show, 'delay-5s':show}" [routerLink]="['/blog']"
+      (click)="hideMobileLayout()"><a>Blog</a></div>
+    <div class="navbar-link-item text-info d-grid" [ngClass]="{'show-menu': show, 'delay-6s':show}"
+      [routerLink]="['/contact']" (click)="hideMobileLayout()">
+      <button class="btn nav-btn">Contact</button>
     </div>
-    <div class="navbar-link-item text-info" [routerLink]="['/blog']" (click)="hideMobileLayout()"><a>Blog</a></div>
-    <div class="navbar-link-item text-info" [routerLink]="['/contact']" (click)="hideMobileLayout()"><a>Contact</a>
+    <div class="mt-5 navbar-link-item gap-3 d-flex nav-social-icon" [ngClass]="{'show-menu': show, 'delay-7s':show}">
+      <svg width="20" height="20" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M15.1172 0H0.882759C0.395224 0 0 0.395224 0 0.882759V15.1172C0 15.6048 0.395224 16 0.882759 16H8.55172V9.81241H6.46897V7.39034H8.55172V5.60828C8.55172 3.54207 9.81517 2.41655 11.6579 2.41655C12.2789 2.4152 12.8995 2.4465 13.5172 2.51034V4.67034H12.2483C11.2441 4.67034 11.0483 5.14483 11.0483 5.84552V7.38759H13.4483L13.1366 9.80966H11.0345V16H15.1172C15.6048 16 16 15.6048 16 15.1172V0.882759C16 0.395224 15.6048 0 15.1172 0Z"
+          fill="#D8D8D8" />
+      </svg>
+
+      <svg width="20" height="20" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M13.6345 13.6338H11.262V9.92C11.262 9.03467 11.246 7.896 10.0281 7.896C8.79427 7.896 8.60581 8.86133 8.60581 9.85689V13.6338H6.23501V5.99822H8.50892V7.04178H8.54181C8.85916 6.44178 9.63253 5.80889 10.7873 5.80889C13.191 5.80889 13.6345 7.38933 13.6345 9.44622V13.6338ZM3.55931 4.95556C2.7966 4.95556 2.18145 4.33867 2.18145 3.57867C2.18145 2.81956 2.7966 2.20267 3.55931 2.20267C4.31757 2.20267 4.9345 2.81956 4.9345 3.57867C4.9345 4.33867 4.31757 4.95556 3.55931 4.95556ZM2.36991 13.6338H4.74604V5.99822H2.36991V13.6338ZM14.8159 0H1.17962C0.528918 0 0 0.516444 0 1.15378V14.8453C0 15.4827 0.528918 16 1.17962 16H14.8159C15.4684 16 16 15.4827 16 14.8453V1.15378C16 0.516444 15.4684 0 14.8159 0V0Z"
+          fill="#D8D8D8" />
+      </svg>
+
+      <svg width="20" height="20" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M2 16H14C15.104 16 16 15.104 16 14V2C16 0.896 15.104 0 14 0H2C0.896 0 0 0.896 0 2V14C0 15.104 0.896 16 2 16ZM11.98 6.228C11.98 8.936 9.916 12.064 6.144 12.064C4.988 12.064 3.908 11.724 3.004 11.148C3.164 11.168 3.328 11.176 3.492 11.176C4.452 11.176 5.336 10.848 6.04 10.296C5.144 10.28 4.384 9.688 4.124 8.872C4.248 8.896 4.376 8.908 4.508 8.908C4.696 8.908 4.876 8.884 5.048 8.836C4.112 8.648 3.404 7.816 3.404 6.824V6.796C3.68 6.948 3.996 7.04 4.332 7.052C3.784 6.684 3.42 6.056 3.42 5.344C3.42 4.968 3.52 4.616 3.696 4.312C4.708 5.552 6.22 6.372 7.924 6.456C7.892 6.304 7.872 6.148 7.872 5.988C7.872 4.856 8.792 3.936 9.924 3.936C10.512 3.936 11.044 4.184 11.42 4.584C11.888 4.492 12.328 4.324 12.724 4.088C12.568 4.568 12.244 4.972 11.82 5.224C12.236 5.172 12.632 5.064 13 4.9C12.724 5.312 12.376 5.676 11.976 5.964C11.98 6.05198 11.98 6.13996 11.98 6.22794V6.228Z"
+          fill="#D8D8D8" />
+      </svg>
+
     </div>
   </div>
 </div>
+<div class="navbar-items container d-flex d-lg-none">
+</div>
 <div class="container-fluid menu">
   <div class="navbar navbar-container d-flex justify-content-between">
-    <div class="navbar-brand mb-4">
+    <div class="navbar-brand">
       <a href="#" class="companyLogo d-flex gap-2">
-        <img src="assets/Img/Svg/company-logo.svg" alt="Logo" class="img-fluid">
+        <svg width="121" height="48" viewBox="0 0 121 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="img-fluid">
+          <path
+            d="M60.05 20.2341C62.48 20.2341 63.524 19.2261 63.524 17.6601C63.524 16.3281 62.768 15.4821 60.266 15.0141C58.664 14.7261 58.304 14.3121 58.304 13.7181C58.304 13.0881 58.808 12.7101 59.798 12.7101C60.806 12.7101 61.31 13.1061 61.544 14.1501L63.29 13.7721C62.948 12.2781 62.156 11.3241 59.834 11.3241C57.584 11.3241 56.468 12.2961 56.468 13.8261C56.468 15.2301 57.26 15.9861 59.51 16.4361C61.184 16.7421 61.652 17.0661 61.652 17.7321C61.652 18.4521 61.112 18.8121 60.086 18.8121C58.718 18.8121 58.124 18.1641 57.854 17.1381L56.108 17.4981C56.414 19.1181 57.314 20.2341 60.05 20.2341Z"
+            fill="#016C62" />
+          <path
+            d="M67.0425 20.0001V15.9861C67.0425 14.2581 67.6725 13.6281 69.4545 13.6281H69.9225V11.4501H69.6165C68.3925 11.4501 67.6005 12.0441 67.1145 14.0961L66.9525 14.0781V11.5401H65.1165V20.0001H67.0425Z"
+            fill="#016C62" />
+          <path
+            d="M77.0216 20.0001H78.9116V11.5401H76.9676V16.3281C76.9676 17.6061 76.1216 18.4701 74.8076 18.4701C73.6556 18.4701 73.2056 17.7141 73.2056 16.6881V11.5401H71.2616V17.1921C71.2616 19.0281 72.1076 20.2341 73.8896 20.2341C75.2936 20.2341 76.3736 19.3341 76.8416 17.7681H77.0216V20.0001Z"
+            fill="#016C62" />
+          <path
+            d="M83.2633 19.8021V11.5581H81.3373V20.0361C81.3373 20.7561 81.1033 21.2241 80.4373 21.2241C80.2213 21.2241 80.0053 21.1881 79.7893 21.1521L79.6993 22.8261C79.9333 22.8801 80.2033 22.9161 80.5093 22.9161C82.4713 22.9161 83.2633 21.6921 83.2633 19.8021ZM83.3533 10.1001V8.53406H81.2473V10.1001H83.3533Z"
+            fill="#016C62" />
+          <path
+            d="M88.3343 18.6681C87.2363 18.6681 86.8582 18.1461 86.8582 17.5341C86.8582 16.8321 87.4162 16.4721 88.3882 16.4721H90.5843V16.8141C90.5843 17.8761 89.6843 18.6681 88.3343 18.6681ZM90.6743 20.0001H92.5103V14.6001C92.5103 12.4941 91.4662 11.3421 89.0182 11.3421C86.8582 11.3421 85.6522 12.3681 85.3282 13.9701L87.1642 14.3841C87.3802 13.3941 87.9563 12.8901 88.9463 12.8901C90.1343 12.8901 90.5843 13.5201 90.5843 14.6181V15.1941H88.0643C85.9223 15.1941 85.0042 16.2921 85.0042 17.8041C85.0042 19.4601 86.0662 20.1801 87.5782 20.1801C89.0722 20.1801 90.0442 19.3521 90.4762 17.9841H90.6743V20.0001Z"
+            fill="#016C62" />
+          <path
+            d="M96.4991 15.2121C96.4991 13.9341 97.3631 13.0701 98.6591 13.0701C99.8291 13.0701 100.279 13.8261 100.279 14.8521V20.0001H102.205V14.3481C102.205 12.5121 101.359 11.3241 99.5951 11.3241C98.1731 11.3241 97.0931 12.2061 96.6251 13.7721H96.4631V11.5401H94.5731V20.0001H96.4991V15.2121Z"
+            fill="#016C62" />
+          <path
+            d="M59.348 29.1081C59.348 28.1181 59.762 27.6321 60.644 27.6321C60.986 27.6321 61.292 27.6681 61.67 27.7221L61.742 26.3361C61.4 26.2641 60.968 26.1921 60.302 26.1921C58.34 26.1921 57.404 27.3621 57.404 29.0721V29.5401H56V31.1061H57.404V38.0001H59.348V31.1061H61.67V29.5401H59.348V29.1081Z"
+            fill="#016C62" />
+          <path d="M65.1315 28.1001V26.5341H63.0255V28.1001H65.1315ZM65.0415 38.0001V29.5401H63.0975V38.0001H65.0415Z"
+            fill="#016C62" />
+          <path
+            d="M69.2167 33.2121C69.2167 31.9341 70.0807 31.0701 71.3767 31.0701C72.5467 31.0701 72.9967 31.8261 72.9967 32.8521V38.0001H74.9227V32.3481C74.9227 30.5121 74.0767 29.3241 72.3127 29.3241C70.8907 29.3241 69.8107 30.2061 69.3427 31.7721H69.1807V29.5401H67.2907V38.0001H69.2167V33.2121Z"
+            fill="#016C62" />
+          <path
+            d="M79.7792 36.6681C78.6812 36.6681 78.3032 36.1461 78.3032 35.5341C78.3032 34.8321 78.8612 34.4721 79.8332 34.4721H82.0292V34.8141C82.0292 35.8761 81.1292 36.6681 79.7792 36.6681ZM82.1192 38.0001H83.9552V32.6001C83.9552 30.4941 82.9112 29.3421 80.4632 29.3421C78.3032 29.3421 77.0972 30.3681 76.7732 31.9701L78.6092 32.3841C78.8252 31.3941 79.4012 30.8901 80.3912 30.8901C81.5792 30.8901 82.0292 31.5201 82.0292 32.6181V33.1941H79.5092C77.3672 33.1941 76.4492 34.2921 76.4492 35.8041C76.4492 37.4601 77.5112 38.1801 79.0232 38.1801C80.5172 38.1801 81.4892 37.3521 81.9212 35.9841H82.1192V38.0001Z"
+            fill="#016C62" />
+          <path
+            d="M87.944 33.2121C87.944 31.9341 88.808 31.0701 90.104 31.0701C91.274 31.0701 91.724 31.8261 91.724 32.8521V38.0001H93.65V32.3481C93.65 30.5121 92.804 29.3241 91.04 29.3241C89.618 29.3241 88.538 30.2061 88.07 31.7721H87.908V29.5401H86.018V38.0001H87.944V33.2121Z"
+            fill="#016C62" />
+          <path
+            d="M101.513 32.8341L103.331 32.4921C102.989 30.4761 101.891 29.3241 99.4605 29.3241C96.8685 29.3241 95.1945 30.9981 95.1945 33.8421C95.1945 36.6861 96.8325 38.2341 99.4965 38.2341C101.819 38.2341 103.007 37.0461 103.349 35.0841L101.567 34.6521C101.315 35.6781 100.847 36.5241 99.4785 36.5241C97.9665 36.5241 97.1745 35.4801 97.1745 33.7701C97.1745 31.9161 98.0385 31.0341 99.4245 31.0341C100.757 31.0341 101.261 31.7541 101.513 32.8341Z"
+            fill="#016C62" />
+          <path d="M107.151 28.1001V26.5341H105.045V28.1001H107.151ZM107.061 38.0001V29.5401H105.117V38.0001H107.061Z"
+            fill="#016C62" />
+          <path
+            d="M112.136 36.6681C111.038 36.6681 110.66 36.1461 110.66 35.5341C110.66 34.8321 111.218 34.4721 112.19 34.4721H114.386V34.8141C114.386 35.8761 113.486 36.6681 112.136 36.6681ZM114.476 38.0001H116.312V32.6001C116.312 30.4941 115.268 29.3421 112.82 29.3421C110.66 29.3421 109.454 30.3681 109.13 31.9701L110.966 32.3841C111.182 31.3941 111.758 30.8901 112.748 30.8901C113.936 30.8901 114.386 31.5201 114.386 32.6181V33.1941H111.866C109.724 33.1941 108.806 34.2921 108.806 35.8041C108.806 37.4601 109.868 38.1801 111.38 38.1801C112.874 38.1801 113.846 37.3521 114.278 35.9841H114.476V38.0001Z"
+            fill="#016C62" />
+          <path d="M120.373 26.4441H118.429V38.0001H120.373V26.4441Z" fill="#016C62" />
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M29.7361 14.4729C29.2583 15.0461 28.7591 16.0278 28.7591 16.3945C28.7591 16.5421 29.4275 17.0001 30.2442 17.4128C31.0609 17.8252 31.8166 18.2092 31.923 18.2656C32.2128 18.4199 32.1565 16.8475 31.8412 15.9768C31.563 15.2082 30.6231 14 30.3039 14C30.2086 14 29.9531 14.2129 29.7361 14.4729ZM33.6665 15.5241C33.3744 15.6074 33.3002 15.9535 33.3656 16.9328C33.4172 17.7081 33.2858 18.6475 33.0394 19.2647C32.8123 19.8333 32.6597 20.3329 32.7002 20.3754C32.8932 20.5772 34.531 19.5125 34.8768 18.9604C35.3743 18.1662 35.7209 16.5778 35.5476 15.8852C35.4182 15.3666 34.7022 15.2293 33.6665 15.5241ZM20.372 17.7827C18.6369 18.1113 17.0337 18.7767 16.5055 19.3874C16.094 19.863 16.1028 19.9241 16.6625 20.4694C17.7791 21.5579 19.7736 21.9724 23.8516 21.9643C27.2421 21.9573 27.7412 21.8935 29.1222 21.2887C31.041 20.4486 31.4525 19.847 30.6061 19.1201C30.2721 18.8334 29.4004 18.4083 28.6689 18.1751C27.0877 17.6714 22.1844 17.4395 20.372 17.7827ZM29.2756 22.7264C27.1494 23.5457 21.5751 23.6814 18.9871 22.9772L18.0588 22.7244C17.4472 22.558 16.7932 22.673 16.2751 23.0382V23.0382C15.1671 23.8195 15.182 24.7288 16.3162 25.5284C19.7206 27.9289 30.0476 27.9297 33.4516 25.5298C34.9204 24.494 34.6926 23.5293 32.7625 22.6105C31.5049 22.0122 31.0937 22.0257 29.2756 22.7264ZM13.9077 26.8799C10.2837 28.8785 11.915 31.132 18.0196 32.5602C20.526 33.1466 27.4356 33.1466 29.942 32.5602C34.9595 31.3866 37.1494 29.5076 35.4099 27.8692C34.4362 26.9523 34.283 26.9399 32.3283 27.6246C29.4817 28.6215 25.5008 29.0096 22.1573 28.6159C19.2895 28.2783 16.575 27.536 15.712 26.8534C15.0705 26.3462 14.8698 26.3491 13.9077 26.8799Z"
+            fill="#A0E4B0" />
+          <rect x="0.5" y="0.5" width="47" height="47" rx="3.5" stroke="#D9D9D9" />
+        </svg>
       </a>
     </div>
-    <button type="button" (click)="showMobileLayout()" class="hamburger-button d-lg-none">
-      <img src="assets/Img/Svg/hamburger.svg" alt="hamburger">
+    <button type="button" (click)="toggle()"
+      class="hamburger-button d-flex flex-column gap-1 d-lg-none position-relative" style="z-index: 99999999;">
+      <div class="blue-line" [ngClass]="{'blue-line-a':show}"></div>
+      <div class="blue-line" [ngClass]="{'blue-line-b':show}"></div>
     </button>
     <div class="navbar-items d-none d-lg-flex">
       <div class="navbar-links d-flex mb-0">
         <div class="navbar-link-item text-info" [routerLink]="['/']" (click)="hideMobileLayout()"><a>Home</a></div>
+        <div class="navbar-link-item text-info" [routerLink]="['/services']" (click)="hideMobileLayout()"><a>Services</a></div>
         <div class="navbar-link-item text-info" [routerLink]="['/about']" (click)="hideMobileLayout()"><a>About</a></div>
-        <div class="navbar-link-item text-info" [routerLink]="['/services']" (click)="hideMobileLayout()"><a>Our Services</a>
-        </div>
-        <div class="navbar-link-item text-info" [routerLink]="['/process']" (click)="hideMobileLayout()"><a>Our Process</a>
-        </div>
+        <div class="navbar-link-item text-info" [routerLink]="['/process']" (click)="hideMobileLayout()"><a>Process</a></div>
         <div class="navbar-link-item text-info" [routerLink]="['/blog']" (click)="hideMobileLayout()"><a>Blog</a></div>
-        <div class="navbar-link-item text-info" [routerLink]="['/contact']" (click)="hideMobileLayout()"><a>Contact</a>
-        </div>
       </div>
     </div>
-    <div class="navbar-action d-none d-lg-flex pb-2">
-      <button class="btn btn-green">Get In touch</button>
+    <div class="navbar-action d-none d-lg-flex">
+      <button class="btn btn-green" [routerLink]="['/contact']">Get In touch</button>
     </div>
   </div>
 </div>

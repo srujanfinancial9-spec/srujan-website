@@ -2,7 +2,6 @@
 @import "src/layout.scss";
 
 .main {
-  background: #004a43;
   .cover {
     max-width: 1440px;
     margin: auto;
@@ -15,82 +14,19 @@
     @include media-breakpoint-up(lg) {
       padding: 129px 165px 100px 165px;
     }
-    .pattern {
-      @include media-breakpoint-up(md) {
-        height: 340px;
-      }
-      @include media-breakpoint-up(lg) {
-        height: 390px;
-      }
-    }
-    .left-pattern {
-      top: 0.4px;
-      left: -70px;
-      img{
-        height: 540px;
-      }
-    }
-    .right-pattern {
-      top: 0.4px;
-      right: -70px;
-      img{
-        height: 540px;
-      }
-    }
     &-container {
       max-width: 730px;
       &-title-icon {
         margin-bottom: 35px;
       }
-      &-title {
-        // h2 {
-        //   //styleName: Display – 56pt;
-        //   font-family: DM Sans;
-        //   font-size: 32px;
-        //   font-weight: 500;
-        //   line-height: 38px;
-        //   letter-spacing: -0.4px;
-        //   text-align: center;
-        //   @include media-breakpoint-up(md) {
-        //     font-size: 40px;
-        //     line-height: 48px;
-        //     letter-spacing: -0.5px;
-        //   }
-        //   @include media-breakpoint-up(lg) {
-        //     letter-spacing: -2px;
-        //     line-height: 60px;
-        //     font-size: 60px;
-        //   }
-        // }
-      }
-      &-body {
-        max-width: 445px;
-        p {
-          font-family: $body-font;
-          font-size: 22px;
-          font-weight: 400;
-          line-height: 28px;
-          letter-spacing: 0px;
-          text-align: center;
-        }
+      &-body{
+        margin: auto;
+        max-width: 308px;
       }
       &-button {
         margin-top: 28px;
         @include media-breakpoint-up(lg) {
           margin-top: 40px;
-        }
-        button {
-          height: 48px;
-          width: 173px;
-          border-radius: 4px;
-          background: #a9ff9b;
-          border: none;
-          font-family: DM Sans;
-          font-size: 16px;
-          font-weight: 700;
-          line-height: 24px;
-          letter-spacing: 0.10000000149011612px;
-          text-align: center;
         }
       }
     }

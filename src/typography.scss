@@ -6,16 +6,16 @@ h1 {
   font-weight: 600 !important;
   font-size: 40px !important;
   line-height: 48px !important;
-  letter-spacing: -0.8px !important;
+  letter-spacing: -0.1px !important;
   @include media-breakpoint-up(md) {
-    font-size: 54px !important;
-    line-height: 56px !important;
-    letter-spacing: -0.8px !important;
+    font-size: 44px !important;
+    line-height: 48px !important;
+    letter-spacing: -0.1px !important;
   }
   @include media-breakpoint-up(lg) {
     font-size: 62px !important;
     line-height: 60px !important;
-    letter-spacing: -0.8px !important;
+    letter-spacing: -0.1px !important;
   }
 }
 
@@ -28,24 +28,29 @@ h2 {
   @include media-breakpoint-up(md) {
     font-size: 40px !important;
     line-height: 48px !important;
-    letter-spacing: -0.4000000059604645px !important;
+    // letter-spacing: -0.4000000059604645px !important;
   }
   @include media-breakpoint-up(lg) {
-    font-size: 54px !important;
-    line-height: 56px !important;
+    font-size: 52px !important;
+    line-height: 54px !important;
     letter-spacing: 0px !important;
   }
 }
 h3 {
   font-family: $title-font;
   font-weight: 600 !important;
-  font-size: 32px !important;
-  line-height: 38px !important;
+  font-size: 24px !important;
+  line-height: 32px !important;
   letter-spacing: -0.10000000149011612px !important;
   text-align: left;
-  @include media-breakpoint-up(md) {
+  @include media-breakpoint-up(lg){
     font-size: 40px !important;
     line-height: 46px !important;
+    letter-spacing: -0.10000000149011612px !important;
+  }
+  @include media-breakpoint-up(md) {
+    font-size: 32px !important;
+    line-height: 38px !important;
     letter-spacing: -0.10000000149011612px !important;
   }
 }
@@ -56,6 +61,11 @@ h4 {
   line-height: 38px !important;
   letter-spacing: 0px !important;
   text-align: left;
+  @include media-breakpoint-down(lg){
+    font-size: 24px !important;
+    line-height: 32px !important;
+    letter-spacing: 0px !important;
+  }
 }
 h5 {
   //styleName: H4 – 18pt;
@@ -118,7 +128,7 @@ h6 {
   font-family: $body-font;
   font-size: 16px;
   font-weight: 400;
-  line-height: 24px;
+  line-height: 28px;
   letter-spacing: 0px;
   text-align: left;
   color: #232722;
@@ -131,6 +141,11 @@ h6 {
   line-height: 20px;
   letter-spacing: 0px;
   text-align: left;
+  @include media-breakpoint-down(lg){
+    font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  }
 }
 .lg-text {
   font-family: $body-font;
@@ -147,30 +162,28 @@ h6 {
   line-height: 28px;
   letter-spacing: 0em;
   text-align: left;
+  @include media-breakpoint-down(lg) {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+  }
 }
 .sub-title {
   font-family: $body-font;
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 18px;
+  font-weight: 600;
   line-height: 24px;
-  letter-spacing: 0.10000000149011612px;
+  letter-spacing: 0.1px;
   text-align: left;
-  @include media-breakpoint-up(md) {
-    font-size: 18px;
-  }
 }
 .testimonial-title {
   font-family: $title-font;
   font-weight: 600;
-  font-size: 18px;
-  line-height: 25px;
   letter-spacing: 0px;
   text-align: center;
-  color:#575757;
-  @include media-breakpoint-up(md) {
-    font-size: 24px;
-    line-height: 32px;
-  }
+  color: #1C4044;
+  font-size: 24px;
+  line-height: 32px;
   @include media-breakpoint-up(lg) {
     font-size: 28px;
     line-height: 40px;

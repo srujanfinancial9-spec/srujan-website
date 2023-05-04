@@ -2,16 +2,26 @@
 @import "src/layout.scss";
 
 .mgt-20 {
-  margin-top: 20px;
+  margin-top: 4px;
+  @include media-breakpoint-up(md){
+    margin-top: 8px;
+  }
+  @include media-breakpoint-up(lg){
+    margin-top: 16px;
+  }
 }
 .left {
-  background: #fff;
-  padding: 50px 0px;
-  @include media-breakpoint-up(md) {
-    padding: 60px 47px 60px 47px;
-  }
-  @include media-breakpoint-up(lg) {
-    padding: 60px 165px;
+  // background: #fff;
+  // padding: 50px 0px;
+  // @include media-breakpoint-up(md) {
+  //   padding: 60px 47px 60px 47px;
+  // }
+  // @include media-breakpoint-up(lg) {
+  //   padding: 60px 165px;
+  // }
+  margin-top: 64px;
+  @include media-breakpoint-down(lg) {
+    margin-top: 32px;
   }
   &-section {
     gap: 28px;
@@ -23,6 +33,7 @@
     }
     &-content {
       order: 2;
+      max-width: 393px;
       @include media-breakpoint-up(md) {
         max-width: 350px;
         order: 1;
@@ -45,6 +56,7 @@
     }
     &-profile {
       order: 1;
+      border: 1px solid#4CA495;
       @include media-breakpoint-up(md) {
         order: 2;
       }
@@ -77,18 +89,23 @@
 
 .right {
   background: rgba(215, 224, 212, 0.12);
-  padding: 50px 0px;
-  @include media-breakpoint-up(md) {
-    padding: 60px 47px;
+  margin-top: 64px;
+  @include media-breakpoint-down(lg) {
+    margin-top: 32px;
   }
-  @include media-breakpoint-up(lg) {
-    padding: 71px 161px 135px 161px;
-  }
+  // padding: 50px 0px;
+  // @include media-breakpoint-up(md) {
+  //   padding: 60px 47px;
+  // }
+  // @include media-breakpoint-up(lg) {
+  //   padding: 71px 161px 135px 161px;
+  // }
   &-title {
     margin: auto;
-    max-width: 757px;
+    max-width: 674px;
     margin-bottom: 80px;
     @include media-breakpoint-up(lg) {
+      max-width: 1020px;
       margin-bottom: 118px;
     }
   }
@@ -99,7 +116,10 @@
     }
     &-content {
       order: 2;
-      max-width: 350px;
+      max-width: 393px;
+      @include media-breakpoint-up(md){
+        max-width: 350px;
+      }
       @include media-breakpoint-up(lg) {
         max-width: 500px;
       }
@@ -124,7 +144,7 @@
 
 .grid {
   background: #fff;
-  padding: 40px 0px;
+  padding: 40px 15px;
   gap: 16px;
   @include media-breakpoint-up(md) {
     row-gap: 60px;
@@ -134,7 +154,7 @@
   }
   &-item {
     margin: auto;
-    max-width: 352px;
+    max-width: 393px;
     @include media-breakpoint-up(md) {
       max-width: 300px;
     }
@@ -166,35 +186,9 @@
     }
   }
 }
+.about-logo{
+  @include media-breakpoint-up(lg){
+    gap: 240px !important;
+  }
+}
 
-// .cover-main {
-//   .cover {
-//     background: #fafbfa;
-//     border: 1px solid #016c62;
-//     max-width: 1440px;
-//     margin: auto;
-//     padding: 40px 15px;
-//     gap: 28px;
-//     @include media-breakpoint-up(md) {
-//       padding: 40px 100px;
-//     }
-//     @include media-breakpoint-up(lg) {
-//       gap: 110px;
-//       padding: 60px 165px;
-//       margin-bottom: 203px;
-//     }
-//     &-container {
-//       max-width: 448px;
-//       &-title {
-//         margin-bottom: 25px;
-//       }
-//     }
-//   }
-//   .green-box {
-//     height: 11px;
-//     width: 11px;
-//     background: #31c3ae;
-//     bottom: -10px;
-//     right: 1px;
-//   }
-// }

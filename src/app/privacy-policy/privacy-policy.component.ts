@@ -7,17 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PrivacyPolicyComponent implements OnInit {
 
-  actionImgPath='assets/Images/Svg/up-arrow.svg';
+  actionImgPath = 'assets/Images/Svg/up-arrow.svg';
+  showDivider = true;
   constructor() { }
 
   ngOnInit(): void {
   }
 
   imageChange() {
-    if (this.actionImgPath == "assets/Img/Svg/up-arrow.svg") {
-      this.actionImgPath ='assets/Img/Svg/down-arrow.svg'
+    if (this.actionImgPath == "assets/Img/Svg/up-arrow.svg" && this.showDivider == true) {
+      this.actionImgPath = 'assets/Img/Svg/down-arrow.svg'
+      this.showDivider = false;
     } else {
-      this.actionImgPath ='assets/Img/Svg/up-arrow.svg'
+      this.actionImgPath = 'assets/Img/Svg/up-arrow.svg'
+      this.showDivider = true;
     }
   }
 }
