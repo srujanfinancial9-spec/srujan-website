@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-privacy-policy',
@@ -6,21 +7,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./privacy-policy.component.scss']
 })
 export class PrivacyPolicyComponent implements OnInit {
+  element?: HTMLElement
 
-  actionImgPath = 'assets/Images/Svg/up-arrow.svg';
-  showDivider = true;
-  constructor() { }
+  constructor(private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.activatedRoute.fragment.subscribe(
+      res => {
+        this.JumpTo(res);
+      }
+    )
   }
 
-  imageChange() {
-    if (this.actionImgPath == "assets/Img/Svg/up-arrow.svg" && this.showDivider == true) {
-      this.actionImgPath = 'assets/Img/Svg/down-arrow.svg'
-      this.showDivider = false;
-    } else {
-      this.actionImgPath = 'assets/Img/Svg/up-arrow.svg'
-      this.showDivider = true;
-    }
+
+  JumpTo(section: any) {
+    setTimeout(() => {
+      this.element = document.getElementById(section) as HTMLElement;
+      this.element.scrollIntoView({ behavior: "smooth" })
+    }, 500);
   }
 }

@@ -2,11 +2,11 @@
   <div class="navbar-links d-flex flex-column justify-content-center text-center mb-0">
     <div class="navbar-link-item text-info" [ngClass]="{'show-menu': show, 'delay-1s':show}" [routerLink]="['/']"
       (click)="hideMobileLayout()"><a>Home</a></div>
-      <div class="navbar-link-item text-info" [ngClass]="{'show-menu': show, 'delay-3s':show}"
-        [routerLink]="['/services']" (click)="hideMobileLayout()"><a>Services</a>
-      </div>
     <div class="navbar-link-item text-info" [ngClass]="{'show-menu': show, 'delay-2s':show}" [routerLink]="['/about']"
       (click)="hideMobileLayout()"><a>About</a></div>
+    <div class="navbar-link-item text-info" [ngClass]="{'show-menu': show, 'delay-3s':show}"
+      [routerLink]="['/services']" (click)="hideMobileLayout()"><a>Services</a>
+    </div>
     <div class="navbar-link-item text-info" [ngClass]="{'show-menu': show, 'delay-4s':show}" [routerLink]="['/process']"
       (click)="hideMobileLayout()"><a>Process</a>
     </div>
@@ -44,7 +44,8 @@
   <div class="navbar navbar-container d-flex justify-content-between">
     <div class="navbar-brand">
       <a href="#" class="companyLogo d-flex gap-2">
-        <svg width="121" height="48" viewBox="0 0 121 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="img-fluid">
+        <svg width="121" height="48" viewBox="0 0 121 48" fill="none" xmlns="http://www.w3.org/2000/svg"
+          class="img-fluid">
           <path
             d="M60.05 20.2341C62.48 20.2341 63.524 19.2261 63.524 17.6601C63.524 16.3281 62.768 15.4821 60.266 15.0141C58.664 14.7261 58.304 14.3121 58.304 13.7181C58.304 13.0881 58.808 12.7101 59.798 12.7101C60.806 12.7101 61.31 13.1061 61.544 14.1501L63.29 13.7721C62.948 12.2781 62.156 11.3241 59.834 11.3241C57.584 11.3241 56.468 12.2961 56.468 13.8261C56.468 15.2301 57.26 15.9861 59.51 16.4361C61.184 16.7421 61.652 17.0661 61.652 17.7321C61.652 18.4521 61.112 18.8121 60.086 18.8121C58.718 18.8121 58.124 18.1641 57.854 17.1381L56.108 17.4981C56.414 19.1181 57.314 20.2341 60.05 20.2341Z"
             fill="#016C62" />
@@ -99,16 +100,10 @@
       <div class="blue-line" [ngClass]="{'blue-line-b':show}"></div>
     </button>
     <div class="navbar-items d-none d-lg-flex">
-      <div class="navbar-links d-flex mb-0">
-        <div class="navbar-link-item text-info" [routerLink]="['/']" (click)="hideMobileLayout()"><a>Home</a></div>
-        <div class="navbar-link-item text-info" [routerLink]="['/services']" (click)="hideMobileLayout()"><a>Services</a></div>
-        <div class="navbar-link-item text-info" [routerLink]="['/about']" (click)="hideMobileLayout()"><a>About</a></div>
-        <div class="navbar-link-item text-info" [routerLink]="['/process']" (click)="hideMobileLayout()"><a>Process</a></div>
-        <div class="navbar-link-item text-info" [routerLink]="['/blog']" (click)="hideMobileLayout()"><a>Blog</a></div>
-      </div>
+      <div class="navbar-links d-flex mb-0" *ngFor="let item of items; let i = index"
+      (click)="selectItem(i)">
+      <div class="navbar-link-item text-info" [routerLink]="item.route" (click)="hideMobileLayout()"><a [ngClass]="{'selected': i === selectedItemIndex}">{{item.name}}</a></div>
     </div>
-    <div class="navbar-action d-none d-lg-flex">
-      <button class="secondary-btn" [routerLink]="['/contact']">Get In touch</button>
-    </div>
+    <button class="secondary-btn" [routerLink]="['/contact']">Contact</button>
   </div>
 </div>

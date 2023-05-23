@@ -5,6 +5,12 @@
   background: $initial-background;
   border: 0.75px solid #d7e0d4;
 }
+.selected {
+  color: #1c4044 !important;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+}
 .navbar {
   a {
     text-decoration: none;
@@ -12,6 +18,9 @@
   }
   &-items {
     align-self: center;
+    @include media-breakpoint-up(lg) {
+      gap: 43px;
+    }
   }
   @include media-breakpoint-up(lg) {
     padding: 18px 40px 18px 18px;
@@ -57,10 +66,10 @@
       @include media-breakpoint-down(lg) {
         margin-top: 2% !important;
       }
-      img{
+      img {
         width: 20px;
         height: 20px;
-        @include media-breakpoint-up(md){
+        @include media-breakpoint-up(md) {
           width: 25px;
           height: 25px;
         }
@@ -85,7 +94,7 @@
     height: 70vh;
     top: -24px;
   }
-  @include media-breakpoint-down(md){
+  @include media-breakpoint-down(md) {
     height: 80vh;
     top: -16px;
   }
@@ -101,7 +110,7 @@
   animation-duration: 0.6s;
   animation-fill-mode: forwards;
 }
-.hide-layout{
+.hide-layout {
   animation-name: slide-up;
   animation-duration: 0.6s;
   animation-fill-mode: forwards;
@@ -164,24 +173,24 @@
     opacity: 1;
   }
 }
-.delay-1s{
+.delay-1s {
   animation-delay: 0.2s;
 }
-.delay-2s{
+.delay-2s {
   animation-delay: 0.3s;
 }
-.delay-3s{
+.delay-3s {
   animation-delay: 0.4s;
 }
-.delay-4s{
+.delay-4s {
   animation-delay: 0.5s;
 }
-.delay-5s{
+.delay-5s {
   animation-delay: 0.6s;
 }
-.delay-6s{
+.delay-6s {
   animation-delay: 0.7s;
 }
-.delay-7s{
+.delay-7s {
   animation-delay: 0.8s;
 }

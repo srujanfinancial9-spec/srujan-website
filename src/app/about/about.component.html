@@ -1,4 +1,4 @@
-<div class="left content-layout container-fluid">
+<div class="left content-layout container-fluid" id="aboutMe">
   <div class="left-section container d-flex flex-column flex-md-row justify-content-center">
     <div class="left-section-content align-self-center">
       <div class="left-section-content-title content-title">
@@ -6,12 +6,12 @@
       </div>
       <div class="left-section-content-body">
         <p class="body-text">As a qualified personal finance professional, I am dedicated to helping young professionals
-          like you <span class="fw-bold">plan for a stress-free tomorrow</span>. </p>
+          like you <span class="sans-bold-text">plan for a stress-free tomorrow</span>. </p>
         <p class="body-text">Whether it's creating a budget, managing debt, or investing for your future, I am
-          <span class="fw-bold">here to guide you every step of the way</span>.</p>
+          <span class="sans-bold-text">here to guide you every step of the way</span>.</p>
       </div>
       <div class="left-section-content-button">
-        <button class="secondary-btn">Schedule Your free Consultation</button>
+        <button class="secondary-btn" [routerLink]="['/contact']" fragment="form">Schedule Your free Consultation</button>
       </div>
     </div>
     <div class="left-section-profile position-relative align-self-center">
@@ -19,7 +19,7 @@
     </div>
   </div>
 </div>
-<div class="featured section-gap container-fluid border border-1">
+<div class="featured section-gap container-fluid border border-1" id="founders-story">
   <div class="logo-section about-logo d-flex flex-wrap justify-content-around justify-content-lg-center">
     <div class="featured-item">
       <h3 class="text-primary text-center">2012</h3>
@@ -36,7 +36,7 @@
   </div>
 </div>
 
-<div class="right content-layout container-fluid">
+<div class="right content-layout container-fluid" id="mission">
   <div class="right-title">
     <h2 class="text-primary text-center">Our mission is to help you live life stress-free without having to worry about
       money</h2>
@@ -48,37 +48,37 @@
       </div>
       <div class="right-section-content-body">
         <p class="sm-text">Hi, My name is Deepali and I’m a Qualified Personal Finance Professional <span
-            class="fw-bold">(QPFP®)</span> with over 20
-          years of experience in the finance industry. I’ve <span class="fw-bold">helped over 250 young professionals</span> protect their wealth,
+            class="sans-bold-text">(QPFP®)</span> with over 20
+          years of experience in the finance industry. I’ve <span class="sans-bold-text">helped over 250 young professionals</span> protect their wealth,
           prepare for the future, and most importantly, live a stress-free life without having to worry about money.
         </p>
         <p class="sm-text">After years of working in the finance Industry, including serving as a VP of
           Business Development for a prominent wealth management firm, I was struck by a glaring reality: <span
-            class="fw-bold">young
+            class="sans-bold-text">young
             professionals were often overlooked and turned away by most financial planners who are suited for people
             with
             massive assets and investments.</span>  </p>
         <p class="sm-text">As someone who grew up in an average middle-class family myself, I understand how important
-          it is to <span class="fw-bold">have access to financial guidance</span> early on in your career <span class="fw-bold">to make the most out of your earning years</span>.
+          it is to <span class="sans-bold-text">have access to financial guidance</span> early on in your career <span class="sans-bold-text">to make the most out of your earning years</span>.
           And that’s exactly why we started Srujan FS.
             </p>
         <p class="sm-text">At Srujan, we provide financial guidance to help young professional like you feel in control
           of your finances and achieve your financial goals, and we do this through a personalized approach that’s
-          <span class="fw-bold">grounded in empathy</span> and <span class="fw-bold">understanding</span>. </p>
+          <span class="sans-bold-text">grounded in empathy</span> and <span class="sans-bold-text">understanding</span>. </p>
         <p class="sm-text">So, whether you're just starting out in your career or looking to make a major financial
-          decision, we’re here to help you <span class="fw-bold">achieve your goals</span> and <span class="fw-bold">live your best life</span>.  </p>
+          decision, we’re here to help you <span class="sans-bold-text">achieve your goals</span> and <span class="sans-bold-text">live your best life</span>.  </p>
       </div>
     </div>
     <div class="right-section-profile align-self-center">
       <img src="assets/Img/Png/deepali-sen.png" alt="deepali-sen" class="img-fluid">
-      <p class="xsm-text mt-1">Co-Founder, QPFP®</p>
+      <p class="xsm-text mt-1">Founder, QPFP®</p>
     </div>
   </div>
 </div>
 
 
 
-<div class="featured-articles content-layout container">
+<div class="featured-articles content-layout container" id="team">
   <div class="featured-articles-title">
     <h2 class="text-primary text-center">Meet the team</h2>
   </div>
@@ -89,7 +89,7 @@
           <img src="assets/Img/Png/founder_deepali_sen.png" alt="founder_deepali_sen" class="img-fluid">
         </div>
         <div class="grid-item-title">
-          <p class="xsm-text mb-1">Co-Founder, QPFP®</p>
+          <p class="xsm-text mb-1">Founder, QPFP®</p>
           <h3 class="text-primary">Deepali Sen</h3>
         </div>
         <div class="grid-item-body">
@@ -136,7 +136,7 @@
   </div>
 </div>
 
-<div class="content-layout">
+<div class="content-layout" id="process">
   <div class="cover-main container position-relative">
     <div class="cover d-flex flex-column flex-md-row justify-content-md-between">
       <div class="cover-container">
@@ -150,7 +150,7 @@
         </div>
       </div>
       <div class="cover-button align-self-center">
-        <button class="secondary-btn">Get In touch</button>
+        <button class="secondary-btn" [routerLink]="['/contact']" fragment="form">Get In touch</button>
       </div>
     </div>
     <div class="green-box position-absolute"></div>

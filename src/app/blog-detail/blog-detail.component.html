@@ -1,4 +1,4 @@
-<div class="main-container container">
+<div class="main-container container" id="blog-detail">
   <div class="hero-layout main-blog-container">
     <div class="header-part">
       <div class="button-section">
@@ -88,11 +88,11 @@
           <h2 class="text-primary">Recent Blog Posts</h2>
         </div>
         <div class="blog-header-button d-none d-md-block">
-          <button class="secondary-btn" [routerLink]="['/blog']">View All </button>
+          <button class="secondary-btn" [routerLink]="['/blog']" fragment="blog">View All </button>
         </div>
       </div>
       <div class="blog-tiles blog-component d-flex flex-column flex-md-row justify-content-between">
-        <div class="blog-tiles-item">
+        <div class="blog-tiles-item" [routerLink]="['/404']" fragment="not-found" style="cursor: pointer;">
           <div class="header d-flex justify-content-center">
             <img src="assets/Img/Png/image_28.png" alt="image_28">
           </div>
@@ -109,7 +109,7 @@
             </div>
           </div>
         </div>
-        <div class="blog-tiles-item">
+        <div class="blog-tiles-item" [routerLink]="['/404']" fragment="not-found" style="cursor: pointer;">
           <div class="header d-flex justify-content-center">
             <img src="assets/Img/Png/money.png" alt="money">
           </div>
@@ -125,7 +125,7 @@
             </div>
           </div>
         </div>
-        <div class="blog-tiles-item">
+        <div class="blog-tiles-item" [routerLink]="['/404']" fragment="not-found" style="cursor: pointer;">
           <div class="header d-flex justify-content-center">
             <img src="assets/Img/Png/steps.png" alt="steps">
           </div>

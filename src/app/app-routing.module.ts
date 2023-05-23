@@ -9,7 +9,7 @@ import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.componen
 import { ProcessComponent } from './process/process.component';
 import { ResourcesComponent } from './resources/resources.component';
 import { StyleguideComponent } from './styleguide/styleguide.component';
-import { SerivcesComponent } from './serivces/serivces.component';
+import { ServicesComponent } from './services/services.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
@@ -21,7 +21,7 @@ const routes: Routes = [
   {path:'style-guide', component:StyleguideComponent},
   {path:'about', component:AboutComponent},
   {path:'process', component:ProcessComponent},
-  {path:'services', component:SerivcesComponent},
+  {path:'services', component:ServicesComponent},
 ];
 
 @NgModule({

@@ -11,9 +11,9 @@
   }
 }
 
-.content{
-  &-title{
-    @include media-breakpoint-down(md){
+.content {
+  &-title {
+    @include media-breakpoint-down(md) {
       max-width: 317px;
     }
   }
@@ -72,6 +72,16 @@
 .featured {
   padding-top: 32px;
   padding-bottom: 32px;
+  &-title {
+    font-family: $title-font;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    color: #31c3ae;
+    opacity: 0.4;
+  }
   .logo-section {
     gap: 24px;
     @include media-breakpoint-up(md) {
@@ -114,11 +124,20 @@
             width: 158px;
           }
           @include media-breakpoint-up(lg) {
-            width: 316px;
+            width: 190px;
             height: 48px;
           }
         }
         &-4 {
+          width: 131px;
+          height: 41px;
+          top: -7px;
+          @include media-breakpoint-up(lg) {
+            width: 240px;
+            height: 56px;
+          }
+        }
+        &-5 {
           width: 131px;
           height: 41px;
           top: -7px;
@@ -153,15 +172,15 @@
       @include media-breakpoint-down(lg) {
         max-width: 380px;
       }
-      &-input{
+      &-input {
         margin: auto;
-        @include media-breakpoint-up(lg){
+        @include media-breakpoint-up(lg) {
           max-width: 500px;
         }
       }
-      &-click-details{
+      &-click-details {
         margin: auto;
-        @include media-breakpoint-up(lg){
+        @include media-breakpoint-up(lg) {
           max-width: 500px;
         }
       }
@@ -199,18 +218,18 @@
   font-size: 16px;
   font-weight: 600;
   line-height: 28px;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.1px;
   text-align: center;
   @include media-breakpoint-down(lg) {
     font-size: 14px;
     line-height: 20px;
   }
-  &:hover{
+  &:hover {
     background: $primary;
     border: 1px solid $primary;
     color: #fff;
   }
-  &:active{
+  &:active {
     transform: scale(0.98);
     border: 1px solid $primary;
     background: $primary;
@@ -229,7 +248,8 @@
   line-height: 24px;
   letter-spacing: 0.10000000149011612px;
   text-align: center;
-  &:hover, &:active {
+  &:hover,
+  &:active {
     background: #a9ff9b;
     border: 1px solid #a0e4b0;
     .calling-feature {
@@ -239,7 +259,7 @@
 }
 .btn-primary-link {
   height: 24px;
-  width: 81px;
+  width: 85px;
   border: none;
   font-family: $body-font;
   font-size: 16px;
@@ -257,7 +277,8 @@
   border: 1px solid $primary;
   background: #fff;
   padding: 0px 16px 4px 16px;
-  &:hover, &:active {
+  &:hover,
+  &:active {
     background: #068466;
     border: 1px solid #068466 !important;
     path {

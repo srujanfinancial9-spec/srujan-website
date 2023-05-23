@@ -14,7 +14,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { StyleguideComponent } from './styleguide/styleguide.component';
 import { AboutComponent } from './about/about.component';
 import { ProcessComponent } from './process/process.component';
-import { SerivcesComponent } from './serivces/serivces.component';
+import { ServicesComponent } from './services/services.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +30,7 @@ import { SerivcesComponent } from './serivces/serivces.component';
     StyleguideComponent,
     AboutComponent,
     ProcessComponent,
-    SerivcesComponent
+    ServicesComponent
   ],
   imports: [
     BrowserModule,
