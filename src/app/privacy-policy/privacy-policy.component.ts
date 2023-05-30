@@ -23,7 +23,7 @@ export class PrivacyPolicyComponent implements OnInit {
   JumpTo(section: any) {
     setTimeout(() => {
       this.element = document.getElementById(section) as HTMLElement;
-      this.element.scrollIntoView({ behavior: "smooth" })
-    }, 500);
+      this.element.scrollIntoView({ behavior: 'auto', block: 'start', inline: 'nearest' })
+    }, 0);
   }
 }

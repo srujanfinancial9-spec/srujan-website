@@ -82,7 +82,7 @@
   <div class="featured-articles-title">
     <h2 class="text-primary text-center">Meet the team</h2>
   </div>
-  <div class="blog-articles-body grid d-flex flex-column flex-md-row flex-md-nowrap justify-content-center">
+  <div class=" blog-articles-body grid d-flex flex-column flex-md-row flex-md-nowrap justify-content-center">
     <div class="grid-item mt-0 border-0 card">
       <div class="card-body card-height">
         <div class="card-img">
@@ -130,6 +130,27 @@
             queries from our clients, ensuring brokerage compliance, and managing interactions with the CA for all
             tax-related matters.
           </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="content-layout">
+  <div class="cotainer justify-content-center">
+    <h3 class="text-primary text-center">Values we share with our clients</h3>
+  </div>
+  <div class="container grid d-flex flex-wrap justify-content-around">
+    <div class="value-plate" *ngFor="let value of values">
+      <div class="value-plate-item d-flex flex-column">
+        <div class="value-plate-item-header-icon">
+          <img src="{{value.svgIconPath}}" alt="header-icon">
+        </div>
+        <div class="value-plate-item-title">
+          <h5 class="text-primary">{{value.header}}</h5>
+        </div>
+        <div class="value-plate-item-body">
+          <p class="body-text">{{value.body}}</p>
         </div>
       </div>
     </div>

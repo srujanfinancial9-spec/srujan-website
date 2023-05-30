@@ -41,7 +41,7 @@
         max-width: 522px;
       }
       &-body {
-        max-width: 460px;
+        max-width: 496px;
         margin-top: 16px;
         @include media-breakpoint-up(lg) {
           margin-top: 24px;
@@ -158,17 +158,21 @@
   .carousel {
     &-inner {
       margin: 32px 0;
-      border: 1px solid #d7e0d4;
       padding: 32px 20px;
+      border: 1px solid #d7e0d4;
       @include media-breakpoint-up(lg) {
         margin: 64px 0;
         padding: 64px 0px;
+        height: 600px;
       }
     }
     &-item {
       .content-heading {
         margin: auto;
         max-width: 825px;
+        @include media-breakpoint-up(lg){
+          height: 275px;
+        }
         .quote {
           margin-top: 16px;
           @include media-breakpoint-up(lg) {
@@ -225,3 +229,10 @@
   overflow: hidden;
   width: 110px;
 }
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+

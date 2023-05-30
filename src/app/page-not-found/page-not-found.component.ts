@@ -20,10 +20,8 @@ export class PageNotFoundComponent implements OnInit {
   }
 
   JumpTo(section: any) {
-    setTimeout(() => {
-      this.element = document.getElementById(section) as HTMLElement;
-      this.element.scrollIntoView({ behavior: "smooth" })
-    }, 500);
+    this.element = document.getElementById(section) as HTMLElement;
+    this.element.scrollIntoView({ behavior: "smooth" })
   }
 
 }

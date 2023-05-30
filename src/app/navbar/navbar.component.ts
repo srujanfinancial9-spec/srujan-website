@@ -13,7 +13,6 @@ export class NavbarComponent implements OnInit {
     { name: 'Services', route: '/services' },
     { name: 'Process', route: '/process' },
     { name: 'Blog', route: '/blog' },
-    { name: 'Contact', route: '/contact' }
   ];
   selectedItemIndex!: number;
   currentPage!: string;
