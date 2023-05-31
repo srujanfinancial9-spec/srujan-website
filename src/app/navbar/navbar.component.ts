@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component, ElementRef, HostListener, OnInit, Renderer2 } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -7,6 +7,8 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
+  isScrolling: boolean = false;
+
   items: { name: string, route: string }[] = [
     { name: 'Home', route: '/' },
     { name: 'About', route: '/about' },
@@ -14,15 +16,25 @@ export class NavbarComponent implements OnInit {
     { name: 'Process', route: '/process' },
     { name: 'Blog', route: '/blog' },
   ];
-  selectedItemIndex!: number;
   currentPage!: string;
   show = false;
   icon = "assets/Img/Svg/hamburger.svg";
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, private elementRef: ElementRef, private router: Router) { }
+  @HostListener('window:scroll', [])
 
   ngOnInit(): void {
+    this.onScroll()
+  }
 
+  onScroll(): void {
+    const stickyNavbar = this.elementRef.nativeElement.querySelector('.sticky');
+    this.isScrolling = (window.scrollY > 36);
+    if (this.isScrolling) {
+      stickyNavbar.classList.add('scrolling');
+    } else {
+      stickyNavbar.classList.remove('scrolling');
+    }
   }
 
   toggle() {
@@ -39,7 +51,7 @@ export class NavbarComponent implements OnInit {
     this.icon = "assets/Img/Svg/hamburger.svg";
   }
 
-  selectItem(index: number) {
-    this.selectedItemIndex = index;
+  isMenuItemActive(path: string): boolean {
+    return this.router.isActive(path, true);
   }
 }

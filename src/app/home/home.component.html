@@ -1,4 +1,4 @@
-<div class="left content-layout container-fluid">
+<div class="left top-margin content-layout container-fluid">
   <div class="left-section container d-flex flex-column flex-md-row justify-content-around">
     <div class="left-section-content align-self-center">
       <div class="left-section-content-title">
@@ -75,7 +75,7 @@
           fill="#068466" />
       </svg>
     </div>
-    <div class="featured-item">
+    <div class="featured-item d-none d-md-block">
       <svg width="152" height="48" viewBox="0 0 152 48" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           d="M127.175 0.353401C126.893 0.509289 123.879 3.47116 115.654 11.6664C106.442 20.8564 104.49 22.8384 104.356 23.1353C104.245 23.3877 104.193 23.6475 104.193 23.989C104.193 24.954 103.436 24.1448 115.736 36.3857C127.91 48.5079 127.19 47.8398 128.088 47.8398C129.001 47.8398 128.251 48.5301 140.44 36.3932C152.755 24.1374 151.991 24.954 151.991 23.9815C151.983 23.0239 152.748 23.8479 140.515 11.659C132.327 3.50085 129.276 0.509289 129.001 0.353401C128.689 0.19009 128.533 0.152973 128.088 0.152973C127.643 0.152973 127.487 0.19009 127.175 0.353401ZM127.828 18.1543V20.1215H127.427C127.027 20.1215 127.019 20.1215 126.93 19.8394C126.707 19.149 126.024 18.0281 125.557 17.5827C125.111 17.167 124.926 17.1373 122.728 17.0928L120.702 17.0557V20.1957V23.3283L121.949 23.306C123.137 23.2763 123.211 23.2689 123.619 23.0685C123.849 22.9497 124.124 22.7493 124.221 22.6231C124.443 22.3187 124.688 21.6506 124.755 21.1681L124.807 20.7895H125.2H125.601V23.8776V26.9582L125.215 26.936L124.837 26.9137L124.733 26.4312C124.547 25.4959 124.399 25.1544 124.042 24.7907C123.597 24.3453 123.308 24.2785 121.86 24.2785H120.702V27.1216C120.702 29.7271 120.717 29.9795 120.836 30.217C121.014 30.5511 121.422 30.7589 122.142 30.8851L122.706 30.9816V31.3751V31.7759H119.551H116.396V31.3825V30.9891L117.087 30.9074C117.948 30.8035 118.141 30.7144 118.327 30.3284C118.475 30.0315 118.475 29.883 118.475 24.0483C118.475 18.518 118.468 18.0578 118.341 17.8203C118.185 17.4936 117.755 17.2709 116.975 17.1002L116.396 16.9814V16.5806V16.1871H122.112H127.828V18.1543ZM136.476 16.3282C138.748 16.7958 140.01 18.4958 139.72 20.7005C139.557 21.9253 139.149 22.7641 138.347 23.5139C137.233 24.5531 136.046 24.9391 133.93 24.9466H132.794L132.817 27.5744C132.839 30.1131 132.846 30.217 132.995 30.4175C133.218 30.7144 133.455 30.8109 134.212 30.9074L134.88 30.9891V31.3825V31.7759H131.763H128.645V31.3751V30.9816L129.313 30.8851C130.085 30.7812 130.374 30.6105 130.501 30.1577C130.56 29.9721 130.575 27.9752 130.56 23.8331C130.538 17.1596 130.567 17.5679 130.063 17.3303C129.922 17.2635 129.528 17.1522 129.187 17.0928L128.571 16.974V16.5806V16.1871H132.193C135.422 16.1871 135.882 16.202 136.476 16.3282Z"
@@ -290,60 +290,6 @@
 
 
 <!-- start client section -->
-<!-- <div class="container wrapper">
-  <div class="content-layout carousel" #testimonialsContainer>
-    <div class="item"
-      *ngFor="let client of clients">
-      <div class="content d-flex flex-column justify-content-center">
-        <div class="content-heading">
-          <div class="sub-heading">
-            <p class="sub-title text-primary text-center">See what my clients have to say</p>
-          </div>
-          <div class="quote">
-            <p class="testimonial-title mb-0">“{{client.title}}”</p>
-          </div>
-          <div class="body">
-            <p class="sm-text">{{client.body}}</p>
-          </div>
-        </div>
-        <div class="sepration">
-          <hr class="dividers">
-          <div class="rectangle-box"></div>
-        </div>
-        <div class="info d-flex gap-4 flex-column flex-md-row justify-content-lg-between justify-content-around">
-          <div class="info-profile d-flex gap-3 justify-content-center">
-            <div class="ellipse text-center">
-              <img src="{{client.icon}}" alt="avatar" class="img-fluid">
-            </div>
-            <div class="details align-self-center">
-              <p class="sub-title text-primary mb-1 fw-bold">{{client.about}}</p>
-              <p class="body-text text-primary mb-1">{{client.profile}}</p>
-            </div>
-          </div>
-          <div class="button-section d-flex gap-2">
-            <button class="slide-btn btn-left" type="button" (click)="scrollPrevious()"
-              [disabled]="!isPreviousActive">
-              <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg"
-                style="transform: scaleX(-1);">
-                <path
-                  d="M10.278 11.6219V10.7579C10.278 8.27395 11.97 6.88795 14.274 6.86995V5.24995C11.97 5.24995 10.278 3.84595 10.278 1.37995V0.515948H8.76605L8.76605 1.37995C8.76605 3.32395 9.57605 4.63795 11.322 5.10595V5.35795L0.774048 5.35795V6.76195L11.322 6.76195V7.03195C9.57605 7.49995 8.76605 8.79595 8.76605 10.7579V11.6219H10.278Z"
-                  fill="#068466" />
-              </svg>
-            </button>
-            <button class="slide-btn btn-right" (click)="scrollNext()" [disabled]="!isNextActive"
-              type="button">
-              <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M10.278 11.6219V10.7579C10.278 8.27395 11.97 6.88795 14.274 6.86995V5.24995C11.97 5.24995 10.278 3.84595 10.278 1.37995V0.515948H8.76605L8.76605 1.37995C8.76605 3.32395 9.57605 4.63795 11.322 5.10595V5.35795L0.774048 5.35795V6.76195L11.322 6.76195V7.03195C9.57605 7.49995 8.76605 8.79595 8.76605 10.7579V11.6219H10.278Z"
-                  fill="#068466" />
-              </svg>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div> -->
 <div class="container wrapper">
   <div class="content-layout carousel slide" id="mySlider" data-pause="hover">
     <div class="carousel-inner text-white">
@@ -360,6 +306,9 @@
             <div class="body">
               <p class="sm-text">{{client.body}}</p>
             </div>
+            <div class="body">
+              <p class="sm-text">{{client.body2}}</p>
+            </div>
           </div>
           <div class="sepration">
             <hr class="dividers">
@@ -368,7 +317,7 @@
           <div class="info d-flex gap-4 flex-column flex-md-row justify-content-lg-between justify-content-around">
             <div class="info-profile d-flex gap-3 justify-content-center">
               <div class="ellipse text-center">
-                <img src="{{client.icon}}" alt="avatar" class="img-fluid">
+                <img src="{{client.avatar}}" alt="avatar" class="img-fluid">
               </div>
               <div class="details align-self-center">
                 <p class="sub-title text-primary mb-1 fw-bold">{{client.about}}</p>
@@ -519,7 +468,7 @@
     <div class="blog-tiles blog-component d-flex flex-column flex-md-row justify-content-between">
       <div class="blog-tiles-item" [routerLink]="['/blog-detail']" fragment="blog-detail" style="cursor: pointer;">
         <div class="header d-flex justify-content-center">
-          <img src="assets/Img/Png/image_28.png" alt="image_28">
+          <img src="assets/Img/Svg/Pie_chart.svg" alt="image_28">
         </div>
         <div class="body">
           <h5 class="text-primary">Key Tips For Sticking To Your Budget</h5>
@@ -536,7 +485,7 @@
       </div>
       <div class="blog-tiles-item" [routerLink]="['/blog-detail']" fragment="blog-detail" style="cursor: pointer;">
         <div class="header d-flex justify-content-center">
-          <img src="assets/Img/Png/money.png" alt="money">
+          <img src="assets/Img/Svg/money.svg" alt="money">
         </div>
         <div class="body">
           <h5 class="text-primary">How To Stop Worrying About Money</h5>
@@ -552,7 +501,7 @@
       </div>
       <div class="blog-tiles-item" [routerLink]="['/blog-detail']" fragment="blog-detail" style="cursor: pointer;">
         <div class="header d-flex justify-content-center">
-          <img src="assets/Img/Png/steps.png" alt="steps">
+          <img src="assets/Img/Svg/goals.svg" alt="steps">
         </div>
         <div class="body">
           <h5 class="text-primary">How To Set Realistic Goals For Your Future</h5>

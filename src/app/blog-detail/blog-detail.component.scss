@@ -2,6 +2,8 @@
 @import "src/layout.scss";
 
 .main-blog-container {
+  margin: auto;
+  max-width: 1242px;
   .header-part {
     .sub-title {
       margin-top: 18px;
@@ -9,25 +11,37 @@
     .thumbnail {
       margin-top: 32px;
       margin-bottom: 20px;
+      @include media-breakpoint-up(lg){
+        margin-top: 73.8px;
+      }
     }
   }
   .body-part {
     margin-top: 48px;
-    .list {
-      margin-top: 18px;
-      padding: 20px 0 38px 40px;
+    .body{
+      @include media-breakpoint-up(lg){
+        margin-top: 32px;
+        margin-bottom: 72px;
+      }
     }
   }
   .blog-end {
     margin-bottom: 9px;
+    margin-top: 48px;
     @include media-breakpoint-up(md){
       margin-bottom: 79px;
     }
     @include media-breakpoint-up(lg){
       margin-bottom: 218px;
+      margin-top: 116px;
     }
     .blog-footer-img {
       margin-top: 62px;
+    }
+    .body{
+      @include media-breakpoint-up(lg){
+        margin-top: 32px;
+      }
     }
   }
 }

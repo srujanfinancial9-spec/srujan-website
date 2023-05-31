@@ -1,10 +1,10 @@
-<div class="mobile-menu-layout container-fluid" [ngClass]="{'show-layout': show, 'hide-layout': !show}">
+<div class="mobile-menu-layout d-lg-none container-fluid" [ngClass]="{'show-layout': show, 'hide-layout': !show}">
   <div class="navbar-links d-flex flex-column justify-content-center text-center mb-0">
-    <div class="navbar-link-item text-info under-line" [ngClass]="{'show-menu': show, 'delay-1s':show}" [routerLink]="['/']"
+    <div class="navbar-link-item text-info" [ngClass]="{'show-menu': show, 'delay-1s':show}" [routerLink]="['/']"
       (click)="hideMobileLayout()"><a>Home</a></div>
     <div class="navbar-link-item text-info" [ngClass]="{'show-menu': show, 'delay-2s':show}" [routerLink]="['/about']"
       (click)="hideMobileLayout()"><a>About</a></div>
-    <div class="navbar-link-item text-info under-line" [ngClass]="{'show-menu': show, 'delay-3s':show}"
+    <div class="navbar-link-item text-info" [ngClass]="{'show-menu': show, 'delay-3s':show}"
       [routerLink]="['/services']" (click)="hideMobileLayout()"><a>Services</a>
     </div>
     <div class="navbar-link-item text-info" [ngClass]="{'show-menu': show, 'delay-4s':show}" [routerLink]="['/process']"
@@ -38,9 +38,9 @@
     </div>
   </div>
 </div>
-<div class="navbar-items container d-flex d-lg-none">
-</div>
-<div class="container-fluid menu">
+<!-- <div class="navbar-items container d-flex d-lg-none">
+</div> -->
+<div class="container-fluid menu sticky">
   <div class="navbar navbar-container d-flex justify-content-between">
     <div class="navbar-brand">
       <a href="#" class="companyLogo d-flex gap-2">
@@ -97,9 +97,8 @@
       <div class="blue-line" [ngClass]="{'blue-line-b':show}"></div>
     </button>
     <div class="navbar-items d-none d-lg-flex">
-      <div class="navbar-links d-flex mb-0" *ngFor="let item of items; let i = index"
-      (click)="selectItem(i)">
-      <div class="navbar-link-item text-info under-line" [routerLink]="item.route" (click)="hideMobileLayout()"><a [ngClass]="{'selected': i === selectedItemIndex}">{{item.name}}</a></div>
+      <div class="navbar-links d-flex mb-0" *ngFor="let item of items">
+      <div class="navbar-link-item under-line" [class.active]="isMenuItemActive(item.route)"  [routerLink]="item.route" (click)="hideMobileLayout()"><a>{{item.name}}</a></div>
     </div>
     <button class="secondary-btn" [routerLink]="['/contact']">Contact</button>
   </div>

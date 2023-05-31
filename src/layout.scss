@@ -1,6 +1,21 @@
 @import "node_modules/bootstrap/scss/mixins";
 @import "src/variables.scss";
 
+.top-margin {
+  margin-top: 95px !important;
+  @include media-breakpoint-up(lg) {
+    margin-top: 144px !important;
+  }
+}
+.top-bg-margin {
+  margin-top: 55px;
+  @include media-breakpoint-up(md) {
+    margin-top: 75px;
+  }
+  @include media-breakpoint-up(lg) {
+    margin-top: 95px;
+  }
+}
 .content-layout {
   padding: 32px 0px;
   @include media-breakpoint-up(md) {
@@ -70,7 +85,7 @@
 }
 
 .featured {
-  background: #FCFBFA;
+  background: #fcfbfa;
   padding-top: 24px;
   padding-bottom: 48px;
   &-title {
@@ -85,16 +100,20 @@
   }
   .logo-section {
     gap: 24px;
+    row-gap: 10px;
     align-items: center;
     @include media-breakpoint-up(md) {
       padding: 0px 0px 0px 0px;
-      column-gap: 12px;
-      row-gap: 4px;
+      column-gap: 47px;
+      row-gap: 0px;
     }
     @include media-breakpoint-up(lg) {
       padding: 40px 0px 0px 0px;
       row-gap: 4px;
       gap: 54px;
+    }
+    @include media-breakpoint-down(md) {
+      margin-top: 32px;
     }
     .featured-item {
       .logo {
@@ -290,8 +309,6 @@
   }
 }
 
-
-
 .sepration {
   position: relative;
   max-width: 860px;
@@ -326,10 +343,6 @@
       background: #f3f1ec;
       height: 197px;
       align-items: center;
-      img {
-        width: 130px;
-        height: 130px;
-      }
     }
     .body {
       padding: 24px 26px;

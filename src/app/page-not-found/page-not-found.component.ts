@@ -21,7 +21,7 @@ export class PageNotFoundComponent implements OnInit {
 
   JumpTo(section: any) {
     this.element = document.getElementById(section) as HTMLElement;
-    this.element.scrollIntoView({ behavior: "smooth" })
+    this.element.scrollIntoView({ behavior: "smooth", block: "start" })
   }
 
 }

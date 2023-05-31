@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { MetaDataService } from '../services/meta-data.service';
+import { ScrollService } from '../services/scroll.service';
 
 @Component({
   selector: 'app-process',
@@ -14,12 +16,17 @@ export class ProcessComponent implements OnInit {
   rotate3 = false;
   rotate4 = false;
   rotate5 = false;
-  constructor(private activatedRoute: ActivatedRoute) { }
+  constructor(private activatedRoute: ActivatedRoute, private metaData: MetaDataService, private scroll:ScrollService) {
+    metaData.setMetaData(
+      ' Our proven planning process - Guiding you towards financial success',
+      'Discover our proven investment planning process designed to help you achieve financial success. From assessing your current financial situation to setting goals and implementing strategies, we guide you every step of the way. '
+    )
+  }
 
   ngOnInit(): void {
     this.activatedRoute.fragment.subscribe(
       res => {
-        this.JumpTo(res);
+        this.scroll.JumpTo(res,'center');
       }
     )
   }
@@ -57,10 +64,5 @@ export class ProcessComponent implements OnInit {
       }
         break;
     }
-  }
-
-  JumpTo(section: any) {
-    this.element = document.getElementById(section) as HTMLElement;
-    this.element.scrollIntoView({ behavior: "smooth" })
   }
 }

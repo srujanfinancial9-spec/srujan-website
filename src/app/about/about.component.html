@@ -1,4 +1,4 @@
-<div class="left content-layout container-fluid" id="aboutMe">
+<div class="left content-layout container-fluid top-margin" id="aboutMe">
   <div class="left-section container d-flex flex-column flex-md-row justify-content-center">
     <div class="left-section-content align-self-center">
       <div class="left-section-content-title content-title">
@@ -11,7 +11,8 @@
           <span class="sans-bold-text">here to guide you every step of the way</span>.</p>
       </div>
       <div class="left-section-content-button">
-        <button class="secondary-btn" [routerLink]="['/contact']" fragment="form">Schedule Your free Consultation</button>
+        <button class="secondary-btn" [routerLink]="['/contact']" fragment="form">Schedule Your free
+          Consultation</button>
       </div>
     </div>
     <div class="left-section-profile position-relative align-self-center">
@@ -19,7 +20,7 @@
     </div>
   </div>
 </div>
-<div class="featured section-gap container-fluid border border-1" id="founders-story">
+<div class="featured section-gap container-fluid border border-1" >
   <div class="logo-section about-logo d-flex flex-wrap justify-content-around justify-content-lg-center">
     <div class="featured-item">
       <h3 class="text-primary text-center">2012</h3>
@@ -36,21 +37,23 @@
   </div>
 </div>
 
-<div class="right content-layout container-fluid" id="mission">
-  <div class="right-title">
+<div class="right content-layout container-fluid">
+  <div class="right-title" id="mission">
     <h2 class="text-primary text-center">Our mission is to help you live life stress-free without having to worry about
       money</h2>
   </div>
-  <div class="right-section container d-flex flex-column flex-md-row justify-content-center">
+  <div class="right-section container d-flex flex-column flex-md-row justify-content-center" id="founders-story">
     <div class="right-section-content align-self-center">
       <div class="right-section-content-title">
-        <h2 class="text-primary">Here’s how we started</h2>
+        <h3 class="text-primary">Here’s how we started</h3>
       </div>
       <div class="right-section-content-body">
         <p class="sm-text">Hi, My name is Deepali and I’m a Qualified Personal Finance Professional <span
             class="sans-bold-text">(QPFP®)</span> with over 20
-          years of experience in the finance industry. I’ve <span class="sans-bold-text">helped over 250 young professionals</span> protect their wealth,
-          prepare for the future, and most importantly, live a stress-free life without having to worry about money.
+          years of experience in the finance industry.</p>
+        <p class="sm-text"> I’ve <span class="sans-bold-text">helped over 250 young professionals</span> protect their
+          wealth,
+          prepare for the future, and most importantly, strike their own equation with money, so that they can live a stress-free life without having to worry about money.
         </p>
         <p class="sm-text">After years of working in the finance Industry, including serving as a VP of
           Business Development for a prominent wealth management firm, I was struck by a glaring reality: <span
@@ -59,14 +62,14 @@
             with
             massive assets and investments.</span>  </p>
         <p class="sm-text">As someone who grew up in an average middle-class family myself, I understand how important
-          it is to <span class="sans-bold-text">have access to financial guidance</span> early on in your career <span class="sans-bold-text">to make the most out of your earning years</span>.
+          it is to <span class="sans-bold-text">have access to financial guidance</span> early on in your career <span
+            class="sans-bold-text">to make the most out of your earning years</span>.
           And that’s exactly why we started Srujan FS.
             </p>
         <p class="sm-text">At Srujan, we provide financial guidance to help young professional like you feel in control
           of your finances and achieve your financial goals, and we do this through a personalized approach that’s
-          <span class="sans-bold-text">grounded in empathy</span> and <span class="sans-bold-text">understanding</span>. </p>
-        <p class="sm-text">So, whether you're just starting out in your career or looking to make a major financial
-          decision, we’re here to help you <span class="sans-bold-text">achieve your goals</span> and <span class="sans-bold-text">live your best life</span>.  </p>
+          <span class="sans-bold-text">grounded in empathy</span> and <span
+            class="sans-bold-text">understanding</span>. </p>
       </div>
     </div>
     <div class="right-section-profile align-self-center">
@@ -83,52 +86,17 @@
     <h2 class="text-primary text-center">Meet the team</h2>
   </div>
   <div class=" blog-articles-body grid d-flex flex-column flex-md-row flex-md-nowrap justify-content-center">
-    <div class="grid-item mt-0 border-0 card">
+    <div class="grid-item mt-0 border-0 card" *ngFor="let team of teams">
       <div class="card-body card-height">
         <div class="card-img">
-          <img src="assets/Img/Png/founder_deepali_sen.png" alt="founder_deepali_sen" class="img-fluid">
+          <img src="{{team.profile}}" alt="{{team.name}}" class="img-fluid">
         </div>
         <div class="grid-item-title">
-          <p class="xsm-text mb-1">Founder, QPFP®</p>
-          <h3 class="text-primary">Deepali Sen</h3>
+          <p class="xsm-text mb-1">{{team.post}}</p>
+          <h3 class="text-primary">{{team.name}}</h3>
         </div>
         <div class="grid-item-body">
-          <p class="sm-text mgt-20">With over 20 years of experience, I specialize in providing personalized guidance to
-            help my clients reach their financial objectives and regularly review their portfolios to ensure they stay
-            on track.
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="grid-item mt-0 border-0 card">
-      <div class="card-body card-height">
-        <div class="card-img">
-          <img src="assets/Img/Png/Archna_kapoor.png" alt="Archna_kapoor" class="img-fluid">
-        </div>
-        <div class="grid-item-title">
-          <p class="xsm-text mb-1">Compliance Officer</p>
-          <h3 class="text-primary">Archna Kapoor</h3>
-        </div>
-        <div class="grid-item-body">
-          <p class="sm-text mgt-20">Compliance with regulatory matters is a vital aspect of our firm’s operations. I
-            take care all critical tasks that ensure that we operate in a transparent, ethical, and compliant manner.
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="grid-item mt-0 border-0 card">
-      <div class="card-body card-height">
-        <div class="card-img">
-          <img src="assets/Img/Png/Aryan_sen.png" alt="Aryan_sen" class="img-fluid">
-        </div>
-        <div class="grid-item-title">
-          <p class="xsm-text mb-1">Back-office</p>
-          <h3 class="text-primary">Aryan Sen</h3>
-        </div>
-        <div class="grid-item-body">
-          <p class="sm-text mgt-20">I take care of all back office related matters, including handling operational
-            queries from our clients, ensuring brokerage compliance, and managing interactions with the CA for all
-            tax-related matters.
+          <p class="sm-text mgt-20">{{team.desc}}
           </p>
         </div>
       </div>
@@ -138,7 +106,7 @@
 
 <div class="content-layout">
   <div class="cotainer justify-content-center">
-    <h3 class="text-primary text-center">Values we share with our clients</h3>
+    <h2 class="text-primary text-center">Values we share with our clients</h2>
   </div>
   <div class="container grid d-flex flex-wrap justify-content-around">
     <div class="value-plate" *ngFor="let value of values">
