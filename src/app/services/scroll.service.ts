@@ -1,6 +1,6 @@
 import { ViewportScroller } from '@angular/common';
-import { Injectable } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import {  Injectable, Renderer2 } from '@angular/core';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -8,11 +8,30 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class ScrollService {
   element?: HTMLElement
 
-  constructor() { }
+  constructor(private router: Router) {
+   }
 
 
-  JumpTo(section: any, block:any) {
-    this.element = document.getElementById(section) as HTMLElement;
-    this.element.scrollIntoView({ behavior: "smooth" , block:block})
+  JumpTo(sectionId: any, block: any) {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      const yOffset = section.offsetTop - (window.innerHeight - section.offsetHeight) / 2;
+      window.scrollTo({ top: yOffset, behavior: 'smooth' });
+    }
   }
+
+  initializeScroll(): void {
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        const fragment = event.urlAfterRedirects.split('#')[1];
+        console.log(fragment)
+        if (fragment) {
+          setTimeout(() => {
+            this.JumpTo(fragment,'');
+          }, 0);
+        }
+      }
+    });
+  }
+
 }

@@ -9,9 +9,15 @@ import { Router } from '@angular/router';
 })
 export class FooterComponent implements OnInit {
 
-  constructor(private router: Router, private scrollService: ScrollService) { }
+  constructor(private router: Router, private scrollService: ScrollService) {
+    this.scrollService.initializeScroll();
+  }
 
   ngOnInit(): void {
+  }
+
+  scrollToSection(sectionId: string) {
+    this.scrollService.JumpTo(sectionId,'');
   }
 
 }

@@ -59,7 +59,7 @@
       <div class="pages-link d-flex flex-wrap">
         <ul class="page-links">
           <p class="text-primary subtitle-text fw-bold mb-0 text-white">ABOUT</p>
-          <li class="link-item text-info"><a [routerLink]="['/about']" fragment="mission" class="xsm-text text-white">Mission</a></li>
+          <li class="link-item text-info"><a [routerLink]="['/about']" fragment="mission" class="xsm-text text-white" (click)="scrollToSection('mission')">Mission</a></li>
           <li class="link-item text-info"><a class="xsm-text text-white" [routerLink]="['/about']" fragment="founders-story">Founders Story</a></li>
           <li class="link-item text-info"><a class="xsm-text text-white" [routerLink]="['/about']" fragment="team">Team</a></li>
           <li class="link-item text-info"><a class="xsm-text text-white" [routerLink]="['/process']">Process</a></li>

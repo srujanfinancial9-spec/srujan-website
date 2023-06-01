@@ -29,13 +29,14 @@ export class AboutComponent implements OnInit {
   ];
 
   constructor(private route: ActivatedRoute,
-    private scrollService: ScrollService,
     private metaData: MetaDataService,
     private scroll:ScrollService) {
     metaData.setMetaData(
       'About Deepali Sen - Your Qualified personal finance professional helping you plan for a secure tomorrow',
       'Meta Description: Deepali Sen is a dedicated personal finance professional committed to helping you plan for a stress-free tomorrow. Get expert guidance on budgeting, debt management, and future investments. Start planning for a secure financial future with Deepali today.'
     )
+
+    this.scroll.initializeScroll();
   }
 
   ngOnInit(): void {

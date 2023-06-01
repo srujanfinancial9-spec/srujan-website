@@ -18,6 +18,8 @@ export class ServicesComponent implements OnInit {
       'Personalized Financial Guidance for a Stress-Free Life | Srujan Financial',
       'We provide goal-based investment planning, comprehensive life planning, and retirement planning to help you live a stress-free life without financial worries. '
     )
+
+    this.scroll.initializeScroll();
   }
 
   ngOnInit(): void {

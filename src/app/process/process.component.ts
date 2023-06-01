@@ -21,6 +21,8 @@ export class ProcessComponent implements OnInit {
       ' Our proven planning process - Guiding you towards financial success',
       'Discover our proven investment planning process designed to help you achieve financial success. From assessing your current financial situation to setting goals and implementing strategies, we guide you every step of the way. '
     )
+
+    this.scroll.initializeScroll();
   }
 
   ngOnInit(): void {
