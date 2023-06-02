@@ -1,7 +1,7 @@
 @import "node_modules/bootstrap/scss/mixins";
 @import "src/layout.scss";
 
-.rotate{
+.rotate {
   transform: rotate(90deg);
   width: 12px;
 }
@@ -137,10 +137,10 @@
   }
   &-header {
     max-width: 300px;
-    @include media-breakpoint-up(md){
+    @include media-breakpoint-up(md) {
       max-width: 300px;
     }
-    @include media-breakpoint-up(lg){
+    @include media-breakpoint-up(lg) {
       max-width: 427px;
     }
     .body {
@@ -151,21 +151,41 @@
     }
   }
   &-question {
+    @include media-breakpoint-up(lg) {
+      width: 650px;
+    }
+    @include media-breakpoint-up(md) {
+      width: 650px;
+    }
     &-item {
       max-width: 540px;
       border-bottom: 1px solid rgba(0, 74, 67, 0.243);
       margin-bottom: 16px;
-      @include media-breakpoint-up(md){
+      @include media-breakpoint-up(md) {
         max-width: 300px;
       }
-      @include media-breakpoint-up(lg){
-        max-width: 540px;
+      @include media-breakpoint-up(lg) {
+        max-width: 615px;
       }
       .question {
         overflow: hidden;
         cursor: pointer;
-        svg{
+        p{
+          @include media-breakpoint-down(lg){
+            width: 250px;
+          }
+          @include media-breakpoint-down(md){
+            width: 290px;
+          }
+        }
+        svg {
           transition: all 0.2s;
+          @include media-breakpoint-up(lg){
+            margin-top: 12px;
+          }
+          @include media-breakpoint-down(lg){
+            align-self: center;
+          }
         }
       }
     }

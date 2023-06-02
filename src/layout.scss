@@ -1,6 +1,21 @@
 @import "node_modules/bootstrap/scss/mixins";
 @import "src/variables.scss";
 
+.top-margin {
+  margin-top: 95px !important;
+  @include media-breakpoint-up(lg) {
+    margin-top: 144px !important;
+  }
+}
+.top-bg-margin {
+  margin-top: 55px;
+  @include media-breakpoint-up(md) {
+    margin-top: 75px;
+  }
+  @include media-breakpoint-up(lg) {
+    margin-top: 95px;
+  }
+}
 .content-layout {
   padding: 32px 0px;
   @include media-breakpoint-up(md) {
@@ -11,9 +26,9 @@
   }
 }
 
-.content{
-  &-title{
-    @include media-breakpoint-down(md){
+.content {
+  &-title {
+    @include media-breakpoint-down(md) {
       max-width: 317px;
     }
   }
@@ -70,18 +85,35 @@
 }
 
 .featured {
-  padding-top: 32px;
-  padding-bottom: 32px;
+  background: #fcfbfa;
+  padding-top: 24px;
+  padding-bottom: 48px;
+  &-title {
+    font-family: $title-font;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    color: #31c3ae;
+    opacity: 0.4;
+  }
   .logo-section {
     gap: 24px;
+    row-gap: 10px;
+    align-items: center;
     @include media-breakpoint-up(md) {
       padding: 0px 0px 0px 0px;
-      column-gap: 12px;
-      row-gap: 4px;
+      column-gap: 47px;
+      row-gap: 0px;
     }
     @include media-breakpoint-up(lg) {
       padding: 40px 0px 0px 0px;
       row-gap: 4px;
+      gap: 54px;
+    }
+    @include media-breakpoint-down(md) {
+      margin-top: 32px;
     }
     .featured-item {
       .logo {
@@ -114,11 +146,20 @@
             width: 158px;
           }
           @include media-breakpoint-up(lg) {
-            width: 316px;
+            width: 190px;
             height: 48px;
           }
         }
         &-4 {
+          width: 131px;
+          height: 41px;
+          top: -7px;
+          @include media-breakpoint-up(lg) {
+            width: 240px;
+            height: 56px;
+          }
+        }
+        &-5 {
           width: 131px;
           height: 41px;
           top: -7px;
@@ -153,15 +194,15 @@
       @include media-breakpoint-down(lg) {
         max-width: 380px;
       }
-      &-input{
+      &-input {
         margin: auto;
-        @include media-breakpoint-up(lg){
+        @include media-breakpoint-up(lg) {
           max-width: 500px;
         }
       }
-      &-click-details{
+      &-click-details {
         margin: auto;
-        @include media-breakpoint-up(lg){
+        @include media-breakpoint-up(lg) {
           max-width: 500px;
         }
       }
@@ -199,18 +240,18 @@
   font-size: 16px;
   font-weight: 600;
   line-height: 28px;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.1px;
   text-align: center;
   @include media-breakpoint-down(lg) {
     font-size: 14px;
     line-height: 20px;
   }
-  &:hover{
+  &:hover {
     background: $primary;
     border: 1px solid $primary;
     color: #fff;
   }
-  &:active{
+  &:active {
     transform: scale(0.98);
     border: 1px solid $primary;
     background: $primary;
@@ -229,7 +270,8 @@
   line-height: 24px;
   letter-spacing: 0.10000000149011612px;
   text-align: center;
-  &:hover, &:active {
+  &:hover,
+  &:active {
     background: #a9ff9b;
     border: 1px solid #a0e4b0;
     .calling-feature {
@@ -239,7 +281,7 @@
 }
 .btn-primary-link {
   height: 24px;
-  width: 81px;
+  width: 85px;
   border: none;
   font-family: $body-font;
   font-size: 16px;
@@ -254,22 +296,16 @@
 
 .slide-btn {
   border-radius: 0px;
-  border: 1px solid $primary;
+  border: 1px solid #068466;
   background: #fff;
   padding: 0px 16px 4px 16px;
-  &:hover, &:active {
+  &:hover,
+  &:active {
     background: #068466;
     border: 1px solid #068466 !important;
     path {
       fill: #fff !important;
     }
-  }
-}
-.active-btn {
-  background: #068466 !important;
-  border: 1px solid #068466 !important;
-  path {
-    fill: #fff !important;
   }
 }
 
@@ -307,10 +343,6 @@
       background: #f3f1ec;
       height: 197px;
       align-items: center;
-      img {
-        width: 130px;
-        height: 130px;
-      }
     }
     .body {
       padding: 24px 26px;

@@ -11,14 +11,6 @@
   }
 }
 .left {
-  // background: #fff;
-  // padding: 50px 0px;
-  // @include media-breakpoint-up(md) {
-  //   padding: 60px 47px 60px 47px;
-  // }
-  // @include media-breakpoint-up(lg) {
-  //   padding: 60px 165px;
-  // }
   margin-top: 64px;
   @include media-breakpoint-down(lg) {
     margin-top: 32px;
@@ -78,8 +70,9 @@
 .featured {
   &-articles {
     &-title {
+      padding-top: 4px;
       @include media-breakpoint-up(lg) {
-        padding-top: 85px;
+        padding-top: 8px;
       }
       margin: auto;
       max-width: 540px;
@@ -103,6 +96,7 @@
     @include media-breakpoint-up(lg) {
       max-width: 1020px;
       margin-bottom: 118px;
+      margin-top: 48px;
     }
   }
   &-section {
@@ -140,13 +134,14 @@
 
 .grid {
   background: #fff;
-  padding: 40px 15px;
+  padding: 40px 15px 0px;
   gap: 16px;
   @include media-breakpoint-up(md) {
-    row-gap: 60px;
+    row-gap: 40px;
+    padding: 60px 15px 0px;
   }
   @include media-breakpoint-up(lg) {
-    padding: 60px;
+    padding: 116px 60px 0px;
   }
   &-item {
     margin: auto;
@@ -165,7 +160,7 @@
       border: none;
     }
     &-title {
-      margin-top: 12px;
+      margin-top: 24px;
       h4 {
         color: #08786c;
       }
@@ -188,3 +183,27 @@
   }
 }
 
+.value-plate{
+  &-item{
+    &-header-icon{
+      margin-bottom: 16px;
+    }
+    max-width: 350px;
+    padding: 15px 0px;
+    @include media-breakpoint-up(md){
+      max-width: 300px;
+      padding: 20px 0px;
+    }
+    @include media-breakpoint-up(lg){
+      padding: 30px 0px;
+      max-width: 350px;
+    }
+  }
+}
+
+#founders-story{
+  background: #fff !important;
+  @include media-breakpoint-up(lg){
+    margin-bottom: 0px !important;
+  }
+}

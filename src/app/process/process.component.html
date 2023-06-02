@@ -1,6 +1,6 @@
-<div class="hero-section container-fluid">
+<div class="hero-section top-bg-margin container-fluid">
   <div class="container content text-center">
-    <p class="subtitle body-text text-uppercase text-center">our process</p>
+    <p class="subtitle subtitle-text text-uppercase text-center">our process</p>
     <h1 class="title text-white">How we do it? </h1>
     <p class="body md-text text-center text-white">A Proven planning process is what converts your goals into reality.
       Here’s how we do it</p>
@@ -27,7 +27,7 @@
             <path d="M4 10.0738L12.2013 1.87248L21.1007 8.85235L27.906 1" stroke="#004A43" stroke-width="2" />
           </svg>
         </div>
-        <p class="sm-text text-center mt-md-2 text-white" style="font-family: 'degular', sans-serif; line-height: 24px;">Access Financial Situation</p>
+        <p class="sm-text text-center mt-md-2 text-white" style="font-family: 'degular', sans-serif; line-height: 24px;">Assess Financial Situation</p>
       </div>
       <div class="horizontal-line d-none d-md-block"></div>
       <div class="process-line-item">
@@ -87,7 +87,7 @@
   </div>
   <div class="profile-content position-relative d-none d-md-block">
     <div class="progress-indicator position-absolute">
-      <p class="sm-text text-primary text-center pb-1 pt-1">Step 1 </p>
+      <h6 class="text-primary text-center">Step 1 </h6>
     </div>
     <div class="right-dashed-element position-absolute">
       <svg width="614" height="164" viewBox="0 0 614 164" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -123,7 +123,7 @@
   </div>
   <div class="profile-content position-relative order-md-1 order-2 d-none d-md-block">
     <div class="progress-indicator position-absolute">
-      <p class="sm-text text-primary text-center pb-1 pt-1">Step 2 </p>
+      <h6 class="text-primary text-center">Step 2 </h6>
     </div>
     <div class="left-dashed-element position-absolute">
       <svg width="614" height="164" viewBox="0 0 614 164" fill="none" xmlns="http://www.w3.org/2000/svg"
@@ -138,7 +138,7 @@
       </svg>
     </div>
     <div class="left-icon position-absolute">
-      <svg width="33.39" height="36.86" viewBox="0 0 29 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg width="33.39" height="46.86" viewBox="0 0 29 30" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M1.82568 16.3087V28.8725H7.75857V16.3087H1.82568Z" stroke="white" stroke-width="2" />
         <path d="M11.0742 20.1477V28.8725H17.0071V20.1477H11.0742Z" stroke="white" stroke-width="2" />
         <path d="M20.8257 14V29H26.8257V14H20.8257Z" stroke="white" stroke-width="2" />
@@ -159,7 +159,7 @@
   </div>
   <div class="profile-content position-relative d-none d-md-block">
     <div class="progress-indicator position-absolute">
-      <p class="sm-text text-primary text-center pb-1 pt-1">Step 3 </p>
+      <h6 class="text-primary text-center">Step 3 </h6>
     </div>
     <div class="right-dashed-element position-absolute">
       <svg width="614" height="164" viewBox="0 0 614 164" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -193,7 +193,7 @@
   </div>
   <div class="profile-content position-relative order-1 d-none d-md-block">
     <div class="progress-indicator position-absolute">
-      <p class="sm-text text-primary text-center pb-1 pt-1">Step 4 </p>
+      <h6 class="text-primary text-center">Step 4 </h6>
     </div>
     <div class="left-dashed-element position-absolute">
       <svg width="614" height="164" viewBox="0 0 614 164" fill="none" xmlns="http://www.w3.org/2000/svg"
@@ -234,7 +234,7 @@
   </div>
   <div class="profile-content position-relative d-none d-md-block">
     <div class="progress-indicator position-absolute">
-      <p class="sm-text text-primary text-center pb-1 pt-1">Step 5 </p>
+      <h6 class="text-primary text-center">Step 5 </h6>
     </div>
     <div class="right-dashed-element position-absolute">
       <svg width="614" height="164" viewBox="0 0 614 164" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -261,7 +261,7 @@
 
 
 <div
-  class="container faq d-flex flex-column flex-md-row justify-content-md-between justify-content-lg-around section-top-bottom-margin">
+  class="container faq d-flex flex-column flex-md-row justify-content-md-between justify-content-lg-around section-top-bottom-margin" id="faq">
   <div class="faq-header">
     <div class="title">
       <h2 class="text-primary">Got questions?</h2>
@@ -275,9 +275,9 @@
   <div class="faq-question">
     <div class="faq-question-item">
       <div class="d-flex  justify-content-between question" data-bs-toggle="collapse" data-bs-target="#collapseOne"
-        aria-expanded="true" aria-controls="collapseOne" (click)="toggle()">
+        aria-expanded="true" aria-controls="collapseOne" (click)="toggle(1)">
         <p class="body-text align-self-center text-primary fw-bold">What is personal finance guidance?</p>
-        <svg class="align-self-center" [ngClass]="{rotate:rotate}" width="6" height="12" viewBox="0 0 6 12" fill="none"
+        <svg class="arrow" [ngClass]="{'rotate':rotate1}" width="6" height="12" viewBox="0 0 6 12" fill="none"
           xmlns="http://www.w3.org/2000/svg">
           <path
             d="M1.77793 11.6219V10.7579C1.77793 8.27395 3.46993 6.88795 5.77393 6.86995V5.24995C3.46993 5.24995 1.77793 3.84595 1.77793 1.37995V0.515948L0.265925 0.515948L0.265925 1.37995C0.265925 3.32395 1.07593 4.63795 2.82193 5.10595V5.35795L2.82193 6.76195V7.03195C1.07593 7.49995 0.265925 8.79595 0.265925 10.7579V11.6219L1.77793 11.6219Z"
@@ -301,9 +301,9 @@
     </div>
     <div class="faq-question-item">
       <div class="d-flex justify-content-between question" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
-        aria-expanded="true" aria-controls="collapseOne" (click)="toggle()">
+        aria-expanded="true" aria-controls="collapseOne" (click)="toggle(2)">
         <p class="body-text align-self-center text-primary fw-bold">Who seeks our services?</p>
-        <svg class="align-self-center" [ngClass]="{rotate:rotate}" width="6" height="12" viewBox="0 0 6 12" fill="none"
+        <svg class="arrow" [ngClass]="{'rotate':rotate2}" width="6" height="12" viewBox="0 0 6 12" fill="none"
           xmlns="http://www.w3.org/2000/svg">
           <path
             d="M1.77793 11.6219V10.7579C1.77793 8.27395 3.46993 6.88795 5.77393 6.86995V5.24995C3.46993 5.24995 1.77793 3.84595 1.77793 1.37995V0.515948L0.265925 0.515948L0.265925 1.37995C0.265925 3.32395 1.07593 4.63795 2.82193 5.10595V5.35795L2.82193 6.76195V7.03195C1.07593 7.49995 0.265925 8.79595 0.265925 10.7579V11.6219L1.77793 11.6219Z"
@@ -322,10 +322,10 @@
     </div>
     <div class="faq-question-item">
       <div class="d-flex justify-content-between question" data-bs-toggle="collapse" data-bs-target="#collapseThree"
-        aria-expanded="true" aria-controls="collapseOne" (click)="toggle()">
+        aria-expanded="true" aria-controls="collapseOne" (click)="toggle(3)">
         <p class="body-text align-self-center text-primary fw-bold">How do I know if your guidance will be useful for
           me?</p>
-        <svg class="align-self-center" [ngClass]="{rotate:rotate}" width="6" height="12" viewBox="0 0 6 12" fill="none"
+        <svg class="arrow" [ngClass]="{'rotate':rotate3}" width="6" height="12" viewBox="0 0 6 12" fill="none"
           xmlns="http://www.w3.org/2000/svg">
           <path
             d="M1.77793 11.6219V10.7579C1.77793 8.27395 3.46993 6.88795 5.77393 6.86995V5.24995C3.46993 5.24995 1.77793 3.84595 1.77793 1.37995V0.515948L0.265925 0.515948L0.265925 1.37995C0.265925 3.32395 1.07593 4.63795 2.82193 5.10595V5.35795L2.82193 6.76195V7.03195C1.07593 7.49995 0.265925 8.79595 0.265925 10.7579V11.6219L1.77793 11.6219Z"
@@ -342,10 +342,10 @@
     </div>
     <div class="faq-question-item">
       <div class="d-flex justify-content-between question" data-bs-toggle="collapse" data-bs-target="#collapseFour"
-      aria-expanded="true" aria-controls="collapseOne" (click)="toggle()">
+      aria-expanded="true" aria-controls="collapseOne" (click)="toggle(4)">
       <p class="body-text align-self-center text-primary fw-bold">What changes can I expect after seeking your
         guidance? </p>
-        <svg class="align-self-center" [ngClass]="{rotate:rotate}" width="6" height="12" viewBox="0 0 6 12" fill="none"
+        <svg class="arrow" [ngClass]="{'rotate':rotate4}" width="6" height="12" viewBox="0 0 6 12" fill="none"
         xmlns="http://www.w3.org/2000/svg">
         <path
         d="M1.77793 11.6219V10.7579C1.77793 8.27395 3.46993 6.88795 5.77393 6.86995V5.24995C3.46993 5.24995 1.77793 3.84595 1.77793 1.37995V0.515948L0.265925 0.515948L0.265925 1.37995C0.265925 3.32395 1.07593 4.63795 2.82193 5.10595V5.35795L2.82193 6.76195V7.03195C1.07593 7.49995 0.265925 8.79595 0.265925 10.7579V11.6219L1.77793 11.6219Z"
@@ -363,10 +363,10 @@
     </div>
     <div class="faq-question-item">
       <div class="d-flex justify-content-between question" data-bs-toggle="collapse" data-bs-target="#collapseFive"
-      aria-expanded="true" aria-controls="collapseOne" (click)="toggle()">
+      aria-expanded="true" aria-controls="collapseOne" (click)="toggle(5)">
       <p class="body-text align-self-center text-primary fw-bold">How can I trust your advice if you make a commission
         from my investments? </p>
-        <svg class="align-self-center" [ngClass]="{rotate:rotate}" width="6" height="12" viewBox="0 0 6 12" fill="none"
+        <svg class="arrow" [ngClass]="{'rotate':rotate5}" width="6" height="12" viewBox="0 0 6 12" fill="none"
         xmlns="http://www.w3.org/2000/svg">
         <path
         d="M1.77793 11.6219V10.7579C1.77793 8.27395 3.46993 6.88795 5.77393 6.86995V5.24995C3.46993 5.24995 1.77793 3.84595 1.77793 1.37995V0.515948L0.265925 0.515948L0.265925 1.37995C0.265925 3.32395 1.07593 4.63795 2.82193 5.10595V5.35795L2.82193 6.76195V7.03195C1.07593 7.49995 0.265925 8.79595 0.265925 10.7579V11.6219L1.77793 11.6219Z"
@@ -397,7 +397,7 @@
         </div>
       </div>
       <div class="cover-button align-self-center">
-        <button class="secondary-btn">Get In touch</button>
+        <button class="secondary-btn" [routerLink]="['/contact']" fragment="form">Get In touch</button>
       </div>
     </div>
     <div class="green-box position-absolute"></div>
