@@ -1,7 +1,6 @@
 @import "node_modules/bootstrap/scss/mixins";
 @import "src/layout.scss";
 
-
 .section {
   margin-top: 28px;
   margin-bottom: 28px;
@@ -39,11 +38,11 @@
 
     .left-pattern {
       bottom: 0px;
-      left: -70px;
+      left: 0px;
     }
     .right-pattern {
       top: 0px;
-      right: -70px;
+      right: 0px;
     }
     &-container {
       max-width: 730px;

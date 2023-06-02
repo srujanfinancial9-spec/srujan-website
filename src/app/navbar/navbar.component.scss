@@ -5,6 +5,17 @@
   background: $initial-background;
   border: 0.75px solid #d7e0d4;
 }
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999999;
+  transition: all 100ms ease;
+}
+.scrolling {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
 .navbar {
   a {
     text-decoration: none;
@@ -12,9 +23,20 @@
   }
   &-items {
     align-self: center;
+    @include media-breakpoint-up(lg) {
+      gap: 43px;
+    }
   }
   @include media-breakpoint-up(lg) {
     padding: 18px 40px 18px 18px;
+  }
+  &-brand {
+    svg {
+      @include media-breakpoint-down(md) {
+        height: 27px;
+        width: 147px;
+      }
+    }
   }
   &-links {
     text-decoration: none;
@@ -57,10 +79,10 @@
       @include media-breakpoint-down(lg) {
         margin-top: 2% !important;
       }
-      img{
+      img {
         width: 20px;
         height: 20px;
-        @include media-breakpoint-up(md){
+        @include media-breakpoint-up(md) {
           width: 25px;
           height: 25px;
         }
@@ -70,12 +92,9 @@
 }
 .navbar-brand {
   margin-right: 0;
-  @include media-breakpoint-up(lg) {
-    width: 180px;
-  }
 }
 .mobile-menu-layout {
-  position: absolute;
+  position: fixed;
   background: #fff;
   padding: 0;
   z-index: 9999;
@@ -85,9 +104,9 @@
     height: 70vh;
     top: -24px;
   }
-  @include media-breakpoint-down(md){
+  @include media-breakpoint-down(md) {
     height: 80vh;
-    top: -16px;
+    top: -40px;
   }
   .cross-button {
     left: 80%;
@@ -101,7 +120,7 @@
   animation-duration: 0.6s;
   animation-fill-mode: forwards;
 }
-.hide-layout{
+.hide-layout {
   animation-name: slide-up;
   animation-duration: 0.6s;
   animation-fill-mode: forwards;
@@ -164,24 +183,61 @@
     opacity: 1;
   }
 }
-.delay-1s{
+.delay-1s {
   animation-delay: 0.2s;
 }
-.delay-2s{
+.delay-2s {
   animation-delay: 0.3s;
 }
-.delay-3s{
+.delay-3s {
   animation-delay: 0.4s;
 }
-.delay-4s{
+.delay-4s {
   animation-delay: 0.5s;
 }
-.delay-5s{
+.delay-5s {
   animation-delay: 0.6s;
 }
-.delay-6s{
+.delay-6s {
   animation-delay: 0.7s;
 }
-.delay-7s{
+.delay-7s {
   animation-delay: 0.8s;
+}
+
+.under-line {
+  position: relative;
+  &:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -35px;
+    left: 0;
+    background-color: $primary;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+}
+.active {
+  color: #1c4044 !important;
+  font-weight: 700 !important;
+  font-size: 16px !important;
+  line-height: 24px !important;
+  &:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(1);
+    height: 2px;
+    bottom: -35px;
+    left: 0;
+    background-color: $primary;
+    transform-origin: bottom left;
+    transition: transform 0.25s ease-out;
+  }
+  a {
+    color: #1c4044 !important;
+  }
 }

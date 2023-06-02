@@ -41,7 +41,7 @@
         max-width: 522px;
       }
       &-body {
-        max-width: 460px;
+        max-width: 496px;
         margin-top: 16px;
         @include media-breakpoint-up(lg) {
           margin-top: 24px;
@@ -82,7 +82,7 @@
   &-section {
     gap: 28px;
     @include media-breakpoint-up(lg) {
-      gap: 110px;
+      gap: 160px;
     }
     &-content {
       order: 2;
@@ -156,19 +156,35 @@
 
 .wrapper {
   .carousel {
+    @include media-breakpoint-up(lg){
+      padding-left: 28px;
+      padding-right: 28px;
+    }
     &-inner {
       margin: 32px 0;
-      border: 1px solid #d7e0d4;
       padding: 32px 20px;
+      border: 1px solid #d7e0d4;
+      height: 760px;
+      @include media-breakpoint-up(md){
+        height: 600px;
+      }
       @include media-breakpoint-up(lg) {
         margin: 64px 0;
         padding: 64px 0px;
+        height: 600px;
       }
     }
     &-item {
       .content-heading {
         margin: auto;
         max-width: 825px;
+        height: 500px;
+        @include media-breakpoint-up(md){
+          height: 350px;
+        }
+        @include media-breakpoint-up(lg){
+          height: 295px;
+        }
         .quote {
           margin-top: 16px;
           @include media-breakpoint-up(lg) {
@@ -225,3 +241,10 @@
   overflow: hidden;
   width: 110px;
 }
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+

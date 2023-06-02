@@ -2,8 +2,10 @@
 @import "src/layout.scss";
 
 .form-select {
-  color: rgba(0, 74, 67, 0.46);
-  opacity: 0.4;
+  color: $primary;
+  &:focus{
+    border: 1px solid #068466;
+  }
 }
 input {
   height: 48px;
@@ -16,7 +18,6 @@ input {
   }
 }
 .form-control {
-  background: rgba(255, 255, 255, 0.4);
   border: 1px solid #d7e0d4;
   border-radius: 4px;
   &::-webkit-input-placeholder {
@@ -62,11 +63,22 @@ input {
     color: rgba(0, 74, 67, 0.46);
     opacity: 0.4;
   }
+  &:focus{
+    border: 1px solid #068466;
+  }
 }
 select {
   height: 48px;
   border-radius: 4px;
+  &:focus{
+    border: 1px solid #068466;
+  }
 }
+
+.selected-item {
+  color: $primary;
+}
+
 textarea {
   border-radius: 4px;
   &::placeholder {

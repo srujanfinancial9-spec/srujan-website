@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-blog-detail',
@@ -6,10 +7,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./blog-detail.component.scss']
 })
 export class BlogDetailComponent implements OnInit {
+  element?: HTMLElement
 
-  constructor() { }
+  constructor(private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.activatedRoute.fragment.subscribe(
+      res => {
+        this.JumpTo(res);
+      }
+    )
+  }
+
+  JumpTo(section: any) {
+    this.element = document.getElementById(section) as HTMLElement;
+    this.element.scrollIntoView({ behavior: "smooth" })
   }
 
 }

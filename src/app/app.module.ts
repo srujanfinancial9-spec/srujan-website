@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,7 +16,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { StyleguideComponent } from './styleguide/styleguide.component';
 import { AboutComponent } from './about/about.component';
 import { ProcessComponent } from './process/process.component';
-import { SerivcesComponent } from './serivces/serivces.component';
+import { ServicesComponent } from './services/services.component';
 
 @NgModule({
   declarations: [
@@ -30,11 +32,14 @@ import { SerivcesComponent } from './serivces/serivces.component';
     StyleguideComponent,
     AboutComponent,
     ProcessComponent,
-    SerivcesComponent
+    ServicesComponent,
   ],
   imports: [
+    FormsModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
