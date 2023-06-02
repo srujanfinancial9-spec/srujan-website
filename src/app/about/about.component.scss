@@ -203,7 +203,5 @@
 
 #about-logo{
   background: #fff !important;
-  @include media-breakpoint-up(lg){
-    margin-bottom: 0px !important;
-  }
+  margin-bottom: 0px !important;
 }
