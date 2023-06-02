@@ -92,7 +92,7 @@ h6 {
   font-size: 16px;
   font-weight: 400;
   line-height: 28px;
-  letter-spacing: -0.2px;
+  letter-spacing: 0px;
   text-align: left;
   color: #232722;
 }
@@ -108,7 +108,7 @@ h6 {
   @include media-breakpoint-up(md) {
     font-size: 24px;
     line-height: 32px;
-    letter-spacing: -0.23999999463558197px;
+    letter-spacing: 0px;
   }
 }
 .blog-text {
@@ -116,7 +116,7 @@ h6 {
   font-size: 16px;
   font-weight: 400;
   line-height: 28px;
-  letter-spacing: 0.10000000149011612px;
+  letter-spacing: 0px;
   @include media-breakpoint-up(md) {
     font-size: 20px;
     font-weight: 400;
@@ -131,7 +131,7 @@ h6 {
   font-size: 16px;
   font-weight: 400;
   line-height: 28px;
-  letter-spacing: -0.2px;
+  letter-spacing: 0px;
   text-align: left;
   color: #232722;
 }
@@ -141,7 +141,7 @@ h6 {
   font-size: 16px;
   font-weight: 400;
   line-height: 28px;
-  letter-spacing: -0.2px;
+  letter-spacing: 0px;
   text-align: left;
   color: #232722;
 }
@@ -163,7 +163,7 @@ h6 {
   font-size: 24px;
   font-weight: 400;
   line-height: 32px;
-  letter-spacing: -0.2px;
+  letter-spacing: 0px;
   text-align: left;
 }
 .md-text {
@@ -171,7 +171,7 @@ h6 {
   font-size: 18px;
   font-weight: 400;
   line-height: 28px;
-  letter-spacing: -0.2px;
+  letter-spacing: 0px;
   text-align: left;
   @include media-breakpoint-down(lg) {
     font-size: 16px;
@@ -203,7 +203,9 @@ h6 {
 .sans-bold-text {
   font-family: $body-font;
   font-weight: 700;
-  letter-spacing: 0px;
+  letter-spacing: -0.2px;
   text-align: left;
+  
   color: #1C4044;
 }
+
