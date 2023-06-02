@@ -11,7 +11,7 @@
         <p class="text-primary md-text">Because the earlier you plan for your goals, the better you’ll be.</p>
       </div>
       <div class="left-section-content-button">
-        <button class="secondary-btn" [routerLink]="['/contact']" fragment="form">Schedule Your Free
+        <button class="secondary-btn" [routerLink]="['/contact']">Schedule Your Free
           Consultation</button>
       </div>
     </div>
@@ -278,7 +278,7 @@
             class="sans-bold-text">stress-free life</span> without having to worry about money.</p>
       </div>
       <div class="right-section-content-button">
-        <button class="secondary-btn" [routerLink]="['/about']" fragment="aboutMe">More About Me</button>
+        <button class="secondary-btn" [routerLink]="['/about']">More About Me</button>
       </div>
     </div>
     <div class="left-section-profile align-self-center position-relative green-border">
@@ -291,7 +291,7 @@
 
 <!-- start client section -->
 <div class="container wrapper">
-  <div class="content-layout carousel slide" id="mySlider" data-pause="hover">
+  <div class="content-layout carousel" id="mySlider" data-pause="hover">
     <div class="carousel-inner text-white">
       <div class="carousel-item" [ngClass]="{'active': i === selectedItemIndex}"
         *ngFor="let client of clients; let i = index">
@@ -462,11 +462,11 @@
         <h2 class="text-primary">Recent Blog Posts</h2>
       </div>
       <div class="blog-header-button d-none d-md-block">
-        <button class="secondary-btn" [routerLink]="['/blog']" fragment="blog">View All </button>
+        <button class="secondary-btn" [routerLink]="['/blog']">View All </button>
       </div>
     </div>
     <div class="blog-tiles blog-component d-flex flex-column flex-md-row justify-content-between">
-      <div class="blog-tiles-item" [routerLink]="['/blog-detail']" fragment="blog-detail" style="cursor: pointer;">
+      <div class="blog-tiles-item" [routerLink]="['/blog-detail']" style="cursor: pointer;">
         <div class="header d-flex justify-content-center">
           <img src="assets/Img/Svg/Pie_chart.svg" alt="image_28">
         </div>
@@ -483,7 +483,7 @@
           </div>
         </div>
       </div>
-      <div class="blog-tiles-item" [routerLink]="['/blog-detail']" fragment="blog-detail" style="cursor: pointer;">
+      <div class="blog-tiles-item" [routerLink]="['/blog-detail']" style="cursor: pointer;">
         <div class="header d-flex justify-content-center">
           <img src="assets/Img/Svg/money.svg" alt="money">
         </div>
@@ -499,7 +499,7 @@
           </div>
         </div>
       </div>
-      <div class="blog-tiles-item" [routerLink]="['/blog-detail']" fragment="blog-detail" style="cursor: pointer;">
+      <div class="blog-tiles-item" [routerLink]="['/blog-detail']" style="cursor: pointer;">
         <div class="header d-flex justify-content-center">
           <img src="assets/Img/Svg/goals.svg" alt="steps">
         </div>
@@ -533,7 +533,7 @@
         </div>
       </div>
       <div class="cover-button align-self-center">
-        <button class="secondary-btn" [routerLink]="['contact']" fragment="form">Get In touch</button>
+        <button class="secondary-btn" [routerLink]="['contact']">Get In touch</button>
       </div>
     </div>
     <div class="green-box position-absolute"></div>
