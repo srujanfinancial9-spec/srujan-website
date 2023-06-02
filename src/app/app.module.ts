@@ -17,6 +17,7 @@ import { StyleguideComponent } from './styleguide/styleguide.component';
 import { AboutComponent } from './about/about.component';
 import { ProcessComponent } from './process/process.component';
 import { ServicesComponent } from './services/services.component';
+import { DisclaimerComponent } from './disclaimer/disclaimer.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { ServicesComponent } from './services/services.component';
     AboutComponent,
     ProcessComponent,
     ServicesComponent,
+    DisclaimerComponent,
   ],
   imports: [
     FormsModule,

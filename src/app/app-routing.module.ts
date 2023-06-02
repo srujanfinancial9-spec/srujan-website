@@ -10,6 +10,7 @@ import { ProcessComponent } from './process/process.component';
 import { ResourcesComponent } from './resources/resources.component';
 import { StyleguideComponent } from './styleguide/styleguide.component';
 import { ServicesComponent } from './services/services.component';
+import { DisclaimerComponent } from './disclaimer/disclaimer.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
@@ -22,6 +23,7 @@ const routes: Routes = [
   {path:'about', component:AboutComponent},
   {path:'process', component:ProcessComponent},
   {path:'services', component:ServicesComponent},
+  {path:'disclaimer', component:DisclaimerComponent},
 ];
 
 @NgModule({
