@@ -1,23 +1,25 @@
 <div class="mobile-menu-layout d-lg-none container-fluid" [ngClass]="{'show-layout': show, 'hide-layout': !show}">
   <div class="navbar-links d-flex flex-column justify-content-center text-center mb-0">
     <div class="navbar-link-item text-info" [ngClass]="{'show-menu': show, 'delay-1s':show}" [routerLink]="['/']"
-      (click)="hideMobileLayout()"><a>Home</a></div>
+      (click)="hideMobileLayout()"><a aria-label="go to the home page">Home</a></div>
     <div class="navbar-link-item text-info" [ngClass]="{'show-menu': show, 'delay-2s':show}" [routerLink]="['/about']"
-      (click)="hideMobileLayout()"><a>About</a></div>
+      (click)="hideMobileLayout()"><a aria-label="go to the about page">About</a></div>
     <div class="navbar-link-item text-info" [ngClass]="{'show-menu': show, 'delay-3s':show}"
-      [routerLink]="['/services']" (click)="hideMobileLayout()"><a>Services</a>
+      [routerLink]="['/services']" (click)="hideMobileLayout()"><a aria-label="go to the service page">Services</a>
     </div>
     <div class="navbar-link-item text-info" [ngClass]="{'show-menu': show, 'delay-4s':show}" [routerLink]="['/process']"
-      (click)="hideMobileLayout()"><a>Process</a>
+      (click)="hideMobileLayout()"><a aria-label="go to the process page">Process</a>
     </div>
     <div class="navbar-link-item text-info" [ngClass]="{'show-menu': show, 'delay-5s':show}" [routerLink]="['/blog']"
-      (click)="hideMobileLayout()"><a>Blog</a></div>
-    <div class="navbar-link-item text-info d-grid" [ngClass]="{'show-menu': show, 'delay-6s':show}"
-      [routerLink]="['/contact']">
-      <button class="secondary-btn" (click)="hideMobileLayout()">Contact</button>
+      (click)="hideMobileLayout()"><a aria-label="go to the blog page">Blog</a></div>
+
+    <div class="navbar-link-item text-info" [ngClass]="{'show-menu': show, 'delay-5s':show}" [routerLink]="['/contact']"
+      (click)="hideMobileLayout()"><a aria-label="go to the contact page">Contact</a></div>
+    <div class="navbar-link-item text-info d-grid" [ngClass]="{'show-menu': show, 'delay-6s':show}">
+      <button class="secondary-btn" (click)="goToInvestOfficePage()" aria-label="go to the client page">Client Log In</button>
     </div>
     <div class="mt-5 navbar-link-item gap-3 d-flex nav-social-icon" [ngClass]="{'show-menu': show, 'delay-7s':show}">
-      <a href="https://www.facebook.com/srujanfinancial" target="_blank">
+      <a href="https://www.facebook.com/srujanfinancial" target="_blank" aria-label="Go to the facebook page">
         <svg width="20" height="20" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" clip-rule="evenodd"
             d="M15.1172 0H0.882759C0.395224 0 0 0.395224 0 0.882759V15.1172C0 15.6048 0.395224 16 0.882759 16H8.55172V9.81241H6.46897V7.39034H8.55172V5.60828C8.55172 3.54207 9.81517 2.41655 11.6579 2.41655C12.2789 2.4152 12.8995 2.4465 13.5172 2.51034V4.67034H12.2483C11.2441 4.67034 11.0483 5.14483 11.0483 5.84552V7.38759H13.4483L13.1366 9.80966H11.0345V16H15.1172C15.6048 16 16 15.6048 16 15.1172V0.882759C16 0.395224 15.6048 0 15.1172 0Z"
@@ -25,7 +27,7 @@
         </svg>
       </a>
 
-      <a href="https://in.linkedin.com/pub/deepali-sen/9/5a7/387" target="_blank">
+      <a href="https://in.linkedin.com/pub/deepali-sen/9/5a7/387" target="_blank" aria-label="Go to the linkedin page">
         <svg width="20" height="20" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" clip-rule="evenodd"
             d="M13.6345 13.6338H11.262V9.92C11.262 9.03467 11.246 7.896 10.0281 7.896C8.79427 7.896 8.60581 8.86133 8.60581 9.85689V13.6338H6.23501V5.99822H8.50892V7.04178H8.54181C8.85916 6.44178 9.63253 5.80889 10.7873 5.80889C13.191 5.80889 13.6345 7.38933 13.6345 9.44622V13.6338ZM3.55931 4.95556C2.7966 4.95556 2.18145 4.33867 2.18145 3.57867C2.18145 2.81956 2.7966 2.20267 3.55931 2.20267C4.31757 2.20267 4.9345 2.81956 4.9345 3.57867C4.9345 4.33867 4.31757 4.95556 3.55931 4.95556ZM2.36991 13.6338H4.74604V5.99822H2.36991V13.6338ZM14.8159 0H1.17962C0.528918 0 0 0.516444 0 1.15378V14.8453C0 15.4827 0.528918 16 1.17962 16H14.8159C15.4684 16 16 15.4827 16 14.8453V1.15378C16 0.516444 15.4684 0 14.8159 0V0Z"
@@ -33,7 +35,7 @@
         </svg>
       </a>
 
-      <a href="https://twitter.com/" target=”_blank”>
+      <a href="https://twitter.com/deepali_sen" target=”_blank” aria-label="Go to the twitter page">
         <svg width="20" height="20" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" clip-rule="evenodd"
             d="M2 16H14C15.104 16 16 15.104 16 14V2C16 0.896 15.104 0 14 0H2C0.896 0 0 0.896 0 2V14C0 15.104 0.896 16 2 16ZM11.98 6.228C11.98 8.936 9.916 12.064 6.144 12.064C4.988 12.064 3.908 11.724 3.004 11.148C3.164 11.168 3.328 11.176 3.492 11.176C4.452 11.176 5.336 10.848 6.04 10.296C5.144 10.28 4.384 9.688 4.124 8.872C4.248 8.896 4.376 8.908 4.508 8.908C4.696 8.908 4.876 8.884 5.048 8.836C4.112 8.648 3.404 7.816 3.404 6.824V6.796C3.68 6.948 3.996 7.04 4.332 7.052C3.784 6.684 3.42 6.056 3.42 5.344C3.42 4.968 3.52 4.616 3.696 4.312C4.708 5.552 6.22 6.372 7.924 6.456C7.892 6.304 7.872 6.148 7.872 5.988C7.872 4.856 8.792 3.936 9.924 3.936C10.512 3.936 11.044 4.184 11.42 4.584C11.888 4.492 12.328 4.324 12.724 4.088C12.568 4.568 12.244 4.972 11.82 5.224C12.236 5.172 12.632 5.064 13 4.9C12.724 5.312 12.376 5.676 11.976 5.964C11.98 6.05198 11.98 6.13996 11.98 6.22794V6.228Z"
@@ -44,12 +46,10 @@
     </div>
   </div>
 </div>
-<!-- <div class="navbar-items container d-flex d-lg-none">
-</div> -->
 <div class="container-fluid menu sticky">
   <div class="navbar navbar-container d-flex justify-content-between">
     <div class="navbar-brand">
-      <a href="#" class="companyLogo d-flex gap-2">
+      <a href="/" class="companyLogo d-flex gap-2" aria-label="Go to the home page">
         <svg width="265" height="49" viewBox="0 0 265 49" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M0 5.93939C0 2.65916 2.65916 0 5.93939 0H43.0606C46.3408 0 49 2.65916 49 5.93939V43.0606C49 46.3408 46.3408 49 43.0606 49H5.93939C2.65916 49 0 46.3408 0 43.0606V5.93939Z" fill="#016C62"/>
           <path fill-rule="evenodd" clip-rule="evenodd" d="M30.5331 13.8441C30.0305 14.4264 29.5054 15.4238 29.5054 15.7964C29.5054 15.9463 30.2085 16.4116 31.0674 16.8309C31.9264 17.2498 32.7213 17.6399 32.8332 17.6973C33.138 17.8541 33.0788 16.2565 32.7471 15.3719C32.4545 14.5911 31.466 13.3636 31.1302 13.3636C31.03 13.3636 30.7613 13.58 30.5331 13.8441ZM34.6669 14.9121C34.3596 14.9966 34.2817 15.3483 34.3504 16.3433C34.4047 17.131 34.2665 18.0852 34.0073 18.7123C33.7685 19.2899 33.608 19.7976 33.6506 19.8407C33.8535 20.0458 35.5761 18.9641 35.9399 18.4032C36.4631 17.5963 36.8276 15.9825 36.6454 15.2789C36.5093 14.752 35.7562 14.6126 34.6669 14.9121ZM20.6842 17.2067C18.8592 17.5406 17.173 18.2165 16.6175 18.837C16.1848 19.3202 16.194 19.3822 16.7827 19.9362C17.957 21.0421 20.0548 21.4632 24.344 21.455C27.91 21.4479 28.4348 21.3831 29.8874 20.7686C31.9055 19.9151 32.3382 19.3039 31.448 18.5654C31.0968 18.2741 30.1799 17.8423 29.4106 17.6053C27.7475 17.0936 22.5904 16.858 20.6842 17.2067ZM30.0487 22.2292C27.8125 23.0616 21.9496 23.1995 19.2276 22.484L17.2355 21.9602L16.3752 22.546C15.2098 23.3398 15.2255 24.2636 16.4184 25.076C19.9991 27.5147 30.8607 27.5156 34.4409 25.0773C35.9858 24.025 35.7462 23.0449 33.7161 22.1115C32.3934 21.5036 31.9609 21.5173 30.0487 22.2292ZM13.8852 26.449C10.0736 28.4795 11.7894 30.7689 18.21 32.2199C20.8461 32.8156 28.1135 32.8156 30.7496 32.2199C36.0268 31.0275 38.3302 29.1186 36.5006 27.4541C35.4764 26.5225 35.3153 26.5099 33.2594 27.2056C30.2655 28.2184 26.0785 28.6126 22.5619 28.2126C19.5457 27.8697 16.6906 27.1156 15.783 26.4221C15.1082 25.9067 14.8971 25.9097 13.8852 26.449Z" fill="white"/>
@@ -97,15 +97,15 @@
           </svg>
       </a>
     </div>
-    <button type="button" (click)="toggle()"
+    <button type="button" aria-label="toggle" (click)="toggle()"
       class="hamburger-button d-flex flex-column gap-1 d-lg-none position-relative" style="z-index: 99999999;">
       <div class="blue-line" [ngClass]="{'blue-line-a':show}"></div>
       <div class="blue-line" [ngClass]="{'blue-line-b':show}"></div>
     </button>
     <div class="navbar-items d-none d-lg-flex">
       <div class="navbar-links d-flex mb-0" *ngFor="let item of items">
-      <div class="navbar-link-item under-line" [class.active]="isMenuItemActive(item.route)"  [routerLink]="item.route" (click)="hideMobileLayout()"><a>{{item.name}}</a></div>
+      <div class="navbar-link-item under-line" [class.active]="isMenuItemActive(item.route)"  [routerLink]="item.route" (click)="hideMobileLayout()"><a [attr.aria-label]="item.name">{{item.name}}</a></div>
     </div>
-    <button class="secondary-btn" [routerLink]="['/contact']">Contact</button>
+    <button  type="button" class="secondary-btn" aria-label="go the page invest office page" (click)="goToInvestOfficePage()">Client Log In</button>
   </div>
 </div>
