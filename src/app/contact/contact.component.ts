@@ -80,4 +80,5 @@ export class ContactComponent implements OnInit {
     this.element.scrollIntoView({ behavior: "smooth" })
   }
 
+
 }
