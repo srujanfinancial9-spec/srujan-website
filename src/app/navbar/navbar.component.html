@@ -14,7 +14,7 @@
       (click)="hideMobileLayout()"><a>Blog</a></div>
     <div class="navbar-link-item text-info d-grid" [ngClass]="{'show-menu': show, 'delay-6s':show}"
       [routerLink]="['/contact']">
-      <button class="secondary-btn" (click)="hideMobileLayout()">Contact</button>
+      <button class="secondary-btn" (click)="hideMobileLayout()" aria-label="contact">Contact</button>
     </div>
     <div class="mt-5 navbar-link-item gap-3 d-flex nav-social-icon" [ngClass]="{'show-menu': show, 'delay-7s':show}">
       <a href="https://www.facebook.com/srujanfinancial" target="_blank">
@@ -97,7 +97,7 @@
           </svg>
       </a>
     </div>
-    <button type="button" (click)="toggle()"
+    <button type="button" aria-label="toggle" (click)="toggle()"
       class="hamburger-button d-flex flex-column gap-1 d-lg-none position-relative" style="z-index: 99999999;">
       <div class="blue-line" [ngClass]="{'blue-line-a':show}"></div>
       <div class="blue-line" [ngClass]="{'blue-line-b':show}"></div>
@@ -106,6 +106,6 @@
       <div class="navbar-links d-flex mb-0" *ngFor="let item of items">
       <div class="navbar-link-item under-line" [class.active]="isMenuItemActive(item.route)"  [routerLink]="item.route" (click)="hideMobileLayout()"><a>{{item.name}}</a></div>
     </div>
-    <button class="secondary-btn" [routerLink]="['/contact']">Contact</button>
+    <button  type="button" class="secondary-btn" aria-label="contact" [routerLink]="['/contact']">Contact</button>
   </div>
 </div>
