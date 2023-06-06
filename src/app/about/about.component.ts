@@ -16,7 +16,7 @@ export class AboutComponent implements OnInit {
   teams: {name: string, desc: string, profile: string, post: string}[] = [
       {name: 'Deepali Sen',desc: 'With over 20 years of experience, I specialize in providing personalized guidance to help my clients reach their financial objectives and regularly review their portfolios to ensure they stay on track.', profile:'assets/Img/webp/DSC_1050 1.webp', post:'Founder, QPFP®'},
       {name: 'Archna Kapoor',desc: 'Compliance with regulatory matters is a vital aspect of our firm’s operations. I take care all critical tasks that ensure that we operate in a transparent, ethical, and compliant manner.', profile:'assets/Img/webp/Archna_kapoor.webp', post:'Compliance Officer'},
-      {name: 'Aryan Sen',desc: 'I take care of all back office related matters, including handling operational queries from our clients, ensuring brokerage compliance, and managing interactions with the CA for all tax-related matters.', profile:'assets/Img/webp/Aryan_sen.webp', post:'Back-office'}
+      {name: 'Aaryan Sen',desc: 'I take care of all back office related matters, including handling operational queries from our clients, ensuring brokerage compliance, and managing interactions with the CA for all tax-related matters.', profile:'assets/Img/webp/Aryan_sen.webp', post:'Back-office'}
   ]
 
   values: { svgIconPath: string, header: string, body: string }[] = [
