@@ -12,9 +12,11 @@
     </div>
     <div class="navbar-link-item text-info" [ngClass]="{'show-menu': show, 'delay-5s':show}" [routerLink]="['/blog']"
       (click)="hideMobileLayout()"><a aria-label="go to the blog page">Blog</a></div>
-    <div class="navbar-link-item text-info d-grid" [ngClass]="{'show-menu': show, 'delay-6s':show}"
-      [routerLink]="['/contact']">
-      <button class="secondary-btn" (click)="hideMobileLayout()" aria-label="contact">Contact</button>
+
+    <div class="navbar-link-item text-info" [ngClass]="{'show-menu': show, 'delay-5s':show}" [routerLink]="['/contact']"
+      (click)="hideMobileLayout()"><a aria-label="go to the contact page">Contact</a></div>
+    <div class="navbar-link-item text-info d-grid" [ngClass]="{'show-menu': show, 'delay-6s':show}">
+      <button class="secondary-btn" (click)="goToInvestOfficePage()" aria-label="go to the client page">Client Log In</button>
     </div>
     <div class="mt-5 navbar-link-item gap-3 d-flex nav-social-icon" [ngClass]="{'show-menu': show, 'delay-7s':show}">
       <a href="https://www.facebook.com/srujanfinancial" target="_blank" aria-label="Go to the facebook page">
@@ -104,6 +106,6 @@
       <div class="navbar-links d-flex mb-0" *ngFor="let item of items">
       <div class="navbar-link-item under-line" [class.active]="isMenuItemActive(item.route)"  [routerLink]="item.route" (click)="hideMobileLayout()"><a [attr.aria-label]="item.name">{{item.name}}</a></div>
     </div>
-    <button  type="button" class="secondary-btn" aria-label="contact" [routerLink]="['/contact']">Contact</button>
+    <button  type="button" class="secondary-btn" aria-label="go the page invest office page" (click)="goToInvestOfficePage()">Client Log In</button>
   </div>
 </div>

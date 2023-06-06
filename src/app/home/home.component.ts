@@ -30,7 +30,6 @@ export class HomeComponent implements OnInit {
 
   scrollPrevious() {
     const container = this.testimonialsContainer.nativeElement;
-    console.log("scrollPrevious:-", container.scrollLeft)
     container.scrollLeft -= container.offsetWidth;
 
 
@@ -38,7 +37,6 @@ export class HomeComponent implements OnInit {
   }
   scrollNext() {
     const container = this.testimonialsContainer.nativeElement;
-    console.log("scrollNext :-", container.scrollLeft)
     container.scrollLeft += container.offsetWidth;
 
     this.updateButtonStates();

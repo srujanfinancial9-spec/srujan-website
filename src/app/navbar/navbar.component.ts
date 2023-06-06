@@ -1,5 +1,5 @@
 import { Component, ElementRef, HostListener, OnInit, Renderer2 } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, withDebugTracing } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -15,6 +15,7 @@ export class NavbarComponent implements OnInit {
     { name: 'Services', route: '/services' },
     { name: 'Process', route: '/process' },
     { name: 'Blog', route: '/blog' },
+    { name: 'Contact', route: '/contact' },
   ];
   currentPage!: string;
   show = false;
@@ -53,5 +54,9 @@ export class NavbarComponent implements OnInit {
 
   isMenuItemActive(path: string): boolean {
     return this.router.isActive(path, true);
+  }
+
+  goToInvestOfficePage() {
+    window.open('https://iinvestoffice.com/');
   }
 }

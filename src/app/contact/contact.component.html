@@ -4,10 +4,10 @@
       <h1 class="text-primary">Get In touch</h1>
     </div>
     <div class="contact-content-body">
-      <p class="text-primary body-text">You can use the contact form below to send us a message, and we'll get back to you as soon as possible. Or, if you prefer to keep things old-school, you can shoot us an email directly at <a href="mailto: deepali@srujanfs.com" class="link">deepali@srujanfs.com</a></p>
+      <p class="text-primary body-text">You can use the contact form below to send us a message, and we'll get back to you as soon as possible. Or, if you prefer to keep things old-school, you can shoot us an email directly at <a href="mailto: deepali@srujanfs.com" aria-link="go to the gmail page" class="link">deepali@srujanfs.com</a></p>
     </div>
   </div>
-  <form class="contact-form" [formGroup]="myForm">
+  <form class="contact-form">
     <div>
       <label for="exampleInputEmail1" class="form-label body-text text-info">Name*</label>
       <input type="text" ngModel required name="recipientEmail" id="recipientEmail" class="form-control shadow-none no-outline" placeholder="Enter your full name">
@@ -30,7 +30,7 @@
       <textarea id="message" name="message" ngModel required class="form-control shadow-none" id="exampleFormControlTextarea1" rows="4" placeholder="Enter your message "></textarea>
     </div>
     <div class="d-grid gap-2">
-      <button class="secondary-btn" type="button" (click)="sendEmail()">Send</button>
+      <button class="secondary-btn" type="button" aria-label="submit">Send</button>
     </div>
   </form>
 </div>

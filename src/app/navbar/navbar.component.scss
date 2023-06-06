@@ -101,11 +101,11 @@
   width: 100%;
   transform: translateY(-130%) translateZ(0px);
   @include media-breakpoint-down(lg) {
-    height: 70vh;
+    height: 80vh;
     top: -24px;
   }
   @include media-breakpoint-down(md) {
-    height: 80vh;
+    height: 90vh;
     top: -40px;
   }
   .cross-button {

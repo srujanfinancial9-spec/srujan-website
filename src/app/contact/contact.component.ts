@@ -3,6 +3,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, NgForm } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { MetaDataService } from '../services/meta-data.service';
+import { ScrollService } from '../services/scroll.service';
 
 @Component({
   selector: 'app-contact',
@@ -16,11 +17,12 @@ export class ContactComponent implements OnInit {
   @ViewChild('myForm') form!: NgForm;
   element?: HTMLElement
 
-  constructor(private activatedRoute: ActivatedRoute, private http: HttpClient, metaData: MetaDataService, private fb: FormBuilder) {
+  constructor(private activatedRoute: ActivatedRoute, private http: HttpClient, metaData: MetaDataService, private fb: FormBuilder, private scroll:ScrollService ) {
     metaData.setMetaData(
       'Reach out for expert financial guidance',
       'Contact Deepali Sen, a qualified personal finance professional, to receive expert guidance and support for all your investment planning needs. '
     )
+
   }
 
   items = [
@@ -46,34 +48,6 @@ export class ContactComponent implements OnInit {
     this.selectedItem = event.target.value;
   }
 
-  sendEmail() {
-    const email = this.form.value.recipientEmail;
-    const name = this.form.value.name;
-    const body = this.form.value.message;
-
-    const endpoint = 'https://your-server.com/send-email';
-
-    // const mailtoUrl = `mailto:${email}?subject=${encodeURIComponent(name)}&body=${encodeURIComponent(body)}`;
-
-    // window.open(mailtoUrl);
-
-    const payload = {
-      email,
-      name,
-      body
-    };
-
-    this.http.post(endpoint, payload).subscribe(
-      () => {
-        console.log('Email sent successfully');
-        // Handle success
-      },
-      (error) => {
-        console.error('Failed to send email', error);
-        // Handle error
-      }
-    );
-  }
 
   JumpTo(section: any) {
     this.element = document.getElementById(section) as HTMLElement;
