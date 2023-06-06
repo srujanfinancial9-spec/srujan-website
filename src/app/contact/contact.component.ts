@@ -80,4 +80,14 @@ export class ContactComponent implements OnInit {
     this.element.scrollIntoView({ behavior: "smooth" })
   }
 
+  // submitForm(): void {
+  //   // Perform form submission logic
+
+  //   // Identify user (if applicable)
+  //   this.hotjarService.identify('123456');
+
+  //   // Tag recording (if applicable)
+  //   this.hotjarService.tagRecording('Submitted Form');
+  // }
+
 }
