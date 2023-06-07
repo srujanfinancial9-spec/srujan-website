@@ -1,6 +1,7 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import { MetaDataService } from '../services/meta-data.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -15,7 +16,9 @@ export class HomeComponent implements OnInit {
   isPreviousActive = false;
   isNextActive = true;
 
-  constructor(private elRef: ElementRef, private metaData: MetaDataService) {
+  constructor(private elRef: ElementRef,
+    private metaData: MetaDataService,
+    private router: Router) {
     metaData.setMetaData('Srujan Financial - Personal Finance Guidance for Busy Young Professionals', 'We offer simple and personalized financial guidance tailored to busy young professionals. Achieve your financial goals, build long-term wealth, and secure your financial future with our expert advice and services.')
   }
   clients: { title: string, body: string, body2: string, about: string, avatar: string, profile: string }[] = [
@@ -46,6 +49,10 @@ export class HomeComponent implements OnInit {
     const container = this.testimonialsContainer.nativeElement;
     this.isPreviousActive = container.scrollLeft > 0;
     this.isNextActive = container.scrollLeft + container.offsetWidth < container.scrollWidth;
+  }
+
+  onCardClick(id:number) {
+    this.router.navigate(['/blog-detail', id]);
   }
 
 

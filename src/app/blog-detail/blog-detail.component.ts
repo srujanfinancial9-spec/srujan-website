@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { blogPosts } from './blogPosts';
 
 @Component({
   selector: 'app-blog-detail',
@@ -8,6 +9,9 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class BlogDetailComponent implements OnInit {
   element?: HTMLElement
+  blogId!: string;
+  blog: any;
+  blogPosts = blogPosts;
 
   constructor(private activatedRoute: ActivatedRoute) { }
 
@@ -17,6 +21,11 @@ export class BlogDetailComponent implements OnInit {
         this.JumpTo(res);
       }
     )
+
+    this.activatedRoute.params.subscribe(params => {
+      this.blogId = params['id'];
+      this.blog = this.blogPosts.find(post => post.id === this.blogId);
+    });
   }
 
   JumpTo(section: any) {
