@@ -4,6 +4,8 @@ import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { MetaDataService } from '../services/meta-data.service';
 import { ScrollService } from '../services/scroll.service';
+import { MongoClient } from 'mongodb';
+
 
 @Component({
   selector: 'app-contact',
@@ -13,6 +15,7 @@ import { ScrollService } from '../services/scroll.service';
 export class ContactComponent implements OnInit {
   myForm!: FormGroup;
   selectedItem!: string;
+  url = "mongodb://localhost:27017/";
 
   @ViewChild('myForm') form!: NgForm;
   element?: HTMLElement
@@ -77,6 +80,7 @@ export class ContactComponent implements OnInit {
     );
 
     this.myForm.reset();
+
   }
 
 

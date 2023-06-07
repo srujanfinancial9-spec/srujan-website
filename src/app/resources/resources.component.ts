@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { MetaDataService } from '../services/meta-data.service';
 
 @Component({
@@ -9,8 +9,11 @@ import { MetaDataService } from '../services/meta-data.service';
 })
 export class ResourcesComponent implements OnInit {
   element?: HTMLElement
+  @Input() blog: any;
 
-  constructor(private activatedRoute: ActivatedRoute, private metaData: MetaDataService) {
+  constructor(private activatedRoute: ActivatedRoute,
+    private metaData: MetaDataService,
+    private router: Router) {
     metaData.setMetaData(
       'Financial Resources - Empowering You with Knowledge and Tools',
       'Access a wealth of financial resources and tools curated by Deepali Sen to empower you on your journey towards financial success. Explore articles, guides, calculators, and recommended readings to enhance your financial literacy and make informed decisions.'
@@ -23,6 +26,10 @@ export class ResourcesComponent implements OnInit {
         this.JumpTo(res);
       }
     )
+  }
+
+  onCardClick(id:number) {
+    this.router.navigate(['/blog-detail', id]);
   }
 
   JumpTo(section: any) {

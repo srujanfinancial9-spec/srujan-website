@@ -16,7 +16,7 @@ const routes: Routes = [
   {path:'',component:HomeComponent},
   {path:'blog',component:ResourcesComponent},
   {path:'contact', component:ContactComponent},
-  {path:'blog-detail', component:BlogDetailComponent},
+  {path:'blog-detail/:id', component:BlogDetailComponent},
   {path:'privacy-policy', component:PrivacyPolicyComponent},
   {path:'404', component:PageNotFoundComponent},
   {path:'style-guide', component:StyleguideComponent},
