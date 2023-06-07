@@ -7,10 +7,10 @@
       <p class="text-primary body-text">You can use the contact form below to send us a message, and we'll get back to you as soon as possible. Or, if you prefer to keep things old-school, you can shoot us an email directly at <a href="mailto: deepali@srujanfs.com" aria-link="go to the gmail page" class="link">deepali@srujanfs.com</a></p>
     </div>
   </div>
-  <form class="contact-form">
+  <form class="contact-form" [formGroup]="myForm" (ngSubmit)="onSubmit()">
     <div>
       <label for="exampleInputEmail1" class="form-label body-text text-info">Name*</label>
-      <input type="text" ngModel required name="recipientEmail" id="recipientEmail" class="form-control shadow-none no-outline" placeholder="Enter your full name">
+      <input type="text" formControlName="name"  required name="recipientName" id="recipientName" class="form-control shadow-none no-outline" placeholder="Enter your full name">
     </div>
     <div>
       <label for="exampleInputEmail1" class="form-label body-text text-info shadow-none">Service*</label>
@@ -23,14 +23,14 @@
     </div>
     <div>
       <label class="form-label text-info body-text">Your Phone Number*</label>
-      <input ngModel required id="name" name="subject" type="tel" class="form-control shadow-none" placeholder="Enter your phone number">
+      <input  required id="name" formControlName="phoneNumber" name="subject" type="tel" class="form-control shadow-none" placeholder="Enter your phone number">
     </div>
     <div>
       <label for="exampleFormControlTextarea1" class="form-label text-info body-text">Message</label>
-      <textarea id="message" name="message" ngModel required class="form-control shadow-none" id="exampleFormControlTextarea1" rows="4" placeholder="Enter your message "></textarea>
+      <textarea id="message" name="message" formControlName="message"  required class="form-control shadow-none" id="exampleFormControlTextarea1" rows="4" placeholder="Enter your message "></textarea>
     </div>
     <div class="d-grid gap-2">
-      <button class="secondary-btn" type="button" aria-label="submit">Send</button>
+      <button class="secondary-btn" type="submit" aria-label="submit">Send</button>
     </div>
   </form>
 </div>
