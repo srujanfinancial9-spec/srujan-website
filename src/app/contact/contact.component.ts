@@ -1,10 +1,9 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { MetaDataService } from '../services/meta-data.service';
 import { ScrollService } from '../services/scroll.service';
-import { MongoClient } from 'mongodb';
 
 
 @Component({
@@ -67,10 +66,13 @@ export class ContactComponent implements OnInit {
 
   onSubmit() {
     const formData = this.myForm.value;
-    console.log(formData)
-    const url = 'http://localhost:8080/api/users'; // Replace with your API endpoint URL
+    const url = 'https://us-east-1.aws.data.mongodb-api.com/app/application-0-ripez/endpoint/addUser';
 
-    this.http.post(url, formData).subscribe(
+    const headers = new HttpHeaders()
+    .set('Content-Type', 'application/json')
+    .set('apiKey', 'kWOpkzXhGJv3QOIGpBY7rAbI5mcZAxPsI8zPZeXa0r4fz8fxA5FSfvZ4tBzkA0B6');
+
+    this.http.post(url, formData, {headers}).subscribe(
       (response) => {
         console.log('Data sent successfully!', response);
       },
