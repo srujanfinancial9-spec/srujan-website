@@ -20,7 +20,7 @@
     margin-top: 48px;
     .body{
       @include media-breakpoint-up(lg){
-        margin-top: 32px;
+        margin-top: 16px;
         margin-bottom: 72px;
       }
     }
@@ -33,14 +33,14 @@
     }
     @include media-breakpoint-up(lg){
       margin-bottom: 218px;
-      margin-top: 116px;
+      margin-top: 72px;
     }
     .blog-footer-img {
       margin-top: 62px;
     }
     .body{
       @include media-breakpoint-up(lg){
-        margin-top: 32px;
+        margin-top: 16px;
       }
     }
   }
