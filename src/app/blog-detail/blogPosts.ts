@@ -67,7 +67,7 @@ export const blogPosts: any[] = [
       Prioritize on your goals if all seem unlikely to be met. Write some off, shrink them or
       delay them if needed`
     ],
-    bottomTitle: 'conclusion',
+    bottomTitle: 'Conclusion',
     bottom: `Money is our gateway to freedom, let’s lead our lives around money with grit, grace, and dignity.
     It’s time we respect money- one of the highest forms of energies. I’d like to end this piece with a very
     apt Chinese proverb, “When sleeping women wake, mountains move”.`,
@@ -147,7 +147,7 @@ export const blogPosts: any[] = [
       `If the corpus were managed optimally (yet conservatively), it would have lasted much longer (see
                   chart below). It could be passed on or donated after the client’s need gets through.`
     ],
-    bottomTitle: 'conclusion',
+    bottomTitle: 'Conclusion',
     bottom: `Total returns of 8% could get possible with just 11% of the corpus (Rs.1.9 cr.) being invested at 12%
     expected returns in a diversified basket of stocks.
     To my mind this Chinese proverb rings very true, “When sleeping women wake, mountains will move”.`,

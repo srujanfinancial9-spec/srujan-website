@@ -14,7 +14,10 @@ import { ScrollService } from '../services/scroll.service';
 export class ContactComponent implements OnInit {
   myForm!: FormGroup;
   selectedItem!: string;
-  url = "mongodb://localhost:27017/";
+  tokenUrl = "https://us-east-1.aws.realm.mongodb.com/api/client/v2.0/app/application-0-ripez/auth/providers/anon-user/login";
+  mongodbUrl = "https://us-east-1.aws.data.mongodb-api.com/app/application-0-ripez/endpoint/addUser";
+
+  tokenObject!: any;
 
   @ViewChild('myForm') form!: NgForm;
   element?: HTMLElement
@@ -64,15 +67,13 @@ export class ContactComponent implements OnInit {
     this.element.scrollIntoView({ behavior: "smooth" })
   }
 
-  onSubmit() {
-    const formData = this.myForm.value;
-    const url = 'https://us-east-1.aws.data.mongodb-api.com/app/application-0-ripez/endpoint/addUser';
+  postForm(token: string, body: Object) {
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${token}`
+    })
 
-    const headers = new HttpHeaders()
-    .set('Content-Type', 'application/json')
-    .set('apiKey', 'kWOpkzXhGJv3QOIGpBY7rAbI5mcZAxPsI8zPZeXa0r4fz8fxA5FSfvZ4tBzkA0B6');
-
-    this.http.post(url, formData, {headers}).subscribe(
+    this.http.post(this.mongodbUrl, body, {headers}).subscribe(
       (response) => {
         console.log('Data sent successfully!', response);
       },
@@ -83,6 +84,22 @@ export class ContactComponent implements OnInit {
 
     this.myForm.reset();
 
+  }
+
+  onSubmit() {
+    const formData = this.myForm.value;
+    const headers = new HttpHeaders()
+      .set('Content-Type', 'application/json');
+
+    this.http.post(this.tokenUrl, { headers }).subscribe(
+      (response) => {
+        this.tokenObject = response;
+        this.postForm(this.tokenObject.access_token, formData)
+      },
+      (error) => {
+        console.error('Error sending data:', error);
+      }
+    );
   }
 
 
