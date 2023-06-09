@@ -11,12 +11,12 @@
         <p class="text-primary md-text">Because the earlier you plan for your goals, the better you’ll be.</p>
       </div>
       <div class="left-section-content-button">
-        <button class="secondary-btn" [routerLink]="['/contact']">Schedule Your Free
+        <button aria-label="Call to Action" class="secondary-btn" [routerLink]="['/contact']">Schedule Your Free
           Consultation</button>
       </div>
     </div>
     <div class="left-section-profile align-self-center green-border">
-      <img src="assets/Img/Png/hero-profile.png" alt="cover" class="img-fluid">
+      <img src="assets/Img/webp/hero-profile.webp" alt="cover" class="img-fluid">
     </div>
   </div>
 </div>
@@ -266,9 +266,9 @@
         <h2 class="text-primary mt-2 mt-md-0">At Srujan financial, we help you make the right financial decisions</h2>
       </div>
       <div class="left-section-content-body body-width">
-        <p class="text-primary md-text">Hi, my name is Deepali. I’m a <span class="sans-bold-text">Qualified Personal
-            Finance
-            Professional (QPFP®)</span>
+        <p class="text-primary md-text">Hi, my name is Deepali. I’m an MBA finance graduate, and a Qualified Personal
+          Finance
+          Professional (QPFP®)
         </p>
         <p class="text-primary md-text">I started Srujan financial, to help driven young individuals like you <span
             class="sans-bold-text">build wealth</span>, and <span class="sans-bold-text">achieve your financial
@@ -278,11 +278,11 @@
             class="sans-bold-text">stress-free life</span> without having to worry about money.</p>
       </div>
       <div class="right-section-content-button">
-        <button class="secondary-btn" [routerLink]="['/about']">More About Me</button>
+        <button aria-label="about me" class="secondary-btn" [routerLink]="['/about']">More About Me</button>
       </div>
     </div>
     <div class="left-section-profile align-self-center position-relative green-border">
-      <img src="assets/Img/Png/founder_deepali_sen.png" alt="founder_deepali_sen" class="img-fluid">
+      <img src="assets/Img/webp/founder_deepali_sen.webp" alt="founder_deepali_sen" class="img-fluid">
       <p class="xsm-text name-placeholder position-absolute">Founder, QPFP®</p>
     </div>
   </div>
@@ -325,7 +325,8 @@
               </div>
             </div>
             <div class="button-section d-flex gap-2">
-              <button class="slide-btn btn-left" type="button" data-bs-target="#mySlider" data-bs-slide="prev">
+              <button class="slide-btn btn-left" aria-label="Featured Content Slider" type="button"
+                data-bs-target="#mySlider" data-bs-slide="prev">
                 <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg"
                   style="transform: scaleX(-1);">
                   <path
@@ -333,8 +334,8 @@
                     fill="#068466" />
                 </svg>
               </button>
-              <button class="slide-btn active-btn btn-right" type="button" data-bs-target="#mySlider"
-                data-bs-slide="next">
+              <button class="slide-btn active-btn btn-right" aria-label="Featured Content Slider" type="button"
+                data-bs-target="#mySlider" data-bs-slide="next">
                 <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M10.278 11.6219V10.7579C10.278 8.27395 11.97 6.88795 14.274 6.86995V5.24995C11.97 5.24995 10.278 3.84595 10.278 1.37995V0.515948H8.76605L8.76605 1.37995C8.76605 3.32395 9.57605 4.63795 11.322 5.10595V5.35795L0.774048 5.35795V6.76195L11.322 6.76195V7.03195C9.57605 7.49995 8.76605 8.79595 8.76605 10.7579V11.6219H10.278Z"
@@ -462,57 +463,58 @@
         <h2 class="text-primary">Recent Blog Posts</h2>
       </div>
       <div class="blog-header-button d-none d-md-block">
-        <button class="secondary-btn" [routerLink]="['/blog']">View All </button>
+        <button aria-label="view all" class="secondary-btn" [routerLink]="['/blog']">View All </button>
       </div>
     </div>
     <div class="blog-tiles blog-component d-flex flex-column flex-md-row justify-content-between">
-      <div class="blog-tiles-item" [routerLink]="['/blog-detail']" style="cursor: pointer;">
-        <div class="header d-flex justify-content-center">
-          <img src="assets/Img/Svg/Pie_chart.svg" alt="image_28">
-        </div>
-        <div class="body">
-          <h5 class="text-primary">Key Tips For Sticking To Your Budget</h5>
-          <p class="text-primary body-text">As someone who has been living on one income for years, I know firsthand the
-          </p>
-          <div class="link">
-            <button class="btn btn-primary-link fw-bold">Read Now</button>
-            <svg width="7" height="11" viewBox="0 0 7 11" fill="none" class="mt-1" xmlns="http://www.w3.org/2000/svg">
-              <path d="M1.5 1.5L5.5 5.5L1.5 9.5" stroke="#016C62" stroke-width="1.5" />
-            </svg>
+      <div class="blog-tiles blog-component d-flex flex-column flex-md-row justify-content-between">
+        <div class="blog-tiles-item" (click)="onCardClick(1)" style="cursor: pointer;">
+          <div class="header d-flex justify-content-center">
+            <img src="assets/Img/Svg/money1.svg" alt="money">
+          </div>
+          <div class="body">
+            <h5 class="text-primary">Money- Our partner for life</h5>
+            <p class="text-primary body-text">We all are part of a society where very often; the women folk are expected....
+            </p>
+            <div class="link">
+              <button class="btn btn-primary-link fw-bold" aria-label="read now">Read Now</button>
+              <svg width="7" height="11" viewBox="0 0 7 11" fill="none" class="mt-1" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.5 1.5L5.5 5.5L1.5 9.5" stroke="#016C62" stroke-width="1.5" />
+              </svg>
 
+            </div>
           </div>
         </div>
-      </div>
-      <div class="blog-tiles-item" [routerLink]="['/blog-detail']" style="cursor: pointer;">
-        <div class="header d-flex justify-content-center">
-          <img src="assets/Img/Svg/money.svg" alt="money">
-        </div>
-        <div class="body">
-          <h5 class="text-primary">How To Stop Worrying About Money</h5>
-          <p class="text-primary body-text">Money is a big stress factor for many people. So, if you’ve found yourself
-          </p>
-          <div class="link">
-            <button class="btn btn-primary-link fw-bold">Read Now</button>
-            <svg width="7" height="11" viewBox="0 0 7 11" fill="none" class="mt-1" xmlns="http://www.w3.org/2000/svg">
-              <path d="M1.5 1.5L5.5 5.5L1.5 9.5" stroke="#016C62" stroke-width="1.5" />
-            </svg>
+        <div class="blog-tiles-item" (click)="onCardClick(2)" style="cursor: pointer;">
+          <div class="header d-flex justify-content-center">
+            <img src="assets/Img/Svg/goals.svg" alt="goal">
+          </div>
+          <div class="body">
+            <h5 class="text-primary">Most common investment mistakes women make</h5>
+            <p class="text-primary body-text">My real experiences in dealing with families while doing their financial planning...
+            </p>
+            <div class="link">
+              <button class="btn btn-primary-link fw-bold" aria-label="read now">Read Now</button>
+              <svg width="7" height="11" viewBox="0 0 7 11" fill="none" class="mt-1" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.5 1.5L5.5 5.5L1.5 9.5" stroke="#016C62" stroke-width="1.5" />
+              </svg>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="blog-tiles-item" [routerLink]="['/blog-detail']" style="cursor: pointer;">
-        <div class="header d-flex justify-content-center">
-          <img src="assets/Img/Svg/goals.svg" alt="steps">
-        </div>
-        <div class="body">
-          <h5 class="text-primary">How To Set Realistic Goals For Your Future</h5>
-          <p class="text-primary body-text">Setting realistic goals can be a powerful way to start making progress
-            towards
-          </p>
-          <div class="link">
-            <button class="btn btn-primary-link fw-bold">Read Now</button>
-            <svg width="7" height="11" viewBox="0 0 7 11" fill="none" class="mt-1" xmlns="http://www.w3.org/2000/svg">
-              <path d="M1.5 1.5L5.5 5.5L1.5 9.5" stroke="#016C62" stroke-width="1.5" />
-            </svg>
+        <div class="blog-tiles-item" (click)="onCardClick(3)" style="cursor: pointer;">
+          <div class="header d-flex justify-content-center">
+            <img src="assets/Img/Svg/money.svg" alt="steps">
+          </div>
+          <div class="body">
+            <h5 class="text-primary">Money management- the traditional ways</h5>
+            <p class="text-primary body-text">All Indians are doctors just as all of us are financial planners. Well, ...
+            </p>
+            <div class="link">
+              <button class="btn btn-primary-link fw-bold" aria-label="read now">Read Now</button>
+              <svg width="7" height="11" viewBox="0 0 7 11" fill="none" class="mt-1" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.5 1.5L5.5 5.5L1.5 9.5" stroke="#016C62" stroke-width="1.5" />
+              </svg>
+            </div>
           </div>
         </div>
       </div>
@@ -533,7 +535,7 @@
         </div>
       </div>
       <div class="cover-button align-self-center">
-        <button class="secondary-btn" [routerLink]="['contact']">Get In touch</button>
+        <button class="secondary-btn" [routerLink]="['contact']" aria-label="Get in touch">Get In touch</button>
       </div>
     </div>
     <div class="green-box position-absolute"></div>

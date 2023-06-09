@@ -24,7 +24,6 @@ export class ScrollService {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         const fragment = event.urlAfterRedirects.split('#')[1];
-        console.log(fragment)
         if (fragment) {
           setTimeout(() => {
             this.JumpTo(fragment,'');

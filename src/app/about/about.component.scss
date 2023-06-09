@@ -1,6 +1,16 @@
 @import "node_modules/bootstrap/scss/mixins";
 @import "src/layout.scss";
 
+
+
+.link {
+  color: #518d57 !important;
+  font-weight: 800 !important;
+  &:hover {
+    color: #518d57 !important;
+  }
+}
+
 .mgt-20 {
   margin-top: 4px;
   @include media-breakpoint-up(md){

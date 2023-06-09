@@ -54,17 +54,16 @@
   <div class="content-layout">
     <div class="blog-tiles blog-component d-flex flex-column flex-md-row justify-content-between">
       <div class="blog-tiles blog-component d-flex flex-column flex-md-row justify-content-between">
-        <div class="blog-tiles-item" [routerLink]="['/blog-detail']" style="cursor: pointer;">
+        <div class="blog-tiles-item" (click)="onCardClick(1)" style="cursor: pointer;">
           <div class="header d-flex justify-content-center">
-            <img src="assets/Img/Svg/Pie_chart.svg" alt="image_28">
+            <img src="assets/Img/Svg/money1.svg" alt="money">
           </div>
           <div class="body">
-            <h5 class="text-primary">Key Tips For Sticking To Your Budget</h5>
-            <p class="text-primary body-text">As someone who has been living on one income for years, I know firsthand
-              the
+            <h5 class="text-primary">Money- Our partner for life</h5>
+            <p class="text-primary body-text">We all are part of a society where very often; the women folk are expected....
             </p>
             <div class="link">
-              <button class="btn btn-primary-link fw-bold">Read Now</button>
+              <button class="btn btn-primary-link fw-bold" aria-label="read now">Read Now</button>
               <svg width="7" height="11" viewBox="0 0 7 11" fill="none" class="mt-1" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1.5 1.5L5.5 5.5L1.5 9.5" stroke="#016C62" stroke-width="1.5" />
               </svg>
@@ -72,33 +71,32 @@
             </div>
           </div>
         </div>
-        <div class="blog-tiles-item" [routerLink]="['/blog-detail']" style="cursor: pointer;">
+        <div class="blog-tiles-item" (click)="onCardClick(2)" style="cursor: pointer;">
           <div class="header d-flex justify-content-center">
-            <img src="assets/Img/Svg/money.svg" alt="money">
+            <img src="assets/Img/Svg/goals.svg" alt="goal">
           </div>
           <div class="body">
-            <h5 class="text-primary">How To Stop Worrying About Money</h5>
-            <p class="text-primary body-text">Money is a big stress factor for many people. So, if you’ve found yourself
+            <h5 class="text-primary">Most common investment mistakes women make</h5>
+            <p class="text-primary body-text">My real experiences in dealing with families while doing their financial planning...
             </p>
             <div class="link">
-              <button class="btn btn-primary-link fw-bold">Read Now</button>
+              <button class="btn btn-primary-link fw-bold" aria-label="read now">Read Now</button>
               <svg width="7" height="11" viewBox="0 0 7 11" fill="none" class="mt-1" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1.5 1.5L5.5 5.5L1.5 9.5" stroke="#016C62" stroke-width="1.5" />
               </svg>
             </div>
           </div>
         </div>
-        <div class="blog-tiles-item" [routerLink]="['/blog-detail']" style="cursor: pointer;">
+        <div class="blog-tiles-item" (click)="onCardClick(3)" style="cursor: pointer;">
           <div class="header d-flex justify-content-center">
-            <img src="assets/Img/Svg/goals.svg" alt="steps">
+            <img src="assets/Img/Svg/money.svg" alt="steps">
           </div>
           <div class="body">
-            <h5 class="text-primary">How To Set Realistic Goals For Your Future</h5>
-            <p class="text-primary body-text">Setting realistic goals can be a powerful way to start making progress
-              towards
+            <h5 class="text-primary">Money management- the traditional ways</h5>
+            <p class="text-primary body-text">All Indians are doctors just as all of us are financial planners. Well, ...
             </p>
             <div class="link">
-              <button class="btn btn-primary-link fw-bold">Read Now</button>
+              <button class="btn btn-primary-link fw-bold" aria-label="read now">Read Now</button>
               <svg width="7" height="11" viewBox="0 0 7 11" fill="none" class="mt-1" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1.5 1.5L5.5 5.5L1.5 9.5" stroke="#016C62" stroke-width="1.5" />
               </svg>
@@ -108,40 +106,46 @@
       </div>
     </div>
     <div class="blog-tiles blog-component d-flex flex-column flex-md-row justify-content-between">
-      <div class="blog-tiles-item" [routerLink]="['/blog-detail']" style="cursor: pointer;">
-        <div class="header"></div>
+      <div class="blog-tiles-item" (click)="onCardClick(4)" style="cursor: pointer;">
+        <div class="header d-flex justify-content-center">
+          <img src="assets/Img/Svg/gold.svg" alt="gold">
+        </div>
         <div class="body">
-          <h5 class="text-primary">Long headline to turn your visitors</h5>
-          <p class="text-info body-text">Harmonious colour themes have built up as the collection has evolved. </p>
+          <h5 class="text-primary">Is gold a sensible investment idea?</h5>
+          <p class="text-info body-text">I know lots of my women acquaintances and mothers of my friends who keep buying gold ... </p>
           <div class="link">
-            <button class="btn btn-primary-link fw-bold" [routerLink]="['/blog-detail']">Read Now</button>
+            <button class="btn btn-primary-link fw-bold" [routerLink]="['/blog-detail']" aria-label="read now">Read Now</button>
             <svg width="7" height="11" viewBox="0 0 7 11" fill="none" class="mt-1" xmlns="http://www.w3.org/2000/svg">
               <path d="M1.5 1.5L5.5 5.5L1.5 9.5" stroke="#016C62" stroke-width="1.5" />
             </svg>
           </div>
         </div>
       </div>
-      <div class="blog-tiles-item" [routerLink]="['/blog-detail']" style="cursor: pointer;">
-        <div class="header"></div>
+      <div class="blog-tiles-item" (click)="onCardClick(5)" style="cursor: pointer;">
+        <div class="header d-flex justify-content-center">
+          <img src="assets/Img/Svg/retirement.svg" alt="gold">
+        </div>
         <div class="body">
-          <h5 class="text-primary">Long headline to turn your visitors</h5>
-          <p class="text-info body-text">Harmonious colour themes have built up as the collection has evolved. </p>
+          <h5 class="text-primary">Retirement- one of the surest financial goals</h5>
+          <p class="text-info body-text">We have been increasingly hearing of people passing away in their mid-nineties or their ninety plus
+            birthdays ... </p>
           <div class="link">
-            <button class="btn btn-primary-link fw-bold" [routerLink]="['/blog-detail']">Read Now</button>
+            <button class="btn btn-primary-link fw-bold" [routerLink]="['/blog-detail']" aria-label="read now">Read Now</button>
             <svg width="7" height="11" viewBox="0 0 7 11" fill="none" class="mt-1" xmlns="http://www.w3.org/2000/svg">
               <path d="M1.5 1.5L5.5 5.5L1.5 9.5" stroke="#016C62" stroke-width="1.5" />
             </svg>
           </div>
         </div>
       </div>
-      <div class="blog-tiles-item" [routerLink]="['/blog-detail']" style="cursor: pointer;">
-        <div class="header"></div>
+      <div class="blog-tiles-item" (click)="onCardClick(6)" style="cursor: pointer;">
+        <div class="header d-flex justify-content-center">
+          <img src="assets/Img/Svg/retirement1.svg" alt="gold">
+        </div>
         <div class="body">
-          <h5 class="text-primary">Long headline to turn your visitors</h5>
-          <p class="text-info body-text">Harmonious colour themes have built up as the
-            collection has evolved. </p>
+          <h5 class="text-primary">Retirement is closer than it appears</h5>
+          <p class="text-info body-text">The overall objective of financial planning is to prepare the client for any of the two possibilities; of passing ...</p>
           <div class="link">
-            <button class="btn btn-primary-link fw-bold" [routerLink]="['/blog-detail']">Read Now</button>
+            <button class="btn btn-primary-link fw-bold" [routerLink]="['/blog-detail']" aria-label="read now">Read Now</button>
             <svg width="7" height="11" viewBox="0 0 7 11" fill="none" class="mt-1" xmlns="http://www.w3.org/2000/svg">
               <path d="M1.5 1.5L5.5 5.5L1.5 9.5" stroke="#016C62" stroke-width="1.5" />
             </svg>
@@ -165,7 +169,7 @@
         <div class="cover-container-input d-flex justify-content-center">
           <input type="email" class="form-control shadow-none rounded-0" placeholder="Enter your email address"
             aria-label="Recipient's email" aria-describedby="button-addon2">
-          <button class="secondary-btn">Subscribe</button>
+          <button class="secondary-btn" type="button" aria-label="subscribe">Subscribe</button>
         </div>
         <div class="cover-container-click-details">
           <p class="xsm-text text-info text-center mt-2">Join our newsletter to keep an eye on the latest developments in the modern work culture</p>
