@@ -97,7 +97,7 @@ export class ContactComponent implements OnInit {
     this.http.post(this.tokenUrl, { headers }).subscribe(
       (response) => {
         this.tokenObject = response;
-        // this.postForm(this.tokenObject.access_token, formData)
+        this.postForm(this.tokenObject.access_token, formData)
       },
       (error) => {
         console.error('Error sending data:', error);
