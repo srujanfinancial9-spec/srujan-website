@@ -4,17 +4,22 @@
       <h1 class="text-primary">Get In touch</h1>
     </div>
     <div class="contact-content-body">
-      <p class="text-primary body-text">You can use the contact form below to send us a message, and we'll get back to you as soon as possible. Or, if you prefer to keep things old-school, you can shoot us an email directly at <a href="mailto: deepali.sen@srujanfa.com" aria-link="go to the gmail page" class="link">deepali.sen@srujanfa.com</a></p>
+      <p class="text-primary body-text">You can use the contact form below to send us a message, and we'll get back to
+        you as soon as possible. Or, if you prefer to keep things old-school, you can shoot us an email directly at <a
+          href="mailto: deepali.sen@srujanfa.com" aria-link="go to the gmail page"
+          class="link">deepali.sen@srujanfa.com</a></p>
     </div>
   </div>
   <form class="contact-form" [formGroup]="myForm" (ngSubmit)="onSubmit()">
     <div>
       <label for="exampleInputEmail1" class="form-label body-text text-info">Name*</label>
-      <input type="text" formControlName="name"  required name="recipientName" id="recipientName" class="form-control shadow-none no-outline" placeholder="Enter your full name">
+      <input type="text" formControlName="name" required name="recipientName" id="recipientName"
+        class="form-control shadow-none no-outline" placeholder="Enter your full name">
     </div>
     <div>
       <label for="exampleInputEmail1" class="form-label body-text text-info shadow-none">Service*</label>
-      <select class="form-select shadow-none" formControlName="selectedOption" (change)="onItemSelected($event)" aria-label="Default select example">
+      <select class="form-select shadow-none" formControlName="selectedOption" (change)="onItemSelected($event)"
+        aria-label="Default select example">
         <option class="body-text" value="" disabled selected hidden>What service are you looking for?</option>
         <option *ngFor="let item of items" [value]="item" [class.selected-item]="item === selectedItem">
           {{ item }}
@@ -23,14 +28,19 @@
     </div>
     <div>
       <label class="form-label text-info body-text">Your Phone Number*</label>
-      <input  required id="name" formControlName="phoneNumber" name="subject" type="tel" class="form-control shadow-none" placeholder="Enter your phone number">
+      <input required id="name" formControlName="phoneNumber" name="subject" type="tel" class="form-control shadow-none"
+        placeholder="Enter your phone number">
     </div>
     <div>
       <label for="exampleFormControlTextarea1" class="form-label text-info body-text">Message</label>
-      <textarea id="message" name="message" formControlName="message"  required class="form-control shadow-none" id="exampleFormControlTextarea1" rows="4" placeholder="Enter your message "></textarea>
+      <textarea id="message" name="message" formControlName="message" required class="form-control shadow-none"
+        id="exampleFormControlTextarea1" rows="4" placeholder="Enter your message "></textarea>
     </div>
     <div class="d-grid gap-2">
-      <button class="secondary-btn" type="submit" aria-label="submit">Send</button>
+      <button class="secondary-btn" type="submit" aria-label="submit">
+        <span *ngIf="!loading">{{ submitButtonText }}</span>
+        <span *ngIf="loading">Loading...</span>
+      </button>
     </div>
   </form>
 </div>

@@ -16,6 +16,8 @@ export class ContactComponent implements OnInit {
   selectedItem!: string;
   tokenUrl = "https://us-east-1.aws.realm.mongodb.com/api/client/v2.0/app/application-0-ripez/auth/providers/anon-user/login";
   mongodbUrl = "https://us-east-1.aws.data.mongodb-api.com/app/application-0-ripez/endpoint/addUser";
+  loading: boolean = false;
+  submitButtonText = 'Send'
 
   tokenObject!: any;
 
@@ -73,7 +75,7 @@ export class ContactComponent implements OnInit {
       'Authorization': `Bearer ${token}`
     })
 
-    this.http.post(this.mongodbUrl, body, {headers}).subscribe(
+    this.http.post(this.mongodbUrl, body, { headers }).subscribe(
       (response) => {
         console.log('Data sent successfully!', response);
       },
@@ -82,11 +84,12 @@ export class ContactComponent implements OnInit {
       }
     );
 
-    this.myForm.reset();
-
   }
 
   onSubmit() {
+    this.loading = true;
+    this.submitButtonText = 'Your message is sent!';
+
     const formData = this.myForm.value;
     const headers = new HttpHeaders()
       .set('Content-Type', 'application/json');
@@ -100,7 +103,11 @@ export class ContactComponent implements OnInit {
         console.error('Error sending data:', error);
       }
     );
+
+    setTimeout(() => {
+      this.loading = false;
+      this.myForm.reset();
+      this.submitButtonText = 'Your message is sent!';
+    }, 1000);
   }
-
-
 }
