@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MetaDataService } from '../services/meta-data.service';
 
@@ -7,9 +7,9 @@ import { MetaDataService } from '../services/meta-data.service';
   templateUrl: './resources.component.html',
   styleUrls: ['./resources.component.scss']
 })
-export class ResourcesComponent implements OnInit {
+export class ResourcesComponent {
   element?: HTMLElement
-  @Input() blog: any;
+  @Input() blog: unknown;
 
   constructor(private activatedRoute: ActivatedRoute,
     private metaData: MetaDataService,
@@ -20,21 +20,9 @@ export class ResourcesComponent implements OnInit {
     )
   }
 
-  ngOnInit(): void {
-    this.activatedRoute.fragment.subscribe(
-      res => {
-        this.JumpTo(res);
-      }
-    )
-  }
-
   onCardClick(id:number) {
     this.router.navigate(['/blog-detail', id]);
   }
 
-  JumpTo(section: any) {
-    this.element = document.getElementById(section) as HTMLElement;
-    this.element.scrollIntoView({ behavior: "smooth" })
-  }
 
 }

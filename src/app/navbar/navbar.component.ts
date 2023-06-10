@@ -1,5 +1,5 @@
-import { Component, ElementRef, HostListener, OnInit, Renderer2 } from '@angular/core';
-import { ActivatedRoute, Router, withDebugTracing } from '@angular/router';
+import { Component, ElementRef, HostListener, OnInit } from '@angular/core';
+import { ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -7,7 +7,7 @@ import { ActivatedRoute, Router, withDebugTracing } from '@angular/router';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-  isScrolling: boolean = false;
+  isScrolling = false;
 
   items: { name: string, route: string }[] = [
     { name: 'Home', route: '/' },

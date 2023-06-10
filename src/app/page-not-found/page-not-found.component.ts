@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -6,22 +6,10 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './page-not-found.component.html',
   styleUrls: ['./page-not-found.component.scss']
 })
-export class PageNotFoundComponent implements OnInit {
+export class PageNotFoundComponent {
   element?: HTMLElement
 
   constructor(private activatedRoute: ActivatedRoute) { }
 
-  ngOnInit(): void {
-    this.activatedRoute.fragment.subscribe(
-      res => {
-        this.JumpTo(res);
-      }
-    )
-  }
-
-  JumpTo(section: any) {
-    this.element = document.getElementById(section) as HTMLElement;
-    this.element.scrollIntoView({ behavior: "smooth", block: "start" })
-  }
 
 }

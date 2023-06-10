@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { blogPosts } from './blogPosts';
+import { BlogObject } from '../models/blog.model';
 
 @Component({
   selector: 'app-blog-detail',
@@ -10,27 +11,17 @@ import { blogPosts } from './blogPosts';
 export class BlogDetailComponent implements OnInit {
   element?: HTMLElement
   blogId!: string;
-  blog: any;
+  blog!: BlogObject;
   blogPosts = blogPosts;
 
   constructor(private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.activatedRoute.fragment.subscribe(
-      res => {
-        this.JumpTo(res);
-      }
-    )
-
     this.activatedRoute.params.subscribe(params => {
       this.blogId = params['id'];
-      this.blog = this.blogPosts.find(post => post.id === this.blogId);
+      this.blog = this.blogPosts.find(post => post.id === this.blogId) as BlogObject;
+      console.log(this.blog)
     });
-  }
-
-  JumpTo(section: any) {
-    this.element = document.getElementById(section) as HTMLElement;
-    this.element.scrollIntoView({ behavior: "smooth" })
   }
 
 }

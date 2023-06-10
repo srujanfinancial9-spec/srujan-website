@@ -80,9 +80,9 @@
 <div
   class="container layout d-flex flex-column flex-md-row justify-content-md-between justify-content-lg-center section-top-bottom-margin">
   <div class="text-content align-self-center">
-    <h2 class="text-primary title">1. Schedule a Consultation </h2>
+    <h2 class="text-primary title">1. Schedule a Consultation </h2>
     <p class="md-text">The first step in our process is to schedule a free consultation with us. During this initial
-      conversation, we will take the time to listen to your financial goals, concerns, and aspirations. </p>
+      conversation, we will take the time to listen to your financial goals, concerns, and aspirations. </p>
     <p class="md-text">In case you find us the right fit, we’ll get this going with a simple and work-able plan</p>
   </div>
   <div class="profile-content position-relative d-none d-md-block">
@@ -115,9 +115,9 @@
 <div
   class="container layout d-flex flex-column flex-md-row justify-content-md-between justify-content-lg-center section-top-bottom-margin">
   <div class="text-content align-self-center order-md-2 order-1">
-    <h2 class="text-primary title">2. Access your financial situation </h2>
+    <h2 class="text-primary title">2. Access your financial situation </h2>
     <p class="md-text">The next step is to assess your current financial situation. This includes gathering information
-      about your income, expenses, assets, and debts.  </p>
+      about your income, expenses, assets, and debts.  </p>
     <p class="md-text">This will give you a clear picture of where you stand financially and be able to make more
       informed decisions about how to achieve your financial goals</p>
   </div>
@@ -151,11 +151,11 @@
 <div
   class="container layout d-flex flex-column flex-md-row justify-content-md-between justify-content-lg-center section-top-bottom-margin">
   <div class="text-content align-self-center">
-    <h2 class="text-primary title">3. Create an Investment Plan  </h2>
+    <h2 class="text-primary title">3. Create an Investment Plan  </h2>
     <p class="md-text">Using the information we’ve gathered in the previous steps, we can now develop a plan that will
-      help you achieve your financial goals.  </p>
+      help you achieve your financial goals.  </p>
     <p class="md-text">This plan includes personalized strategies for reducing debt, increasing savings, and investing
-      for the future. </p>
+      for the future. </p>
   </div>
   <div class="profile-content position-relative d-none d-md-block">
     <div class="progress-indicator position-absolute">
@@ -187,7 +187,7 @@
 <div
   class="container layout d-flex flex-column flex-md-row justify-content-md-between justify-content-lg-center section-top-bottom-margin">
   <div class="text-content align-self-center order-md-2 order-1">
-    <h2 class="text-primary title">4. Implement your Investment Plan  </h2>
+    <h2 class="text-primary title">4. Implement your Investment Plan  </h2>
     <p class="md-text">Once we’ve created your financial plan, we will help you put it into action by executing the
       necessary investments.</p>
   </div>
@@ -274,8 +274,8 @@
   </div>
   <div class="faq-question">
     <div class="faq-question-item">
-      <div class="d-flex  justify-content-between question" data-bs-toggle="collapse" data-bs-target="#collapseOne"
-        aria-expanded="true" aria-controls="collapseOne" (click)="toggle(1)">
+      <div tabindex="0" type="button" class="d-flex  justify-content-between question" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+        aria-expanded="true" aria-controls="collapseOne" (click)="toggle(1)" (keypress)="toggle(1)">
         <p class="body-text align-self-center text-primary fw-bold">What is personal finance guidance?</p>
         <svg class="arrow" [ngClass]="{'rotate':rotate1}" width="6" height="12" viewBox="0 0 6 12" fill="none"
           xmlns="http://www.w3.org/2000/svg">
@@ -300,8 +300,8 @@
       </div>
     </div>
     <div class="faq-question-item">
-      <div class="d-flex justify-content-between question" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
-        aria-expanded="true" aria-controls="collapseOne" (click)="toggle(2)">
+      <div tabindex="0" class="d-flex justify-content-between question" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+        aria-expanded="true" aria-controls="collapseOne" (click)="toggle(2)" (keypress)="toggle(2)">
         <p class="body-text align-self-center text-primary fw-bold">Who seeks our services?</p>
         <svg class="arrow" [ngClass]="{'rotate':rotate2}" width="6" height="12" viewBox="0 0 6 12" fill="none"
           xmlns="http://www.w3.org/2000/svg">
@@ -321,8 +321,8 @@
       </div>
     </div>
     <div class="faq-question-item">
-      <div class="d-flex justify-content-between question" data-bs-toggle="collapse" data-bs-target="#collapseThree"
-        aria-expanded="true" aria-controls="collapseOne" (click)="toggle(3)">
+      <div tabindex="0" class="d-flex justify-content-between question" role="button" data-bs-toggle="collapse" data-bs-target="#collapseThree"
+        aria-expanded="true" aria-controls="collapseOne" (click)="toggle(3)" (keypress)="toggle(3)">
         <p class="body-text align-self-center text-primary fw-bold">How do I know if your guidance will be useful for
           me?</p>
         <svg class="arrow" [ngClass]="{'rotate':rotate3}" width="6" height="12" viewBox="0 0 6 12" fill="none"
@@ -341,10 +341,10 @@
       </div>
     </div>
     <div class="faq-question-item">
-      <div class="d-flex justify-content-between question" data-bs-toggle="collapse" data-bs-target="#collapseFour"
-      aria-expanded="true" aria-controls="collapseOne" (click)="toggle(4)">
+      <div tabindex="0" class="d-flex justify-content-between question" data-bs-toggle="collapse" data-bs-target="#collapseFour"
+      aria-expanded="true" aria-controls="collapseOne" (click)="toggle(4)" (keypress)="toggle(4)">
       <p class="body-text align-self-center text-primary fw-bold">What changes can I expect after seeking your
-        guidance? </p>
+        guidance? </p>
         <svg class="arrow" [ngClass]="{'rotate':rotate4}" width="6" height="12" viewBox="0 0 6 12" fill="none"
         xmlns="http://www.w3.org/2000/svg">
         <path
@@ -362,10 +362,10 @@
       </div>
     </div>
     <div class="faq-question-item">
-      <div class="d-flex justify-content-between question" data-bs-toggle="collapse" data-bs-target="#collapseFive"
-      aria-expanded="true" aria-controls="collapseOne" (click)="toggle(5)">
+      <div tabindex="0" class="d-flex justify-content-between question" data-bs-toggle="collapse" data-bs-target="#collapseFive"
+      aria-expanded="true" aria-controls="collapseOne" (click)="toggle(5)" (keypress)="toggle(5)">
       <p class="body-text align-self-center text-primary fw-bold">How can I trust your advice if you make a commission
-        from my investments? </p>
+        from my investments? </p>
         <svg class="arrow" [ngClass]="{'rotate':rotate5}" width="6" height="12" viewBox="0 0 6 12" fill="none"
         xmlns="http://www.w3.org/2000/svg">
         <path

@@ -4,6 +4,7 @@ import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { MetaDataService } from '../services/meta-data.service';
 import { ScrollService } from '../services/scroll.service';
+import { TokenObject } from '../models/token.model';
 
 
 @Component({
@@ -16,10 +17,8 @@ export class ContactComponent implements OnInit {
   selectedItem!: string;
   tokenUrl = "https://us-east-1.aws.realm.mongodb.com/api/client/v2.0/app/application-0-ripez/auth/providers/anon-user/login";
   mongodbUrl = "https://us-east-1.aws.data.mongodb-api.com/app/application-0-ripez/endpoint/addUser";
-  loading: boolean = false;
+  loading = false;
   submitButtonText = 'Send'
-
-  tokenObject!: any;
 
   @ViewChild('myForm') form!: NgForm;
   element?: HTMLElement
@@ -51,25 +50,15 @@ export class ContactComponent implements OnInit {
       phoneNumber: ['', [Validators.required]],
       message: ['', [Validators.required]],
     });
-
-    this.activatedRoute.fragment.subscribe(
-      res => {
-        this.JumpTo(res);
-      }
-    )
   }
 
-  onItemSelected(event: any): void {
-    this.selectedItem = event.target.value;
+  onItemSelected(event: Event): void {
+    const target = event.target as HTMLInputElement;
+    this.selectedItem = target.value;
   }
 
 
-  JumpTo(section: any) {
-    this.element = document.getElementById(section) as HTMLElement;
-    this.element.scrollIntoView({ behavior: "smooth" })
-  }
-
-  postForm(token: string, body: Object) {
+  postForm(token: string, body:unknown) {
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
       'Authorization': `Bearer ${token}`
@@ -94,10 +83,9 @@ export class ContactComponent implements OnInit {
     const headers = new HttpHeaders()
       .set('Content-Type', 'application/json');
 
-    this.http.post(this.tokenUrl, { headers }).subscribe(
-      (response) => {
-        this.tokenObject = response;
-        this.postForm(this.tokenObject.access_token, formData)
+    this.http.post<TokenObject>(this.tokenUrl, { headers }).subscribe(
+      (response) : void => {
+        this.postForm(response.access_token, formData)
       },
       (error) => {
         console.error('Error sending data:', error);

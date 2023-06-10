@@ -25,7 +25,7 @@ export class ServicesComponent implements OnInit {
   ngOnInit(): void {
     this.activatedRoute.fragment.subscribe(
       res => {
-        this.scroll.JumpTo(res,'end');
+        this.scroll.JumpTo(res || '');
       }
     )
   }

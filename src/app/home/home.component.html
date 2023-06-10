@@ -468,7 +468,7 @@
     </div>
     <div class="blog-tiles blog-component d-flex flex-column flex-md-row justify-content-between">
       <div class="blog-tiles blog-component d-flex flex-column flex-md-row justify-content-between">
-        <div class="blog-tiles-item" (click)="onCardClick(1)" style="cursor: pointer;">
+        <div tabindex="0" class="blog-tiles-item" (click)="onCardClick(1)" (keypress)="onCardClick(1)" style="cursor: pointer;">
           <div class="header d-flex justify-content-center">
             <img src="assets/Img/Svg/money1.svg" alt="money">
           </div>
@@ -485,7 +485,7 @@
             </div>
           </div>
         </div>
-        <div class="blog-tiles-item" (click)="onCardClick(2)" style="cursor: pointer;">
+        <div tabindex="0" class="blog-tiles-item" (click)="onCardClick(2)" (keypress)="onCardClick(2)" style="cursor: pointer;">
           <div class="header d-flex justify-content-center">
             <img src="assets/Img/Svg/goals.svg" alt="goal">
           </div>
@@ -501,7 +501,7 @@
             </div>
           </div>
         </div>
-        <div class="blog-tiles-item" (click)="onCardClick(3)" style="cursor: pointer;">
+        <div tabindex="0" class="blog-tiles-item" (click)="onCardClick(3)" (keypress)="onCardClick(3)" style="cursor: pointer;">
           <div class="header d-flex justify-content-center">
             <img src="assets/Img/Svg/money.svg" alt="steps">
           </div>

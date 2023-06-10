@@ -28,7 +28,7 @@ export class ProcessComponent implements OnInit {
   ngOnInit(): void {
     this.activatedRoute.fragment.subscribe(
       res => {
-        this.scroll.JumpTo(res,'center');
+        this.scroll.JumpTo(res || '');
       }
     )
   }

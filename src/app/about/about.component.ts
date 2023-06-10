@@ -1,6 +1,5 @@
-import { DOCUMENT } from '@angular/common';
-import { Component, ElementRef, Inject, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { ScrollService } from '../services/scroll.service';
 import { MetaDataService } from '../services/meta-data.service';
 
@@ -42,7 +41,7 @@ export class AboutComponent implements OnInit {
   ngOnInit(): void {
     this.route.fragment.subscribe(
       res => {
-        this.scroll.JumpTo(res,"center");
+        this.scroll.JumpTo(res || '');
       }
     )
   }
