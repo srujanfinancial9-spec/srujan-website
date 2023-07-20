@@ -4,6 +4,82 @@
   </div>
   <div class="body">
     <router-outlet></router-outlet>
+    <div class="bot-area" id="bot-area">
+      <div id="iframe-area">
+        <button class="cross-section" onclick="toggleStyle()">
+          <svg
+            focusable="false"
+            aria-hidden="true"
+            width="20"
+            height="20"
+            viewBox="0 0 8 8"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            color="white"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M8 7.23251L7.23251 8L4 4.76749L0.767492 8L0 7.23251L3.23251 4L0 0.767492L0.767492 0L4 3.23251L7.23251 0L8 0.767492L4.76749 4L8 7.23251Z"
+              fill="white"
+            ></path>
+          </svg>
+        </button>
+        <iframe
+          id="myIframe"
+          allowfullscreen
+          src="https://dev.d29vxnie5nkqyk.amplifyapp.com"
+          [frameBorder]="0"
+          allowtransparency="true"
+        ></iframe>
+      </div>
+      <button
+        class="btn btn-chatBot"
+        id="ifram-hide-show"
+        style="
+          position: fixed;
+          width: 70px;
+          height: 70px;
+          border-radius: 50%;
+          background-color: #26865a;
+          border: #26865a;
+          bottom: 20px;
+          right: 36px;
+        "
+        onclick="toggleStyle()"
+      >
+        <svg
+          width="32"
+          height="32"
+          viewBox="0 0 32 32"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g clip-path="url(#clip0_37_202)">
+            <path
+              d="M16.0001 28L11.2001 23.2H8.00007C6.72703 23.2 5.50614 22.6943 4.60596 21.7941C3.70579 20.8939 3.20007 19.673 3.20007 18.4V8.8C3.20007 7.52696 3.70579 6.30606 4.60596 5.40589C5.50614 4.50571 6.72703 4 8.00007 4H24.0001C25.2731 4 26.494 4.50571 27.3942 5.40589C28.2944 6.30606 28.8001 7.52696 28.8001 8.8V18.4C28.8001 19.673 28.2944 20.8939 27.3942 21.7941C26.494 22.6943 25.2731 23.2 24.0001 23.2H20.8001L16.0001 28Z"
+              fill="white"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M10 15.3333C13.3333 18.6666 18.6667 18.6666 22 15.3333"
+              stroke="#26865A"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </g>
+          <defs>
+            <clipPath id="clip0_37_202">
+              <rect width="32" height="32" fill="white" />
+            </clipPath>
+          </defs>
+        </svg>
+      </button>
+    </div>
   </div>
   <div class="footer">
     <app-footer></app-footer>

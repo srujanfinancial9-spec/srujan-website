@@ -1,0 +1,44 @@
+@import "node_modules/bootstrap/scss/mixins";
+@import "src/layout.scss";
+
+.bot-area {
+  position: fixed;
+  z-index: 2;
+  #iframe-area {
+    position: fixed;
+    width: 420px;
+    height: 800px;
+    bottom: 2%;
+    right: 1%;
+    @include media-breakpoint-down(md) {
+      background: #fff;
+      width: 425px;
+      z-index: 3;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 0;
+      height: 100%;
+    }
+    iframe {
+      height: 100%;
+      width: 100%;
+      background: none transparent;
+    }
+  }
+  .btn-chatBot {
+    align-self: flex-end;
+  }
+  .cross-section{
+    position: fixed;
+    width: 64px;
+    height: 64px;
+    top: 0;
+    right: 0;
+    border: none;
+    background: transparent;
+    z-index: 4;
+    @include media-breakpoint-up(md){
+      display: none;
+    }
+  }
+}
