@@ -1,5 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { Meta, Title } from '@angular/platform-browser';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { MetaDataService } from '../services/meta-data.service';
 import { Router } from '@angular/router';
 
@@ -8,7 +7,7 @@ import { Router } from '@angular/router';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
   @ViewChild('testimonialsContainer') testimonialsContainer!: ElementRef;
 
   selectedItemIndex = 0;
@@ -27,8 +26,7 @@ export class HomeComponent implements OnInit {
     { title: 'Deepali has been integral to our financial journey.', body: "Over the last decade, I have come to trust her implicitly as someone who watches out for us as if she were a family member.", about: 'Janani Ravichandran & Achal Dhruva', body2: "This has been especially important for us, considering the erratic nature of our income as entrepreneurs. Be it pushing us to save in line with our goals or restructuring portfolios at various milestones, Deepali has always been aligned with our needs and interests.", avatar: 'assets/Img/webp/JananiRavichandranAchalDhruva.webp', profile: 'Media Personnel' },
     { title: 'Deepali’s dedication for helping people understand financial planning for themselves is exceptional.', body: "I’ve known Deepali for a decade now. Her dedication and passion to help people understand financial planning and customized advice is exceptional.", about: 'Vikram Garga', body2: "She goes the extra mile to make you feel confident and also timely advises to take necessary course corrections, based on change in goals or market performance if any.", avatar: 'assets/Img/webp/vikram_ganga.webp', profile: '' },
   ];
-  ngOnInit(): void {
-  }
+
 
 
   scrollPrevious() {

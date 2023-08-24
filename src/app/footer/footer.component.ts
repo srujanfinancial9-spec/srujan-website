@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ScrollService } from '../services/scroll.service';
 import { Router } from '@angular/router';
 
@@ -7,17 +7,15 @@ import { Router } from '@angular/router';
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.scss']
 })
-export class FooterComponent implements OnInit {
+export class FooterComponent {
 
   constructor(private router: Router, private scrollService: ScrollService) {
     this.scrollService.initializeScroll();
   }
 
-  ngOnInit(): void {
-  }
 
   scrollToSection(sectionId: string) {
-    this.scrollService.JumpTo(sectionId,'');
+    this.scrollService.JumpTo(sectionId);
   }
 
 }

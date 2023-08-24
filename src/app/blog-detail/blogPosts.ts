@@ -1,21 +1,23 @@
-export const blogPosts: any[] = [
+import { BlogObject } from "../models/blog.model";
+
+export const blogPosts:BlogObject[] = [
   {
     id: '1',
     title: 'Money- Our partner for life',
     headerImg: 'assets/Img/Svg/money_bd.svg',
     content: [
       `We all are part of a society where very often; the women folk are expected to settle down at the
-      earliest. And the basic understanding of “settling down” connotes finding a worthy life partner. In this
-      age of uncertainty in terms of relationships, life spans (owing to various ailments), net worth (given
-        that we want to live off tomorrow’s cashflows), etc- the only consistent life partner is the money we
-        have. The money we possess is our shadow until we leave this world for another.`,
+       earliest. And the basic understanding of “settling down” connotes finding a worthy life partner. In this
+       age of uncertainty in terms of relationships, life spans (owing to various ailments), net worth (given
+       that we want to live off tomorrow’s cashflows), etc- the only consistent life partner is the money we
+       have. The money we possess is our shadow until we leave this world for another.`,
       `A woman who knows what she brings to the table is not afraid to eat alone. Whether she is unmarried,
-        divorced or widowed, taking control of one’s financial life ought to be a must for all of them. Financial
-        empowerment is the first step towards equality, towards shaping one’s life meaningfully, towards living
-        the dream one pursues and eventually influencing and improving the lives of those around.`,
+       divorced or widowed, taking control of one’s financial life ought to be a must for all of them. Financial
+       empowerment is the first step towards equality, towards shaping one’s life meaningfully, towards living
+       the dream one pursues and eventually influencing and improving the lives of those around.`,
       `There are certain core financial needs matters which need to be addressed irrespective of the life stage
-        one is in- single, divorced or widowed women. For each of them the pecking order of “to-do” things
-        would largely be similar`
+       one is in- single, divorced or widowed women. For each of them the pecking order of “to-do” things
+       would largely be similar`
     ],
     subTitle: [
       'Life insurance',
@@ -26,53 +28,53 @@ export const blogPosts: any[] = [
     ],
     subTitleBody: [
       `If they have children or seniors to look after, they would be the epicenter of a few lives
-        besides their own.
-        If they are working (financially contributing towards household expenses), they must
-        have a term plan, to begin with, to the extent of their pending responsibilities towards
-        their senior and junior dependents for an expected tenure till they become independent
-        or pass away respectively.
-        Term plans also provide an additional cover for critical illness, terminal illness or
-        personal accident or accident disability. They also provide premium waivers under
-      certain circumstances. The add-ons need to be evaluated and bought accordingly.
-      In this context, it needs to be noted that every rupee of the additional cover comes at an
-      additional cost. While none of us have a crystal ball, it doesn’t make sense to be overly
-      fearful and end up taking a huge cover, thereby limiting the scope of investing from your
-      current cash flows.
-      While any kind of event is a possibility, the probability of possibility holds the key to the
-      right balance`,
-      `Possessing an appropriate medical insurance cover for self and one’s dependents will
-      ensure that the investment planning does not get hampered owing to medical
-      exigencies.
-      Here, it may be important to take cover (a separate policy or add-on riders for cancer,
-        neurological disorders, heart ailments, etc. if one has a family history of them).
-      While choosing a provider, which has a good hospital network and has a quicker and
-      faster claim ratio.`,
+       besides their own.If they are working (financially contributing towards household expenses), they must
+       have a term plan, to begin with, to the extent of their pending responsibilities towards
+       their senior and junior dependents for an expected tenure till they become independent
+       or pass away respectively.
+       Term plans also provide an additional cover for critical illness, terminal illness or
+       personal accident or accident disability. They also provide premium waivers under
+       certain circumstances. The add-ons need to be evaluated and bought accordingly.
+       In this context, it needs to be noted that every rupee of the additional cover comes at an
+       additional cost. While none of us have a crystal ball, it doesn’t make sense to be overly
+       fearful and end up taking a huge cover, thereby limiting the scope of investing from your
+       current cash flows.
+       While any kind of event is a possibility, the probability of possibility holds the key to the
+       right balance`,
+       `Possessing an appropriate medical insurance cover for self and one’s dependents will
+       ensure that the investment planning does not get hampered owing to medical
+       exigencies.
+       Here, it may be important to take cover (a separate policy or add-on riders for cancer,
+       neurological disorders, heart ailments, etc. if one has a family history of them).
+       While choosing a provider, which has a good hospital network and has a quicker and
+       faster claim ratio.`,
       `Setting aside some money (4-5 months’ expenses) for unexpected happenings like job
-      loss, taking a forced break due to health reasons, etc is what we call an emergency fund
-      rainy-day corpus.
-      It allows the goal-based investments to run on the track,
-      It avoids the need to take a personal loan.
-      It also does with the embarrassment of seeking friend and relatives’ help to bail oneself
-      out from the trying circumstances`,
-      `Ensure that all financial products have a nomination
-      Prepare a will and get it registered
-      Share the money related information with the stakeholders
-      File your IT returns on time
-      Ensure that your KYC compliance for all financial products is relevant`,
-      `To avoid negative surprises on your future goals, act while there’s still time.
-      For meeting the goals cut corners if you need too. Remember that you can be young and
-      wanting-on-money but you can’t be old and lack in money.
-      The more important half while working on our goals, is acting on the goal-plan, the first
-      being, making one.
-      Prioritize on your goals if all seem unlikely to be met. Write some off, shrink them or
-      delay them if needed`
+       loss, taking a forced break due to health reasons, etc is what we call an emergency fund
+       rainy-day corpus.
+       It allows the goal-based investments to run on the track,
+       It avoids the need to take a personal loan.
+       It also does with the embarrassment of seeking friend and relatives’ help to bail oneself
+       out from the trying circumstances`,
+       `Ensure that all financial products have a nomination
+       Prepare a will and get it registered
+       Share the money related information with the stakeholders
+       File your IT returns on time
+       Ensure that your KYC compliance for all financial products is relevant`,
+       `To avoid negative surprises on your future goals, act while there’s still time.
+       For meeting the goals cut corners if you need too. Remember that you can be young and
+       wanting-on-money but you can’t be old and lack in money.
+       The more important half while working on our goals, is acting on the goal-plan, the first
+       being, making one.
+       Prioritize on your goals if all seem unlikely to be met. Write some off, shrink them or
+       delay them if needed`
     ],
     bottomTitle: 'Conclusion',
     bottom: `Money is our gateway to freedom, let’s lead our lives around money with grit, grace, and dignity.
     It’s time we respect money- one of the highest forms of energies. I’d like to end this piece with a very
     apt Chinese proverb, “When sleeping women wake, mountains move”.`,
     author: 'Deepali Sen',
-    date: '2023-06-01'
+    date: '2023-06-01',
+    profile: ''
   },
   {
     id: '2',
@@ -307,29 +309,29 @@ export const blogPosts: any[] = [
     content: [`We have been increasingly hearing of people passing away in their mid-nineties or their ninety plus
     birthdays being celebrated. Owing to various medical advancements and consciousness towards fitness and
     wellness, we may very well end up pushing our individual mortality to nineties.`,
-    `Most of us begin work around 25 years of age and may continue to work till 60, surviving till 95 would mean
+      `Most of us begin work around 25 years of age and may continue to work till 60, surviving till 95 would mean
     an equal proportion between our working and post-retirement years. In these 35 years of earning, one has
     to plan for other goals besides retirement like kids’ education, their marriage, home, car purchase,
     vacationing, funding expenses involved with fulfilling basic needs, whims, dreams, etc.`,
-    `Retirement is, in fact, our surest goal if we live to see it. All of us would rather have our money outlive us
+      `Retirement is, in fact, our surest goal if we live to see it. All of us would rather have our money outlive us
     rather than the other way around. Retiring from ‘working for money’ means that after retirement one has to
     live-off assets accumulated during the working years.`,
-    `I regularly come across people (and they aren’t few in number) who are well in their 40s and are yet to start
+      `I regularly come across people (and they aren’t few in number) who are well in their 40s and are yet to start
     planning for retirement. It is concerning to see people prioritize for their daughter’s lavish wedding, a
     bigger house, spending unwarranted sums on vacations without a care for tomorrow over their certain
     retirement.`,
-    `Our retirement expenses are likely to balloon owing to high inflation and increased longevity, which in turn
+      `Our retirement expenses are likely to balloon owing to high inflation and increased longevity, which in turn
     would mean that we‘d need to invest bigger sums, for longer time-periods at higher rates to
     accumulate appropriate size of funds needed for retirement. Refer to the following table for 3 examples, who
     have just started investing for their retirement. Inflation has been assumed at 7%; the investment portfolio
     generates returns at 12% per annum before retirement and 8 % per annum post-retirement. Also, it has
     been assumed that expenses at retirement will be 70% of today’s expenses (after being adjusted for
     inflation).`,
-    `For someone currently spending Rs.12 lacs annually, he will require to invest 54% of his current expenses
+      `For someone currently spending Rs.12 lacs annually, he will require to invest 54% of his current expenses
     to accumulate the needed corpus of Rs.19 crore at retirement. For a 40 and 50-year-old this percentage
     moves up to 98% (nearly equal to the current expenses) and 214% (double of the monthly expenses)
     respectively.`,
-    `The story gets murkier if for building one’s retirement corpus one is relying solely on EPF/ PPF where the
+      `The story gets murkier if for building one’s retirement corpus one is relying solely on EPF/ PPF where the
     current returns are 8.55%/8.00% per annum respectively. Equity has to be part of one’s retirement
     planning. From April 79 till date, the S&amp;P BSE Sensex has delivered returns close to 16% per annum
     (excluding the dividend earned). The two clear lessons one can draw while planning for one’s retirement
@@ -350,23 +352,23 @@ export const blogPosts: any[] = [
     headerImg: 'assets/Img/Svg/retirement1_bd.svg',
     content: [`The overall objective of financial planning is to prepare the client for any of the two possibilities; of passing
               away too early or living too long. This article is going to focus on the latter possibility.`,
-    `Retirement is real. It is a glaring fact. It will hit all of us at some point in time. In addition, it is much closer
+      `Retirement is real. It is a glaring fact. It will hit all of us at some point in time. In addition, it is much closer
     than it may appear. All of us would rather have our money outlive us rather than the other way around.
     Retiring from ‘working for money’ means that after retirement one has to live-off assets accumulated during
     the pre-retirement or working years.`,
-    `I have met enough people who would have bought annuity/pension plans thinking that their retirement
+      `I have met enough people who would have bought annuity/pension plans thinking that their retirement
     planning is taped up. Not much thought has gone into inflation, medical expenses or longevity. This would
-    require us to invest bigger sums, for longer time-periods at higher rates to accumulate appropriate
+    require us to invest bigger sums, for longer time-periods at higher rates to accumulate appropriate
     size of funds needed for retirement.`,
-    `It’s not uncommon to come across clients who are well in their forties and are yet to start planning for their
-    retirement nest. It is concerning to see people prioritize for their daughter’s wedding, for a house much
-    bigger than what they need on a long-term, for spending unwarranted sums on vacations without a care
+      `It’s not uncommon to come across clients who are well in their forties and are yet to start planning for their
+    retirement nest. It is concerning to see people prioritize for their daughter’s wedding, for a house much
+    bigger than what they need on a long-term, for spending unwarranted sums on vacations without a care
     for tomorrow, over their retirement. At times, they would even part withdraw their PF corpus to fund these
     goals. This dooms them to insufficient funds for post-retirement years, to a home loan tenure ending just a
     few years before retirement, to not being able to pursue their dream of starting on their own, etc. While
     most people strive hard to create/ earn their monies, not many are as careful about nurturing the money so
     earned to keep it relevant in terms of its purchasing power.`,
-    `Let’s take an example of 3 families, the first one has entered the 30s, the second one has stepped into their
+      `Let’s take an example of 3 families, the first one has entered the 30s, the second one has stepped into their
     40s and the third one has begun their second innings (50s). They will now start investing for their
     retirement. We have made the following assumptions,\r
     ·Retirement age of 60
@@ -376,18 +378,18 @@ export const blogPosts: any[] = [
     ·Pre-retirement distribution phase at 12% per annum returns
     ·Post retirement returns are pegged at 8% per annum
     ·Expenses at retirement will be 70% of today’s expenses (after being adjusted for inflation).`,
-    `For someone currently spending Rs.12 lacs annually at 30 years of age, he will require around Rs.32 lacs
+      `For someone currently spending Rs.12 lacs annually at 30 years of age, he will require around Rs.32 lacs
     per year for his retirement at 60 years (this need will keep increasing at the rate 7% per year). Moreover, if
     he were to live-off his assets (which would grow at 8% per annum post-retirement) he must have at least
     Rs.19.01 crore at 60. For building this corpus, he will need to invest around Rs. 54,000 per month for the
     next 30 years at 12% per annum returns. In effect, planning for his retirement he would require an
-    amount more than 50% of his current expenses.`,
-    `Similarly, for a 40-year-old it would mean investing nearly equal (98%) to what he would be spending every
+    amount more than 50% of his current expenses.`,
+      `Similarly, for a 40-year-old it would mean investing nearly equal (98%) to what he would be spending every
     month and for a 50-year-old this investing percentage shoots to 214%.`,
-    `The story gets murkier if for building one’s retirement corpus one is relying only on EPF/ PPF where the
-    current returns are around 7.7% per annum. Equity is a must for one’s retirement planning. From April 79
+      `The story gets murkier if for building one’s retirement corpus one is relying only on EPF/ PPF where the
+    current returns are around 7.7% per annum. Equity is a must for one’s retirement planning. From April 79
     until date, the S&amp;P BSE Sensex has delivered returns close to 15.66% per annum (excluding the dividend
-    earned). The two clear lessons one can draw while planning for one’s retirement, 
+    earned). The two clear lessons one can draw while planning for one’s retirement,
     1. start early and,
     2. invest in equities.
     Starting later in life might get too late to catch up, and avoiding equities could leave you with returns lower

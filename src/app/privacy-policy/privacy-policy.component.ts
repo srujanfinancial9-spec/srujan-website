@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -6,24 +6,9 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './privacy-policy.component.html',
   styleUrls: ['./privacy-policy.component.scss']
 })
-export class PrivacyPolicyComponent implements OnInit {
+export class PrivacyPolicyComponent {
   element?: HTMLElement
 
   constructor(private activatedRoute: ActivatedRoute) { }
 
-  ngOnInit(): void {
-    this.activatedRoute.fragment.subscribe(
-      res => {
-        this.JumpTo(res);
-      }
-    )
-  }
-
-
-  JumpTo(section: any) {
-    setTimeout(() => {
-      this.element = document.getElementById(section) as HTMLElement;
-      this.element.scrollIntoView({ behavior: 'auto', block: 'start', inline: 'nearest' })
-    }, 0);
-  }
 }

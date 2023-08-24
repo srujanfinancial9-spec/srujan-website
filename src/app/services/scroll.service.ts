@@ -1,6 +1,5 @@
-import { ViewportScroller } from '@angular/common';
-import {  Injectable, Renderer2 } from '@angular/core';
-import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
+import {  Injectable} from '@angular/core';
+import {  NavigationEnd, Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +11,7 @@ export class ScrollService {
    }
 
 
-  JumpTo(sectionId: any, block: any) {
+  JumpTo(sectionId: string) {
     const section = document.getElementById(sectionId);
     if (section) {
       const yOffset = section.offsetTop - (window.innerHeight - section.offsetHeight) / 2;
@@ -26,7 +25,7 @@ export class ScrollService {
         const fragment = event.urlAfterRedirects.split('#')[1];
         if (fragment) {
           setTimeout(() => {
-            this.JumpTo(fragment,'');
+            this.JumpTo(fragment);
           }, 0);
         }
       }
