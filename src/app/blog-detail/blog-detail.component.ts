@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { blogPosts } from './blogPosts';
 import { BlogObject } from '../models/blog.model';
 
+
 @Component({
   selector: 'app-blog-detail',
   templateUrl: './blog-detail.component.html',
