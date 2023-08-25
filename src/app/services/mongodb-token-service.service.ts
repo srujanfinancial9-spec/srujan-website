@@ -8,7 +8,7 @@ import { tokenObj } from '../model/token';
 export class MongodbTokenServiceService {
 
   tokenUrl = "https://us-east-1.aws.realm.mongodb.com/api/client/v2.0/app/application-0-ripez/auth/providers/anon-user/login";
-  tokenObject:any
+  tokenObject!: tokenObj
 
   constructor(private http: HttpClient) { }
 
@@ -18,7 +18,7 @@ export class MongodbTokenServiceService {
 
     this.http.post(this.tokenUrl, { headers }).subscribe(
       (response) => {
-        this.tokenObject = response;
+        this.tokenObject = response as tokenObj;
       },
       (error) => {
         console.error('Error sending data:', error);

@@ -1,5 +1,5 @@
-import { Component, ElementRef, HostListener, OnInit } from '@angular/core';
-import { ActivatedRoute, Router} from '@angular/router';
+import { Component, ElementRef, HostListener, OnInit} from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -9,12 +9,19 @@ import { ActivatedRoute, Router} from '@angular/router';
 export class NavbarComponent implements OnInit {
   isScrolling = false;
 
-  items: { name: string, route: string }[] = [
+  items= [
     { name: 'Home', route: '/' },
     { name: 'About', route: '/about' },
     { name: 'Services', route: '/services' },
     { name: 'Process', route: '/process' },
-    { name: 'Blog', route: '/blog' },
+    { name: 'Resources',
+      dropdown: true,
+      showDropdown: false,
+      dropDownItems: [
+      { name: 'Blog', route: '/blog' },
+      { name: 'Publications', route: '/publication' },
+    ]
+  },
     { name: 'Contact', route: '/contact' },
   ];
   currentPage!: string;
@@ -58,5 +65,10 @@ export class NavbarComponent implements OnInit {
 
   goToInvestOfficePage() {
     window.open('https://iinvestoffice.com/');
+  }
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  toggleDropdown(item: any) {
+    item.showDropdown = !item.showDropdown;
   }
 }
