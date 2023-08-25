@@ -11,6 +11,7 @@ export class AppComponent implements OnInit{
   title = 'srujan-financial';
   tokenUrl = "https://us-east-1.aws.realm.mongodb.com/api/client/v2.0/app/application-0-ripez/auth/providers/anon-user/login";
   botStatusUrl = "https://us-east-1.aws.data.mongodb-api.com/app/application-0-ripez/endpoint/getChatBotStatus"
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   response!:any;
   show!:boolean;
 
