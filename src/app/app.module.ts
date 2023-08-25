@@ -18,6 +18,7 @@ import { AboutComponent } from './about/about.component';
 import { ProcessComponent } from './process/process.component';
 import { ServicesComponent } from './services/services.component';
 import { DisclaimerComponent } from './disclaimer/disclaimer.component';
+import { PublicationComponent } from './publication/publication.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { DisclaimerComponent } from './disclaimer/disclaimer.component';
     ProcessComponent,
     ServicesComponent,
     DisclaimerComponent,
+    PublicationComponent,
   ],
   imports: [
     FormsModule,

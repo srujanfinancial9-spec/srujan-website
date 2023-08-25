@@ -13,7 +13,6 @@ export class FooterComponent {
     this.scrollService.initializeScroll();
   }
 
-
   scrollToSection(sectionId: string) {
     this.scrollService.JumpTo(sectionId);
   }

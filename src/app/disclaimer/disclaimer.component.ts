@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
   templateUrl: './disclaimer.component.html',
   styleUrls: ['./disclaimer.component.scss']
 })
+
 export class DisclaimerComponent  {
 
 }

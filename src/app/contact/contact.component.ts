@@ -5,6 +5,7 @@ import { ActivatedRoute } from '@angular/router';
 import { MetaDataService } from '../services/meta-data.service';
 import { ScrollService } from '../services/scroll.service';
 import { TokenObject } from '../models/token.model';
+import { MongodbTokenServiceService } from '../services/mongodb-token-service.service';
 
 
 @Component({
@@ -27,7 +28,8 @@ export class ContactComponent implements OnInit {
     private http: HttpClient,
     metaData: MetaDataService,
     private fb: FormBuilder,
-    private scroll: ScrollService) {
+    private scroll: ScrollService,
+    private tokenService: MongodbTokenServiceService) {
 
     metaData.setMetaData(
       'Reach out for expert financial guidance',

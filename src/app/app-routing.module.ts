@@ -11,6 +11,7 @@ import { ResourcesComponent } from './resources/resources.component';
 import { StyleguideComponent } from './styleguide/styleguide.component';
 import { ServicesComponent } from './services/services.component';
 import { DisclaimerComponent } from './disclaimer/disclaimer.component';
+import { PublicationComponent } from './publication/publication.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
@@ -24,6 +25,7 @@ const routes: Routes = [
   {path:'process', component:ProcessComponent},
   {path:'services', component:ServicesComponent},
   {path:'disclaimer', component:DisclaimerComponent},
+  {path:'publication', component:PublicationComponent},
 ];
 
 @NgModule({

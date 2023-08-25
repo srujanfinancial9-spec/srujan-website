@@ -27,8 +27,6 @@ export class HomeComponent {
     { title: 'Deepali’s dedication for helping people understand financial planning for themselves is exceptional.', body: "I’ve known Deepali for a decade now. Her dedication and passion to help people understand financial planning and customized advice is exceptional.", about: 'Vikram Garga', body2: "She goes the extra mile to make you feel confident and also timely advises to take necessary course corrections, based on change in goals or market performance if any.", avatar: 'assets/Img/webp/vikram_ganga.webp', profile: '' },
   ];
 
-
-
   scrollPrevious() {
     const container = this.testimonialsContainer.nativeElement;
     container.scrollLeft -= container.offsetWidth;

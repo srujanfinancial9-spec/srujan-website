@@ -4,7 +4,7 @@
   </div>
   <div class="body">
     <router-outlet></router-outlet>
-    <div class="bot-area" id="bot-area">
+    <div class="bot-area" id="bot-area" *ngIf="show">
       <div id="iframe-area">
         <button class="cross-section" onclick="toggleStyle()">
           <svg
@@ -80,6 +80,8 @@
         </svg>
       </button>
     </div>
+    <!-- <ng-template [ngClass]="{'display': show}">
+    </ng-template> -->
   </div>
   <div class="footer">
     <app-footer></app-footer>
