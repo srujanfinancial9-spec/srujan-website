@@ -107,7 +107,7 @@
     </button>
     <div class="navbar-items d-none d-lg-flex">
       <div class="navbar-links d-flex mb-0" *ngFor="let item of items">
-      <div *ngIf="!item.dropdown" class="navbar-link-item under-line" [class.active]="isMenuItemActive(item.route)"  [routerLink]="item.route" (click)="hideMobileLayout()" (keypress)="hideMobileLayout()" tabindex="0"><a [attr.aria-label]="item.name">{{item.name}}</a></div>
+      <div *ngIf="!item.dropdown" class="navbar-link-item under-line" [class.active]="isMenuItemActive(item.route!)"  [routerLink]="item.route" (click)="hideMobileLayout()" (keypress)="hideMobileLayout()" tabindex="0"><a [attr.aria-label]="item.name">{{item.name}}</a></div>
       <div *ngIf="item.dropdown" class="navbar-link-item d-flex gap-2" aria-expanded="false" [class.active]="isMenuItemActive(item.name)"  [routerLink]="item.route" (click)="toggleDropdown(item)" (click)="hideMobileLayout()" (keypress)="hideMobileLayout()" tabindex="0">
         <a [attr.aria-label]="item.name">{{item.name }}</a>
         <div class="dropdown-icon">

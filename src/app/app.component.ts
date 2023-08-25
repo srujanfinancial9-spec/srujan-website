@@ -46,7 +46,6 @@ export class AppComponent implements OnInit{
       (response) => {
         this.response = response
         this.show = this.response[0].show
-        console.log('Data get successfully!', this.response[0]);
       },
       (error) => {
         console.error('Error sending data:', error);
