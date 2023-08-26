@@ -1,0 +1,113 @@
+@import "node_modules/bootstrap/scss/mixins";
+@import "src/layout.scss";
+
+.main {
+  background: #f3f1ec;
+  .cover {
+    max-width: 1440px;
+    margin: auto;
+    padding: 40px 15px;
+    gap: 28px;
+    @include media-breakpoint-up(md) {
+      gap: 110px;
+      padding: 50px 165px 50px 165px;
+    }
+    @include media-breakpoint-up(lg) {
+      padding: 99px 165px 127px 165px;
+    }
+    .left-pattern {
+      bottom: 0px;
+      left: 0px;
+    }
+    .right-pattern {
+      top: 0px;
+      right: 0px;
+    }
+    &-container {
+      max-width: 760px;
+      @include media-breakpoint-down(lg) {
+        max-width: 404px;
+      }
+      &-tag {
+        margin-bottom: 1rem;
+      }
+      &-link {
+        margin-top: 28px;
+        @include media-breakpoint-up(lg) {
+          margin-top: 40px;
+        }
+        button {
+          padding-left: 0;
+          padding-right: 9.5px;
+        }
+      }
+    }
+  }
+}
+
+.blog-contain {
+  @include media-breakpoint-up(lg) {
+    padding-top: 203px;
+    padding-bottom: 60px;
+  }
+  .grid {
+    background: #fff;
+    padding: 40px 15px;
+    gap: 16px;
+    @include media-breakpoint-up(md) {
+      row-gap: 60px;
+    }
+    @include media-breakpoint-up(lg) {
+      padding: 60px;
+      row-gap: 120px;
+    }
+  }
+}
+
+.reviews {
+  margin-top: 40px;
+  overflow-x: auto;
+  max-width: 1148px;
+  margin: auto;
+  @include media-breakpoint-down(lg) {
+    gap: 24px;
+  }
+  @include media-breakpoint-down(md) {
+    margin-top: 24px;
+  }
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  &-card {
+    display: flex;
+    flex-direction: column;
+    width: 310px;
+    padding: 24px;
+    gap: 2px;
+    @include media-breakpoint-up(md){
+      width: 210px;
+      height: 340px;
+    }
+    @include media-breakpoint-up(lg){
+      width: 282px;
+      height: 309px;
+    }
+    .sub-header {
+      span {
+        color: #31c3ae;
+        font-weight: 600;
+      }
+    }
+    .post-btn {
+      border: none;
+      background: transparent;
+      color: #27463e;
+      padding-left: 0;
+      text-decoration: none;
+    }
+  }
+}
+.skaletonGap{
+  row-gap: 40px;
+}
+

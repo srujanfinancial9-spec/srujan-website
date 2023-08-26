@@ -12,8 +12,6 @@ export class FooterComponent {
   constructor(private router: Router, private scrollService: ScrollService) {
     this.scrollService.initializeScroll();
   }
-
-
   scrollToSection(sectionId: string) {
     this.scrollService.JumpTo(sectionId);
   }

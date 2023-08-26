@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { TokenObject } from './models/token.model';
+import { delay } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -11,6 +12,7 @@ export class AppComponent implements OnInit{
   title = 'srujan-financial';
   tokenUrl = "https://us-east-1.aws.realm.mongodb.com/api/client/v2.0/app/application-0-ripez/auth/providers/anon-user/login";
   botStatusUrl = "https://us-east-1.aws.data.mongodb-api.com/app/application-0-ripez/endpoint/getChatBotStatus"
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   response!:any;
   show!:boolean;
 
@@ -18,14 +20,16 @@ export class AppComponent implements OnInit{
     private http: HttpClient) {}
 
   ngOnInit(): void {
-     this.getToken()
+    this.getToken()
   }
 
   getToken() {
     const headers = new HttpHeaders()
       .set('Content-Type', 'application/json');
-
-    this.http.post<TokenObject>(this.tokenUrl, { headers }).subscribe(
+    this.http.post<TokenObject>(this.tokenUrl, { headers }).pipe(
+      delay(2000)
+    )
+    .subscribe(
       (response) : void => {
         this.getChatBotStatus(response.access_token)
       },
@@ -45,7 +49,6 @@ export class AppComponent implements OnInit{
       (response) => {
         this.response = response
         this.show = this.response[0].show
-        console.log('Data get successfully!', this.response[0]);
       },
       (error) => {
         console.error('Error sending data:', error);

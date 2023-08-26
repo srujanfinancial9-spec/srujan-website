@@ -8,7 +8,6 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { ResourcesComponent } from './resources/resources.component';
-import { ContactComponent } from './contact/contact.component';
 import { BlogDetailComponent } from './blog-detail/blog-detail.component';
 import { HomeComponent } from './home/home.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
@@ -25,7 +24,6 @@ import { DisclaimerComponent } from './disclaimer/disclaimer.component';
     NavbarComponent,
     FooterComponent,
     ResourcesComponent,
-    ContactComponent,
     BlogDetailComponent,
     HomeComponent,
     PrivacyPolicyComponent,
@@ -41,7 +39,7 @@ import { DisclaimerComponent } from './disclaimer/disclaimer.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

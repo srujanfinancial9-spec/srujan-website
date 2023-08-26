@@ -1,5 +1,5 @@
-import { Component, ElementRef, HostListener, OnInit } from '@angular/core';
-import { ActivatedRoute, Router} from '@angular/router';
+import { Component, ElementRef, HostListener, OnInit, Renderer2} from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -8,21 +8,33 @@ import { ActivatedRoute, Router} from '@angular/router';
 })
 export class NavbarComponent implements OnInit {
   isScrolling = false;
+  rotationAngle = 180;
 
-  items: { name: string, route: string }[] = [
+  items= [
     { name: 'Home', route: '/' },
     { name: 'About', route: '/about' },
     { name: 'Services', route: '/services' },
     { name: 'Process', route: '/process' },
-    { name: 'Blog', route: '/blog' },
-    { name: 'Contact', route: '/contact' },
+    { name: 'Resources',
+      dropdown: true,
+      showDropdown: false,
+      dropDownItems: [
+      { name: 'Blog', route: '/blog' },
+      { name: 'Publications', route: 'api/publication' },
+    ]
+  },
+    { name: 'Contact', route: 'api/contact' },
   ];
   currentPage!: string;
   show = false;
   icon = "assets/Img/Svg/hamburger.svg";
 
-  constructor(private route: ActivatedRoute, private elementRef: ElementRef, private router: Router) { }
+  constructor(private route: ActivatedRoute,
+    private elementRef: ElementRef,
+    private router: Router,
+    private renderer: Renderer2) { }
   @HostListener('window:scroll', [])
+
 
   ngOnInit(): void {
     this.onScroll()
@@ -58,5 +70,20 @@ export class NavbarComponent implements OnInit {
 
   goToInvestOfficePage() {
     window.open('https://iinvestoffice.com/');
+  }
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  toggleDropdown(item: any) {
+    item.showDropdown = !item.showDropdown;
+    const dropdownIcon = document.getElementById('dropdownIcon');
+    const transformValue = `rotate(${this.rotationAngle})`;
+    if(this.rotationAngle === 180){
+      this.rotationAngle = 0;
+      this.renderer.setAttribute(dropdownIcon,'transform', transformValue)
+    } else {
+      console.log("set value")
+      this.rotationAngle = 180;
+      this.renderer.setAttribute(dropdownIcon,'transform', transformValue)
+    }
   }
 }

@@ -12,8 +12,9 @@
     </div>
     <div tabindex="0" class="navbar-link-item text-info" [ngClass]="{'show-menu': show, 'delay-5s':show}" [routerLink]="['/blog']"
       (click)="hideMobileLayout()" (keypress)="hideMobileLayout()"><a aria-label="go to the blog page">Blog</a></div>
-
-    <div tabindex="0" class="navbar-link-item text-info" [ngClass]="{'show-menu': show, 'delay-5s':show}" [routerLink]="['/contact']"
+    <div tabindex="0" class="navbar-link-item text-info" [ngClass]="{'show-menu': show, 'delay-5s':show}" [routerLink]="['api/publication']"
+      (click)="hideMobileLayout()" (keypress)="hideMobileLayout()"><a aria-label="go to the blog page">Publications</a></div>
+    <div tabindex="0" class="navbar-link-item text-info" [ngClass]="{'show-menu': show, 'delay-5s':show}" [routerLink]="['api/contact']"
       (click)="hideMobileLayout()" (keypress)="hideMobileLayout()"><a aria-label="go to the contact page">Contact</a></div>
     <div class="navbar-link-item text-info d-grid" [ngClass]="{'show-menu': show, 'delay-6s':show}">
       <button class="secondary-btn" (click)="goToInvestOfficePage()" aria-label="go to the client page">Client Log In</button>
@@ -104,7 +105,21 @@
     </button>
     <div class="navbar-items d-none d-lg-flex">
       <div class="navbar-links d-flex mb-0" *ngFor="let item of items">
-      <div tabindex="0" class="navbar-link-item under-line" [class.active]="isMenuItemActive(item.route)"  [routerLink]="item.route" (click)="hideMobileLayout()" (keypress)="hideMobileLayout()"><a [attr.aria-label]="item.name">{{item.name}}</a></div>
+      <div *ngIf="!item.dropdown" class="navbar-link-item under-line" [class.active]="isMenuItemActive(item.route!)"  [routerLink]="item.route" (click)="hideMobileLayout()" (keypress)="hideMobileLayout()" tabindex="0"><a [attr.aria-label]="item.name">{{item.name}}</a></div>
+      <div *ngIf="item.dropdown" class="navbar-link-item d-flex gap-2" aria-expanded="false" [class.active]="isMenuItemActive(item.name)"  [routerLink]="item.route" (click)="toggleDropdown(item)" (click)="hideMobileLayout()" (keypress)="hideMobileLayout()" tabindex="0">
+        <a [attr.aria-label]="item.name">{{item.name }}</a>
+        <div class="dropdown-icon">
+          <svg id="dropdownIcon" width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1L5 6L9 1" stroke="#575757"/>
+          </svg>
+        </div>
+      </div>
+      <ul *ngIf="item.dropdown" class="dropdownMenu" [class.show]="item.showDropdown">
+        <li class="dropdownMenu-items" *ngFor="let subItem of item.dropDownItems; let last = last">
+          <a class="item" [class.active]="isMenuItemActive(subItem.name)" [class.active]="isMenuItemActive(subItem.name)" [routerLink]="subItem.route" (click)="hideMobileLayout()" (click)="toggleDropdown(item)" (keypress)="hideMobileLayout()" tabindex="0">{{subItem.name}}</a>
+          <div class="border" *ngIf="!last"></div>
+        </li>
+      </ul>
     </div>
     <button  type="button" class="secondary-btn" aria-label="go the page invest office page" (click)="goToInvestOfficePage()">Client Log In</button>
   </div>
