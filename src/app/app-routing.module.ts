@@ -10,7 +10,6 @@ import { ResourcesComponent } from './resources/resources.component';
 import { StyleguideComponent } from './styleguide/styleguide.component';
 import { ServicesComponent } from './services/services.component';
 import { DisclaimerComponent } from './disclaimer/disclaimer.component';
-import { PublicationComponent } from './publication/publication.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
