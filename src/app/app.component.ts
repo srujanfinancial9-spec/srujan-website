@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { TokenObject } from './models/token.model';
+import { delay } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -19,14 +20,16 @@ export class AppComponent implements OnInit{
     private http: HttpClient) {}
 
   ngOnInit(): void {
-     this.getToken()
+    this.getToken()
   }
 
   getToken() {
     const headers = new HttpHeaders()
       .set('Content-Type', 'application/json');
-
-    this.http.post<TokenObject>(this.tokenUrl, { headers }).subscribe(
+    this.http.post<TokenObject>(this.tokenUrl, { headers }).pipe(
+      delay(2000)
+    )
+    .subscribe(
       (response) : void => {
         this.getChatBotStatus(response.access_token)
       },

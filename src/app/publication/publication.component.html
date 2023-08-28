@@ -53,25 +53,43 @@
 <div class="container">
   <div class="content-layout">
     <div class="blog-tiles blog-component d-flex flex-column flex-md-row justify-content-between">
-      <div class="reviews d-flex flex-wrap">
-        <div class="reviews-card" *ngFor="let post of publicationArray; let i=index">
-          <div class="sub-header">
-            <span class="sub-header xsm-text">{{post.date | date:'longDate'}}</span>
-          </div>
-          <div class="title">
-            <h3 class="primary">{{post.title}}</h3>
-          </div>
-          <div class="body">
-            <p>{{post.section}}</p>
-          </div>
-          <a href="{{post.link}}" target="_blank" class="post-btn d-flex gap-2">Read More
-            <div class="icon">
-              <svg width="24" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 4L10.59 5.41L16.17 11H4V13H16.17L10.59 18.59L12 20L20 12L12 4Z" fill="#27463E"/>
-              </svg>
+      <div class="reviews d-flex flex-wrap" [ngClass]="publicationArray.length ? 'noGap':'skaletonGap'">
+        <ng-container *ngIf="publicationArray.length; else elseTemplate">
+          <div class="reviews-card" *ngFor="let post of publicationArray; let i=index">
+            <div class="sub-header">
+              <span class="sub-header xsm-text">{{post.date | date:'longDate'}}</span>
             </div>
-          </a>
-        </div>
+            <div class="title">
+              <h3 class="primary">{{post.title}}</h3>
+            </div>
+            <div class="body">
+              <p>{{post.section}}</p>
+            </div>
+            <a href="{{post.link}}" target="_blank" class="post-btn d-flex gap-2">Read More
+              <div class="icon">
+                <svg width="24" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12 4L10.59 5.41L16.17 11H4V13H16.17L10.59 18.59L12 20L20 12L12 4Z" fill="#27463E"/>
+                </svg>
+              </div>
+            </a>
+          </div>
+        </ng-container>
+        <ng-template #elseTemplate>
+          <div class="skelaton" *ngFor="let post of generateFake(10)" style="width: 282px;">
+            <div class="sub-header">
+              <ngx-skeleton-loader [theme]="{width: '120px'}"></ngx-skeleton-loader>
+            </div>
+            <div class="title">
+              <ngx-skeleton-loader [theme]="{ width: '100px'}"></ngx-skeleton-loader>
+            </div>
+            <div class="body d-flex flex-column gap-1">
+              <ngx-skeleton-loader [theme]="{ height: '20px' , width: '200px'}"></ngx-skeleton-loader>
+              <ngx-skeleton-loader [theme]="{ height: '20px' , width: '200px'}"></ngx-skeleton-loader>
+              <ngx-skeleton-loader [theme]="{ height: '20px' , width: '200px'}"></ngx-skeleton-loader>
+            </div>
+            <ngx-skeleton-loader [theme]="{width: '50px'}"></ngx-skeleton-loader>
+          </div>
+        </ng-template>
       </div>
     </div>
   </div>

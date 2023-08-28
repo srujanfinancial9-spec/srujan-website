@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MetaDataService } from '../services/meta-data.service';
 import { MongodbTokenServiceService } from '../services/mongodb-token-service.service';
-import { PulicationData } from '../model/publication';
+import { PulicationData } from '../models/publication';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Component({
@@ -13,10 +13,9 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 export class PublicationComponent implements OnInit {
 
   element?: HTMLElement
-  // @Input() blog: any;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   tokenObject!: any;
-  publicationArray!: PulicationData[];
+  publicationArray: PulicationData[]=[];
   mongodbUrl = 'https://us-east-1.aws.data.mongodb-api.com/app/application-0-ripez/endpoint/getPublicationsData';
   tokenUrl = "https://us-east-1.aws.realm.mongodb.com/api/client/v2.0/app/application-0-ripez/auth/providers/anon-user/login";
 
@@ -33,22 +32,17 @@ export class PublicationComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.activatedRoute.fragment.subscribe(
-      res => {
-        this.JumpTo(res);
-      }
-    )
-    this.getToken()
+    const cachedData = localStorage.getItem('publicationData');
+    if (cachedData) {
+      this.publicationArray = JSON.parse(cachedData);
+    } else {
+      this.getToken()
+    }
   }
+
 
   onCardClick(id:number) {
     this.router.navigate(['/blog-detail', id]);
-  }
-
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  JumpTo(section: any) {
-    this.element = document.getElementById(section) as HTMLElement;
-    this.element.scrollIntoView({ behavior: "smooth" })
   }
 
   getPublication(token: string) {
@@ -59,15 +53,23 @@ export class PublicationComponent implements OnInit {
 
     this.http.get(this.mongodbUrl, { headers }).subscribe(
       (response) => {
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        this.publicationArray = response as any
-        console.log('Data sent successfully!', this.publicationArray[0]);
+        this.publicationArray = response as PulicationData[]
+        localStorage.setItem('publicationData', JSON.stringify(response));
       },
       (error) => {
         console.error('Error sending data:', error);
       }
     );
 
+  }
+
+  // Generate Fake Object Array
+  generateFake(count: number): Array<number> {
+    const indexes = [];
+    for (let i = 0; i < count; i++) {
+      indexes.push(i);
+    }
+    return indexes;
   }
 
   getToken(){
