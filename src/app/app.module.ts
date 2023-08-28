@@ -32,7 +32,7 @@ import { DisclaimerComponent } from './disclaimer/disclaimer.component';
     AboutComponent,
     ProcessComponent,
     ServicesComponent,
-    DisclaimerComponent,
+    DisclaimerComponent
   ],
   imports: [
     FormsModule,

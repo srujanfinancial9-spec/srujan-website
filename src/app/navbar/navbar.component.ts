@@ -11,7 +11,7 @@ export class NavbarComponent implements OnInit {
   rotationAngle = 180;
 
   items= [
-    { name: 'Home', route: '/' },
+    { name: 'Home', route: '/home' },
     { name: 'About', route: '/about' },
     { name: 'Services', route: '/services' },
     { name: 'Process', route: '/process' },
@@ -86,4 +86,5 @@ export class NavbarComponent implements OnInit {
       this.renderer.setAttribute(dropdownIcon,'transform', transformValue)
     }
   }
+
 }
