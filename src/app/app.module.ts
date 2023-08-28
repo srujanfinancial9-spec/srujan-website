@@ -17,7 +17,6 @@ import { AboutComponent } from './about/about.component';
 import { ProcessComponent } from './process/process.component';
 import { ServicesComponent } from './services/services.component';
 import { DisclaimerComponent } from './disclaimer/disclaimer.component';
-import { PublicationComponent } from './publication/publication.component';
 
 @NgModule({
   declarations: [
@@ -33,8 +32,7 @@ import { PublicationComponent } from './publication/publication.component';
     AboutComponent,
     ProcessComponent,
     ServicesComponent,
-    DisclaimerComponent,
-    PublicationComponent,
+    DisclaimerComponent
   ],
   imports: [
     FormsModule,
