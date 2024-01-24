@@ -12,7 +12,8 @@ import { ServicesComponent } from './services/services.component';
 import { DisclaimerComponent } from './disclaimer/disclaimer.component';
 
 const routes: Routes = [
-  {path:'',component:HomeComponent},
+  { path:'', pathMatch: 'full', redirectTo: 'home' },
+  {path:'home',component:HomeComponent},
   {path:'blog',component:ResourcesComponent},
   {path:'blog-detail/:id', component:BlogDetailComponent},
   {path:'privacy-policy', component:PrivacyPolicyComponent},
