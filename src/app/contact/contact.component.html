@@ -15,7 +15,7 @@
       <label htmlFor="name" for="exampleInputEmail1" class="form-label body-text text-info">Name*</label>
       <input type="text" formControlName="name"  required name="recipientName" id="recipientName" class="form-control shadow-none no-outline" placeholder="Enter your full name">
       <div *ngIf="formSubmitted && myForm.get('name')?.hasError('required')" class="text-danger">
-        name is required.
+        please enter your name.
       </div>
     </div>
     <div>
@@ -27,21 +27,24 @@
         </option>
       </select>
       <div *ngIf="formSubmitted && myForm.get('selectedOption')?.hasError('required')" class="text-danger">
-        please select option.
+        please select an option.
       </div>
     </div>
     <div>
       <label htmlFor="phone-number" class="form-label text-info body-text">Your Phone Number*</label>
       <input  required id="name" formControlName="phoneNumber" name="subject" type="tel" class="form-control shadow-none" placeholder="Enter your phone number">
       <div *ngIf="formSubmitted && myForm.get('phoneNumber')?.hasError('required')" class="text-danger">
-        phone-number is required.
+        Please enter your phone number.
+      </div>
+      <div *ngIf="formSubmitted && myForm.get('phoneNumber')?.hasError('invalidPhoneNumber')" class="text-danger">
+        Please enter a valid phone number.
       </div>
     </div>
     <div>
       <label htmlFor="message" for="exampleFormControlTextarea1" class="form-label text-info body-text">Message</label>
       <textarea id="message" name="message" formControlName="message"  required class="form-control shadow-none" id="exampleFormControlTextarea1" rows="4" placeholder="Enter your message "></textarea>
       <div *ngIf="formSubmitted && myForm.get('message')?.hasError('required')" class="text-danger">
-        message is required.
+       please enter message.
       </div>
     </div>
     <div class="d-grid gap-2">
