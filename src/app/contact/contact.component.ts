@@ -20,6 +20,7 @@ export class ContactComponent implements OnInit {
   mongodbUrl = "https://us-east-1.aws.data.mongodb-api.com/app/application-0-ripez/endpoint/addUser";
   loading = false;
   submitButtonText = 'Send'
+  formSubmitted = false;
 
   @ViewChild('myForm') form!: NgForm;
   element?: HTMLElement
@@ -78,26 +79,31 @@ export class ContactComponent implements OnInit {
   }
 
   onSubmit() {
-    this.loading = true;
-    this.submitButtonText = 'Your message is sent!';
-
-    const formData = this.myForm.value;
-    const headers = new HttpHeaders()
-      .set('Content-Type', 'application/json');
-
-    this.http.post<TokenObject>(this.tokenUrl, { headers }).subscribe(
-      (response) : void => {
-        this.postForm(response.access_token, formData)
-      },
-      (error) => {
-        console.error('Error sending data:', error);
-      }
-    );
-
-    setTimeout(() => {
-      this.loading = false;
-      this.myForm.reset();
+    this.formSubmitted = true;
+    if(this.myForm.valid){
+      this.loading = true;
       this.submitButtonText = 'Your message is sent!';
-    }, 1000);
+
+      const formData = this.myForm.value;
+      const headers = new HttpHeaders()
+        .set('Content-Type', 'application/json');
+
+
+      this.http.post<TokenObject>(this.tokenUrl, { headers }).subscribe(
+        (response) : void => {
+          this.postForm(response.access_token, formData)
+        },
+        (error) => {
+          console.error('Error sending data:', error);
+        }
+      );
+
+      setTimeout(() => {
+        this.loading = false;
+        this.formSubmitted = true;
+        this.myForm.reset();
+        this.submitButtonText = 'Your message is sent!';
+      }, 1000);
+    }
   }
 }
