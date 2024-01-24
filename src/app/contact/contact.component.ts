@@ -1,6 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
+import { AbstractControl, FormBuilder, FormGroup, NgForm, ValidationErrors, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { MetaDataService } from '../services/meta-data.service';
 import { ScrollService } from '../services/scroll.service';
@@ -46,11 +46,10 @@ export class ContactComponent implements OnInit {
   ]
 
   ngOnInit(): void {
-
     this.myForm = this.fb.group({
       name: ['', Validators.required],
       selectedOption: ['', [Validators.required]],
-      phoneNumber: ['', [Validators.required]],
+      phoneNumber: ['', [Validators.required, this.phoneValidator]],
       message: ['', [Validators.required]],
     });
   }
@@ -61,7 +60,7 @@ export class ContactComponent implements OnInit {
   }
 
 
-  postForm(token: string, body:unknown) {
+  postForm(token: string, body: unknown) {
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
       'Authorization': `Bearer ${token}`
@@ -80,7 +79,7 @@ export class ContactComponent implements OnInit {
 
   onSubmit() {
     this.formSubmitted = true;
-    if(this.myForm.valid){
+    if (this.myForm.valid) {
       this.loading = true;
       this.submitButtonText = 'Your message is sent!';
 
@@ -90,7 +89,7 @@ export class ContactComponent implements OnInit {
 
 
       this.http.post<TokenObject>(this.tokenUrl, { headers }).subscribe(
-        (response) : void => {
+        (response): void => {
           this.postForm(response.access_token, formData)
         },
         (error) => {
@@ -105,5 +104,17 @@ export class ContactComponent implements OnInit {
         this.submitButtonText = 'Your message is sent!';
       }, 1000);
     }
+  }
+
+
+  // Custom validator for phone number
+  phoneValidator(control: AbstractControl): ValidationErrors | null {
+    const phoneNumberPattern = /^\d{10}$/;
+
+    if (!Validators.required(control) && !phoneNumberPattern.test(control.value)) {
+      return { invalidPhoneNumber: true };
+    }
+
+    return null;
   }
 }
