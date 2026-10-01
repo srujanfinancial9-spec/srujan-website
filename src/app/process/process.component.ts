@@ -1,9 +1,12 @@
+import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterModule } from '@angular/router';
 import { MetaDataService } from '../services/meta-data.service';
 import { ScrollService } from '../services/scroll.service';
 
 @Component({
+  standalone: true,
+  imports: [CommonModule, RouterModule],
   selector: 'app-process',
   templateUrl: './process.component.html',
   styleUrls: ['./process.component.scss']
@@ -18,8 +21,8 @@ export class ProcessComponent implements OnInit {
   rotate5 = false;
   constructor(private activatedRoute: ActivatedRoute, private metaData: MetaDataService, private scroll:ScrollService) {
     metaData.setMetaData(
-      ' Our proven planning process - Guiding you towards financial success',
-      'Discover our proven investment planning process designed to help you achieve financial success. From assessing your current financial situation to setting goals and implementing strategies, we guide you every step of the way. '
+      'Our Process | How We Work With You | Srujan Financial Services',
+      'See how Srujan Financial Services works with you in five steps, from a first consultation to building, implementing and reviewing your investment plan.'
     )
 
     this.scroll.initializeScroll();

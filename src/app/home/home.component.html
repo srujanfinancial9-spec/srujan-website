@@ -11,18 +11,18 @@
         <p class="text-primary md-text">Because the earlier you plan for your goals, the better you’ll be.</p>
       </div>
       <div class="left-section-content-button">
-        <button aria-label="Call to Action" class="secondary-btn" [routerLink]="['/api/contact']">Schedule Your Free
-          Consultation</button>
+        <a class="secondary-btn" [routerLink]="['/api/contact']">Schedule Your Free
+          Consultation</a>
       </div>
     </div>
     <div class="left-section-profile align-self-center green-border">
-      <img src="assets/Img/webp/hero-profile.webp" alt="cover" class="img-fluid">
+      <img src="assets/Img/webp/hero-profile.webp" fetchpriority="high" alt="Smiling young woman enjoying a relaxed moment at the beach" width="570" height="531" class="img-fluid">
     </div>
   </div>
 </div>
 
 <div class="featured section-gap container-fluid">
-  <h6 class="featured-title text-uppercase">Featured on</h6>
+  <p class="heading-6 mb-2 featured-title text-uppercase">Featured on</p>
   <div class="logo-section d-flex justify-content-center flex-wrap align-item-center">
     <div class="featured-item">
       <svg width="255" height="24" viewBox="0 0 255 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -254,7 +254,7 @@
       </div>
     </div>
     <div class="right-section-profile position-relative align-self-center">
-      <img src="assets/Img/Svg/decisions.svg" alt="cover" class="img-fluid">
+      <img src="assets/Img/Svg/decisions.svg" alt="" loading="lazy" class="img-fluid">
     </div>
   </div>
 </div>
@@ -276,13 +276,16 @@
           the busy schedules and demanding lifestyles.</p>
         <p class="text-primary md-text">Our aim is to help you feel in control of your finances and live a <span
             class="sans-bold-text">stress-free life</span> without having to worry about money.</p>
+        <p class="text-primary md-text">Srujan Financial Services LLP is an AMFI-registered <a class="link"
+            [routerLink]="['/disclosure']">mutual fund distributor</a> based in Kanjurmarg, Mumbai, and we help
+          individuals and families with their mutual fund investments.</p>
       </div>
       <div class="right-section-content-button">
-        <button aria-label="about me" class="secondary-btn" [routerLink]="['/about']">More About Me</button>
+        <a class="secondary-btn" [routerLink]="['/about']">More About Me</a>
       </div>
     </div>
     <div class="left-section-profile align-self-center position-relative green-border">
-      <img src="assets/Img/webp/founder_deepali_sen.webp" alt="founder_deepali_sen" class="img-fluid">
+      <img src="assets/Img/webp/founder_deepali_sen.webp" alt="Deepali Sen, founder of Srujan Financial Services" width="552" height="520" loading="lazy" class="img-fluid">
       <p class="xsm-text name-placeholder position-absolute">Founder, QPFP®</p>
     </div>
   </div>
@@ -317,7 +320,7 @@
           <div class="info d-flex gap-4 flex-column flex-md-row justify-content-lg-between justify-content-around">
             <div class="info-profile d-flex gap-3 justify-content-center">
               <div class="ellipse text-center">
-                <img src="{{client.avatar}}" alt="avatar" class="img-fluid">
+                <img src="{{client.avatar}}" alt="" loading="lazy" class="img-fluid">
               </div>
               <div class="details align-self-center">
                 <p class="sub-title text-primary mb-1 fw-bold">{{client.about}}</p>
@@ -463,17 +466,17 @@
         <h2 class="text-primary">Recent Blog Posts</h2>
       </div>
       <div class="blog-header-button d-none d-md-block">
-        <button aria-label="view all" class="secondary-btn" [routerLink]="['/blog']">View All </button>
+        <a class="secondary-btn" [routerLink]="['/blog']">View All </a>
       </div>
     </div>
     <div class="blog-tiles blog-component d-flex flex-column flex-md-row justify-content-between">
       <div class="blog-tiles blog-component d-flex flex-column flex-md-row justify-content-between">
         <div tabindex="0" class="blog-tiles-item" (click)="onCardClick(1)" (keypress)="onCardClick(1)" style="cursor: pointer;">
           <div class="header d-flex justify-content-center">
-            <img src="assets/Img/Svg/money1.svg" alt="money">
+            <img src="assets/Img/Svg/money1.svg" alt="" loading="lazy">
           </div>
           <div class="body">
-            <h5 class="text-primary">Money- Our partner for life</h5>
+            <h3 class="heading-5 text-primary"><a class="text-reset text-decoration-none" [routerLink]="['/blog-detail', '1']">Money- Our partner for life</a></h3>
             <p class="text-primary body-text">We all are part of a society where very often; the women folk are expected....
             </p>
             <div class="link">
@@ -487,10 +490,10 @@
         </div>
         <div tabindex="0" class="blog-tiles-item" (click)="onCardClick(2)" (keypress)="onCardClick(2)" style="cursor: pointer;">
           <div class="header d-flex justify-content-center">
-            <img src="assets/Img/Svg/goals.svg" alt="goal">
+            <img src="assets/Img/Svg/goals.svg" alt="" loading="lazy">
           </div>
           <div class="body">
-            <h5 class="text-primary">Most common investment mistakes women make</h5>
+            <h3 class="heading-5 text-primary"><a class="text-reset text-decoration-none" [routerLink]="['/blog-detail', '2']">Most common investment mistakes women make</a></h3>
             <p class="text-primary body-text">My real experiences in dealing with families while doing their financial planning...
             </p>
             <div class="link">
@@ -503,10 +506,10 @@
         </div>
         <div tabindex="0" class="blog-tiles-item" (click)="onCardClick(3)" (keypress)="onCardClick(3)" style="cursor: pointer;">
           <div class="header d-flex justify-content-center">
-            <img src="assets/Img/Svg/money.svg" alt="steps">
+            <img src="assets/Img/Svg/money.svg" alt="" loading="lazy">
           </div>
           <div class="body">
-            <h5 class="text-primary">Money management- the traditional ways</h5>
+            <h3 class="heading-5 text-primary"><a class="text-reset text-decoration-none" [routerLink]="['/blog-detail', '3']">Money management- the traditional ways</a></h3>
             <p class="text-primary body-text">All Indians are doctors just as all of us are financial planners. Well, ...
             </p>
             <div class="link">
@@ -535,7 +538,7 @@
         </div>
       </div>
       <div class="cover-button align-self-center">
-        <button class="secondary-btn" [routerLink]="['/api/contact']" aria-label="Get in touch">Get In touch</button>
+        <a class="secondary-btn" [routerLink]="['/api/contact']">Get In touch</a>
       </div>
     </div>
     <div class="green-box position-absolute"></div>

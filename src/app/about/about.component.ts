@@ -1,9 +1,12 @@
+import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterModule } from '@angular/router';
 import { ScrollService } from '../services/scroll.service';
 import { MetaDataService } from '../services/meta-data.service';
 
 @Component({
+  standalone: true,
+  imports: [CommonModule, RouterModule],
   selector: 'app-about',
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.scss']
@@ -31,8 +34,8 @@ export class AboutComponent implements OnInit {
     private metaData: MetaDataService,
     private scroll:ScrollService) {
     metaData.setMetaData(
-      'About Deepali Sen - Your Qualified personal finance professional helping you plan for a secure tomorrow',
-      'Meta Description: Deepali Sen is a dedicated personal finance professional committed to helping you plan for a stress-free tomorrow. Get expert guidance on budgeting, debt management, and future investments. Start planning for a secure financial future with Deepali today.'
+      'About Srujan Financial Services | Investment Guidance in Mumbai',
+      'Meet Deepali Sen, QPFP® and founder of Srujan Financial Services, a Mumbai-based mutual fund distributor helping clients plan their money since 2012.'
     )
 
     this.scroll.initializeScroll();

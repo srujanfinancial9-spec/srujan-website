@@ -1,132 +1,20 @@
 @import "node_modules/bootstrap/scss/mixins";
 @import "src/layout.scss";
 
-.form-select {
-  color: $primary;
-  &:focus{
-    border: 1px solid #068466;
-  }
-}
-input {
-  height: 48px;
-}
-.link {
-  color: #518d57;
-  font-weight: 500 !important;
-  &:hover {
-    color: #518d57;
-  }
-}
-.form-control {
-  border: 1px solid #d7e0d4;
-  border-radius: 4px;
-  &::-webkit-input-placeholder {
-    font-family: $body-font;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-    letter-spacing: 0.10000000149011612px;
-    text-align: left;
-    color: rgba(0, 74, 67, 0.46);
-    opacity: 0.4;
-  }
-  &::-moz-placeholder {
-    /* Firefox 19+ */
-    font-family: $body-font;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-    letter-spacing: 0.10000000149011612px;
-    text-align: left;
-    color: rgba(0, 74, 67, 0.46);
-    opacity: 0.4;
-  }
-  &:-ms-input-placeholder {
-    /* IE 10+ */
-    font-family: $body-font;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-    letter-spacing: 0.10000000149011612px;
-    text-align: left;
-    color: rgba(0, 74, 67, 0.46);
-    opacity: 0.4;
-  }
-  &:-moz-placeholder {
-    /* Firefox 18- */
-    font-family: $body-font;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-    letter-spacing: 0.10000000149011612px;
-    text-align: left;
-    color: rgba(0, 74, 67, 0.46);
-    opacity: 0.4;
-  }
-  &:focus{
-    border: 1px solid #068466;
-  }
-}
-select {
-  height: 48px;
-  border-radius: 4px;
-  &:focus{
-    border: 1px solid #068466;
-  }
-}
-
-.selected-item {
-  color: $primary;
-}
-
-textarea {
-  border-radius: 4px;
-  &::placeholder {
-    font-family: $body-font;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-    letter-spacing: 0.10000000149011612px;
-    text-align: left;
-    color: rgba(0, 74, 67, 0.46);
-    opacity: 0.4;
-  }
-}
-
+// the embedded form carries its own inner spacing, so the page adds very little around it
 .contact {
-  gap: 32px;
-  padding: 75px 15px;
+  padding: 8px 0px 0px;
   @include media-breakpoint-up(md) {
-    gap: 50px;
+    padding: 16px 15px 0px;
   }
   @include media-breakpoint-up(lg) {
-    padding-top: 150px;
-    padding-bottom: 155px;
-    gap: 125px;
+    padding-top: 24px;
   }
-  &-content {
-    @include media-breakpoint-up(md) {
-      max-width: 262px;
-    }
-    @include media-breakpoint-up(lg) {
-      max-width: 445px;
-    }
-    &-body {
-      margin-top: 16px;
-      @include media-breakpoint-up(lg) {
-        margin-top: 24px;
-      }
-    }
+  [data-youform-embed] {
+    min-height: 700px;
   }
-  &-form {
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-    @include media-breakpoint-up(md) {
-      width: 378px;
-    }
-    @include media-breakpoint-up(lg) {
-      width: 540px;
-    }
+  ::ng-deep iframe {
+    display: block;
+    max-width: 100%;
   }
 }

@@ -1,8 +1,11 @@
+import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { MetaDataService } from '../services/meta-data.service';
 
 @Component({
+  standalone: true,
+  imports: [CommonModule, RouterModule],
   selector: 'app-resources',
   templateUrl: './resources.component.html',
   styleUrls: ['./resources.component.scss']
@@ -15,8 +18,8 @@ export class ResourcesComponent {
     private metaData: MetaDataService,
     private router: Router) {
     metaData.setMetaData(
-      'Financial Resources - Empowering You with Knowledge and Tools',
-      'Access a wealth of financial resources and tools curated by Deepali Sen to empower you on your journey towards financial success. Explore articles, guides, calculators, and recommended readings to enhance your financial literacy and make informed decisions.'
+      'Blog | Personal Finance Articles | Srujan Financial Services',
+      'Articles from Srujan Financial Services on money management, retirement, gold and common investment mistakes, written to help you make informed decisions.'
     )
   }
 
