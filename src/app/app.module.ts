@@ -1,45 +1,22 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
-import { ResourcesComponent } from './resources/resources.component';
-import { BlogDetailComponent } from './blog-detail/blog-detail.component';
 import { HomeComponent } from './home/home.component';
-import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { StyleguideComponent } from './styleguide/styleguide.component';
-import { AboutComponent } from './about/about.component';
-import { ProcessComponent } from './process/process.component';
-import { ServicesComponent } from './services/services.component';
-import { DisclaimerComponent } from './disclaimer/disclaimer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     FooterComponent,
-    ResourcesComponent,
-    BlogDetailComponent,
-    HomeComponent,
-    PrivacyPolicyComponent,
-    PageNotFoundComponent,
-    StyleguideComponent,
-    AboutComponent,
-    ProcessComponent,
-    ServicesComponent,
-    DisclaimerComponent
+    HomeComponent
   ],
   imports: [
-    FormsModule,
     BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    ReactiveFormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

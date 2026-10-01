@@ -18,7 +18,10 @@ export class HomeComponent {
   constructor(private elRef: ElementRef,
     private metaData: MetaDataService,
     private router: Router) {
-    metaData.setMetaData('Srujan Financial - Personal Finance Guidance for Busy Young Professionals', 'We offer simple and personalized financial guidance tailored to busy young professionals. Achieve your financial goals, build long-term wealth, and secure your financial future with our expert advice and services.')
+    metaData.setMetaData(
+      'Srujan Financial Services | Mutual Fund Distributor in Mumbai',
+      'Srujan Financial Services LLP is an AMFI-registered mutual fund distributor in Kanjurmarg, Mumbai, helping young professionals invest towards their goals.'
+    )
   }
   clients: { title: string, body: string, body2: string, about: string, avatar: string, profile: string }[] = [
     { title: 'Deepali’s expertise and knowledge of the market are unparalleled', body: "When I transitioned from my corporate job to a new entrepreneurial journey in 2019, I knew I needed guidance on how to go about planning my personal finances.", body2: "That's when I turned to Deepali. She gave me thorough guidance and plan on what all needs to be kept in mind and possible challenges considering the gestation period for any new venture. Even today, I continue to seek her advice and guidance as her expertise and knowledge of the market are unparalleled.", about: 'Biswarup Sen', avatar: 'assets/Img/webp/biswarup.webp', profile: 'Managing Partner, Zuperia Overseas' },

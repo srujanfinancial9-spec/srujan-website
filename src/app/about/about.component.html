@@ -11,27 +11,27 @@
           <span class="sans-bold-text">here to guide you every step of the way</span>.</p>
       </div>
       <div class="left-section-content-button">
-        <button class="secondary-btn" [routerLink]="['/api/contact']" aria-label="Get Started Button">Schedule Your free
-          Consultation</button>
+        <a class="secondary-btn" [routerLink]="['/api/contact']">Schedule Your free
+          Consultation</a>
       </div>
     </div>
     <div class="left-section-profile position-relative align-self-center">
-      <img src="assets/Img/webp/founder_deepali_sen.webp" alt="founder_deepali_sen" class="img-fluid">
+      <img src="assets/Img/webp/founder_deepali_sen.webp" fetchpriority="high" alt="Deepali Sen, founder of Srujan Financial Services" width="552" height="520" class="img-fluid">
     </div>
   </div>
 </div>
 <div class="featured section-gap container-fluid border border-1" id="about-logo">
   <div class="logo-section about-logo d-flex flex-wrap justify-content-around justify-content-lg-center">
     <div class="featured-item">
-      <h3 class="text-primary text-center">2012</h3>
+      <p class="heading-3 mb-2 text-primary text-center">2012</p>
       <p class="lg-text text-primary text-center">Year founded</p>
     </div>
     <div class="featured-item">
-      <h3 class="text-primary text-center">250+</h3>
+      <p class="heading-3 mb-2 text-primary text-center">400+</p>
       <p class="lg-text text-primary text-center">Happy clients</p>
     </div>
     <div class="featured-item">
-      <h3 class="text-primary text-center">1100+</h3>
+      <p class="heading-3 mb-2 text-primary text-center">1100+</p>
       <p class="lg-text text-primary text-center">Goals achieved</p>
     </div>
   </div>
@@ -81,7 +81,7 @@
       </div>
     </div>
     <div class="right-section-profile align-self-center">
-      <img src="assets/Img/webp/deepali-sen.webp" alt="deepali-sen" class="img-fluid">
+      <img src="assets/Img/webp/deepali-sen.webp" alt="Deepali Sen" width="469" height="588" loading="lazy" class="img-fluid">
       <p class="xsm-text mt-1">Founder, QPFP®</p>
     </div>
   </div>
@@ -94,7 +94,7 @@
     <div class="grid-item mt-0 border-0 card" *ngFor="let team of teams">
       <div class="card-body card-height">
         <div class="card-img">
-          <img src="{{team.profile}}" alt="{{team.name}}" class="img-fluid">
+          <img src="{{team.profile}}" alt="{{team.name}}" loading="lazy" class="img-fluid">
         </div>
         <div class="grid-item-title">
           <p class="xsm-text mb-1">{{team.post}}</p>
@@ -116,10 +116,10 @@
     <div class="value-plate" *ngFor="let value of values">
       <div class="value-plate-item d-flex flex-column">
         <div class="value-plate-item-header-icon">
-          <img src="{{value.svgIconPath}}" alt="header-icon">
+          <img src="{{value.svgIconPath}}" alt="" loading="lazy">
         </div>
         <div class="value-plate-item-title">
-          <h5 class="text-primary">{{value.header}}</h5>
+          <h3 class="heading-5 text-primary">{{value.header}}</h3>
         </div>
         <div class="value-plate-item-body">
           <p class="body-text">{{value.body}}</p>
@@ -141,7 +141,7 @@
         </div>
       </div>
       <div class="cover-button align-self-center">
-        <button class="secondary-btn" [routerLink]="['/api/contact']" aria-label="Get Started Button">Get In touch</button>
+        <a class="secondary-btn" [routerLink]="['/api/contact']">Get In touch</a>
       </div>
     </div>
     <div class="green-box position-absolute"></div>

@@ -21,6 +21,14 @@
   }
 }
 
+.link {
+  color: #518d57;
+  font-weight: 500 !important;
+  &:hover {
+    color: #518d57;
+  }
+}
+
 .main {
   background: #f3f1ec;
   .cover {

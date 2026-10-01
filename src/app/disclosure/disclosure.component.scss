@@ -1,0 +1,37 @@
+@import "node_modules/bootstrap/scss/mixins";
+@import "src/layout.scss";
+
+.link {
+  color: #518d57;
+  font-weight: 500 !important;
+  &:hover {
+    color: #518d57;
+  }
+}
+
+.section-table {
+  margin-top: 17px;
+  max-width: 694px;
+  overflow-x: auto;
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  th,
+  td {
+    padding: 10px 16px 10px 0;
+    border-bottom: 1px solid #d7e0d4;
+    vertical-align: top;
+  }
+  th {
+    font-weight: 500;
+  }
+}
+
+.section-list-items {
+  margin-top: 17px;
+  margin-bottom: 0;
+  @include media-breakpoint-up(md) {
+    columns: 2;
+  }
+}

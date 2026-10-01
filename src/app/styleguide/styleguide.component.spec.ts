@@ -8,7 +8,7 @@ describe('StyleguideComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ StyleguideComponent ]
+      imports: [ StyleguideComponent ]
     })
     .compileComponents();
 

@@ -8,7 +8,7 @@ describe('ProcessComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ProcessComponent ]
+      imports: [ ProcessComponent ]
     })
     .compileComponents();
 

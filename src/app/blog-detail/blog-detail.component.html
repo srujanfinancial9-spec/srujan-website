@@ -8,7 +8,7 @@
         <h1 class="text-primary">{{blog.title}}</h1>
       </div>
       <div class="thumbnail">
-        <img src="{{blog.headerImg}}" alt="header" class="img-fluid">
+        <img src="{{blog.headerImg}}" alt="" class="img-fluid">
       </div>
       <div class="body" *ngFor="let content of blog.content">
         <p class="body-text text-primary">{{content}}</p>
@@ -16,7 +16,7 @@
     </div>
     <div class="body-part" *ngFor="let content of blog.subTitle; let i = index">
       <div class="header">
-        <h3 class="text-primary">{{blog.subTitle[i]}}</h3>
+        <h2 class="heading-3 text-primary">{{blog.subTitle[i]}}</h2>
       </div>
       <div class="body">
         <p class="body-text text-primary">{{blog.subTitleBody[i]}}</p>
@@ -24,7 +24,7 @@
     </div>
     <div class="blog-end">
       <div class="header">
-        <h3 class="text-primary">{{blog.bottomTitle}}</h3>
+        <h2 class="heading-3 text-primary">{{blog.bottomTitle}}</h2>
       </div>
       <div class="body">
         <p class="body-text text-primary">{{blog.bottom}}</p>
@@ -39,61 +39,59 @@
           <h2 class="text-primary">Recent Blog Posts</h2>
         </div>
         <div class="blog-header-button d-none d-md-block">
-          <button class="secondary-btn" [routerLink]="['/blog']" aria-label="view all">View All </button>
+          <a class="secondary-btn" [routerLink]="['/blog']">View All </a>
         </div>
       </div>
       <div class="blog-tiles blog-component d-flex flex-column flex-md-row justify-content-between">
-        <div class="blog-tiles-item" [routerLink]="['/404']" style="cursor: pointer;">
-          <div class="header d-flex justify-content-center">
-            <img src="assets/Img/Svg/Pie_chart.svg" alt="image_28">
-          </div>
-          <div class="body">
-            <h5 class="text-primary">Key Tips For Sticking To Your Budget</h5>
-            <p class="text-primary body-text">As someone who has been living on one income for years, I know firsthand
-              the
-            </p>
-            <div class="link">
-              <button class="btn btn-primary-link fw-bold" aria-label="read now">Read Now</button>
-              <svg width="7" height="11" viewBox="0 0 7 11" fill="none" class="mt-1" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1.5 1.5L5.5 5.5L1.5 9.5" stroke="#016C62" stroke-width="1.5" />
-              </svg>
+      <div class="blog-tiles-item" [routerLink]="['/blog-detail', '1']" style="cursor: pointer;">
+        <div class="header d-flex justify-content-center">
+          <img src="assets/Img/Svg/money1.svg" alt="" loading="lazy">
+        </div>
+        <div class="body">
+          <h3 class="heading-5 text-primary"><a class="text-reset text-decoration-none" [routerLink]="['/blog-detail', '1']">Money- Our partner for life</a></h3>
+          <p class="text-primary body-text">We all are part of a society where very often; the women folk are expected....
+          </p>
+          <div class="link">
+            <button class="btn btn-primary-link fw-bold" aria-label="read now">Read Now</button>
+            <svg width="7" height="11" viewBox="0 0 7 11" fill="none" class="mt-1" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1.5 1.5L5.5 5.5L1.5 9.5" stroke="#016C62" stroke-width="1.5" />
+            </svg>
 
-            </div>
           </div>
         </div>
-        <div class="blog-tiles-item" [routerLink]="['/404']" style="cursor: pointer;">
-          <div class="header d-flex justify-content-center">
-            <img src="assets/Img/Svg/money.svg" alt="money">
-          </div>
-          <div class="body">
-            <h5 class="text-primary">How To Stop Worrying About Money</h5>
-            <p class="text-primary body-text">Money is a big stress factor for many people. So, if you’ve found yourself
-            </p>
-            <div class="link">
-              <button class="btn btn-primary-link fw-bold" aria-label="read now">Read Now</button>
-              <svg width="7" height="11" viewBox="0 0 7 11" fill="none" class="mt-1" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1.5 1.5L5.5 5.5L1.5 9.5" stroke="#016C62" stroke-width="1.5" />
-              </svg>
-            </div>
+      </div>
+      <div class="blog-tiles-item" [routerLink]="['/blog-detail', '2']" style="cursor: pointer;">
+        <div class="header d-flex justify-content-center">
+          <img src="assets/Img/Svg/goals.svg" alt="" loading="lazy">
+        </div>
+        <div class="body">
+          <h3 class="heading-5 text-primary"><a class="text-reset text-decoration-none" [routerLink]="['/blog-detail', '2']">Most common investment mistakes women make</a></h3>
+          <p class="text-primary body-text">My real experiences in dealing with families while doing their financial planning...
+          </p>
+          <div class="link">
+            <button class="btn btn-primary-link fw-bold" aria-label="read now">Read Now</button>
+            <svg width="7" height="11" viewBox="0 0 7 11" fill="none" class="mt-1" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1.5 1.5L5.5 5.5L1.5 9.5" stroke="#016C62" stroke-width="1.5" />
+            </svg>
           </div>
         </div>
-        <div class="blog-tiles-item" [routerLink]="['/404']" style="cursor: pointer;">
-          <div class="header d-flex justify-content-center">
-            <img src="assets/Img/Svg/goals.svg" alt="steps">
-          </div>
-          <div class="body">
-            <h5 class="text-primary">How To Set Realistic Goals For Your Future</h5>
-            <p class="text-primary body-text">Setting realistic goals can be a powerful way to start making progress
-              towards
-            </p>
-            <div class="link">
-              <button class="btn btn-primary-link fw-bold" aria-label="read now">Read Now</button>
-              <svg width="7" height="11" viewBox="0 0 7 11" fill="none" class="mt-1" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1.5 1.5L5.5 5.5L1.5 9.5" stroke="#016C62" stroke-width="1.5" />
-              </svg>
-            </div>
+      </div>
+      <div class="blog-tiles-item" [routerLink]="['/blog-detail', '3']" style="cursor: pointer;">
+        <div class="header d-flex justify-content-center">
+          <img src="assets/Img/Svg/money.svg" alt="" loading="lazy">
+        </div>
+        <div class="body">
+          <h3 class="heading-5 text-primary"><a class="text-reset text-decoration-none" [routerLink]="['/blog-detail', '3']">Money management- the traditional ways</a></h3>
+          <p class="text-primary body-text">All Indians are doctors just as all of us are financial planners. Well, ...
+          </p>
+          <div class="link">
+            <button class="btn btn-primary-link fw-bold" aria-label="read now">Read Now</button>
+            <svg width="7" height="11" viewBox="0 0 7 11" fill="none" class="mt-1" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1.5 1.5L5.5 5.5L1.5 9.5" stroke="#016C62" stroke-width="1.5" />
+            </svg>
           </div>
         </div>
+      </div>
       </div>
     </div>
   </div>

@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import "src/layout.scss";
-@import "src/variables.scss";
 @import "src/typography.scss";
+// Bootstrap stays last so the cascade is unchanged
+@import "src/bootstrap.scss";
 
 
