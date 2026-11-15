@@ -86,8 +86,13 @@
       gap: 16px;
       width: 100%;
       position: absolute;
+      // start the menu items at the top of the panel; newer browsers otherwise centre this box on the
+      // panel's top edge, which pushed Home, About and Services up behind the header
+      top: 0;
+      align-self: auto;
       z-index: 99999;
-      padding: 51.5px 15px 32px 15px;
+      // the panel sits 6vh down the screen, so leave that much extra room to scroll to the last item
+      padding: 51.5px 15px calc(32px + 6vh) 15px;
     }
     .navbar-link-item {
       //styleName: H5 – 16pt;
@@ -141,6 +146,8 @@
   @include media-breakpoint-down(lg) {
     height: 100vh;
     top: -9%;
+    // short phones: let the menu scroll rather than cut off the last items
+    overflow-y: auto;
   }
   .cross-button {
     left: 80%;
@@ -275,4 +282,11 @@
   .dropdown-label {
     color: #1c4044 !important;
   }
+}
+
+// the Contact button replaces Client Log In and keeps the green button look; nav links are grey by default
+.navbar a.secondary-btn,
+.navbar a.secondary-btn:hover,
+.mobile-menu-layout a.secondary-btn {
+  color: #fff;
 }
