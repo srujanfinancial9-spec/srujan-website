@@ -25,7 +25,8 @@ export class NavbarComponent implements OnInit {
       { name: 'Publications', route: '', url: this.publicationsUrl },
     ]
   },
-    { name: 'Contact', route: 'api/contact' },
+    // shown as the green button at the end of the bar rather than as a text link
+    { name: 'Contact', route: 'api/contact', button: true },
   ];
   currentPage!: string;
   show = false;
@@ -76,10 +77,6 @@ export class NavbarComponent implements OnInit {
 
   isMenuItemActive(path: string): boolean {
     return this.router.isActive(path, true);
-  }
-
-  goToInvestOfficePage() {
-    window.open('https://iinvestoffice.com/');
   }
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any

@@ -18,8 +18,8 @@ export class ServicesComponent implements OnInit {
     private metaData: MetaDataService,
     private scroll:ScrollService) {
     metaData.setMetaData(
-      'Services | Goal-Based & Retirement Planning | Srujan Financial',
-      'Goal-based investment planning, retirement planning and comprehensive life planning from Srujan Financial Services, a mutual fund distributor in Mumbai.'
+      'Services | Goal Based Investments & Retirement Planning | Srujan Financial',
+      'Goal based investments and retirement planning from Srujan Financial Services, an AMFI-registered mutual fund distributor in Kanjurmarg, Mumbai.'
     )
 
     this.scroll.initializeScroll();

@@ -8,9 +8,8 @@
     </div>
     <div class="navbar-link-item text-info" [ngClass]="{'show-menu': show, 'delay-5s':show}"><a class="text-reset text-decoration-none" [routerLink]="['/blog']" (click)="hideMobileLayout()">Blog</a></div>
     <div class="navbar-link-item text-info" [ngClass]="{'show-menu': show, 'delay-5s':show}"><a class="text-reset text-decoration-none" [href]="publicationsUrl" target="_blank" rel="noopener noreferrer" (click)="hideMobileLayout()" aria-label="Publications, opens in a new tab">Publications</a></div>
-    <div class="navbar-link-item text-info" [ngClass]="{'show-menu': show, 'delay-5s':show}"><a class="text-reset text-decoration-none" [routerLink]="['api/contact']" (click)="hideMobileLayout()">Contact</a></div>
     <div class="navbar-link-item text-info d-grid" [ngClass]="{'show-menu': show, 'delay-6s':show}">
-      <button class="secondary-btn" (click)="goToInvestOfficePage()" aria-label="go to the client page">Client Log In</button>
+      <a class="secondary-btn" [routerLink]="['/api/contact']" (click)="hideMobileLayout()">Contact</a>
     </div>
     <div class="mt-5 navbar-link-item gap-3 d-flex nav-social-icon" [ngClass]="{'show-menu': show, 'delay-7s':show}">
       <a href="https://www.facebook.com/share/1C1ndH48UM/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Go to the facebook page">
@@ -90,7 +89,7 @@
     </button>
     <div class="navbar-items d-none d-lg-flex">
       <div class="navbar-links d-flex mb-0" *ngFor="let item of items" (mouseenter)="openDropdown(item)" (mouseleave)="closeDropdownSoon(item)">
-      <div *ngIf="!item.dropdown" class="navbar-link-item under-line" [class.active]="isMenuItemActive(item.route!)"   ><a [routerLink]="item.route" (click)="hideMobileLayout()">{{item.name}}</a></div>
+      <div *ngIf="!item.dropdown && !item.button" class="navbar-link-item under-line" [class.active]="isMenuItemActive(item.route!)"   ><a [routerLink]="item.route" (click)="hideMobileLayout()">{{item.name}}</a></div>
       <div *ngIf="item.dropdown" class="navbar-link-item d-flex gap-2" role="button" aria-haspopup="true" [attr.aria-expanded]="!!item.showDropdown" [class.active]="isMenuItemActive(item.name)" (click)="onDropdownClick(item)" (keydown.enter)="toggleDropdown(item)" (keydown.space)="toggleDropdown(item); $event.preventDefault()" (keydown.escape)="closeDropdown(item)" tabindex="0">
         <span class="dropdown-label">{{item.name }}</span>
         <div class="dropdown-icon">
@@ -107,7 +106,7 @@
         </li>
       </ul>
     </div>
-    <button  type="button" class="secondary-btn" aria-label="go the page invest office page" (click)="goToInvestOfficePage()">Client Log In</button>
+    <a class="secondary-btn" [routerLink]="['/api/contact']">Contact</a>
   </div>
 </div>
 </nav>
